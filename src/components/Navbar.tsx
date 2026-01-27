@@ -278,7 +278,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white shadow-xl overflow-hidden hidden md:block border-t border-gray-100"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
                         onMouseEnter={() => setActiveHover(activeHover)}
                         onMouseLeave={() => setActiveHover(null)}
                     >
@@ -286,11 +286,11 @@ export const Navbar = () => {
                             <div className="flex justify-start space-x-12">
                                 {navData[activeHover].map((column, idx) => (
                                     <div key={idx} className="flex flex-col space-y-4 min-w-[150px]">
-                                        <h4 className="text-gray-500 text-xs font-semibold">{column.title}</h4>
+                                        <h4 className="text-gray-500 dark:text-gray-400 text-xs font-semibold">{column.title}</h4>
                                         <ul className="space-y-2">
                                             {column.links.map((link) => (
                                                 <li key={link}>
-                                                    <a href="#" className="text-gray-900 text-lg md:text-xl font-semibold hover:text-blue-600">
+                                                    <a href="#" className="text-gray-900 dark:text-gray-100 text-lg md:text-xl font-semibold hover:text-blue-600 dark:hover:text-blue-400">
                                                         {link}
                                                     </a>
                                                 </li>
@@ -312,10 +312,10 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white shadow-xl overflow-hidden hidden md:block border-t border-gray-100"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
                     >
                         <div className="max-w-[600px] mx-auto px-4 py-10">
-                            <h3 className="text-gray-500 text-xs font-semibold mb-4 uppercase tracking-wider">{t('navbar.quick_links')}</h3>
+                            <h3 className="text-gray-500 dark:text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">{t('navbar.quick_links')}</h3>
                             <ul className="space-y-1">
                                 {searchQuickLinks.map((link, idx) => (
                                     <motion.li
@@ -325,7 +325,7 @@ export const Navbar = () => {
                                         transition={{ delay: idx * 0.05 + 0.1 }}
                                         className="group"
                                     >
-                                        <a href="#" className="text-gray-900 text-lg hover:text-blue-600 hover:bg-gray-50 block py-1 px-4 -mx-4 rounded-lg flex justify-between items-center">
+                                        <a href="#" className="text-gray-900 dark:text-gray-100 text-lg hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 block py-1 px-4 -mx-4 rounded-lg flex justify-between items-center">
                                             {link}
                                             <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 text-gray-400" />
                                         </a>
