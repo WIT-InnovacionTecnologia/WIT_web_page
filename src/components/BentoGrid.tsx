@@ -18,7 +18,7 @@ export const BentoGrid = () => {
             title: t('navbar.mac'),
             subtitle: 'Lean. Mean. M3 machine.',
             description: 'Supercharged by M3.',
-            className: 'md:col-span-1 bg-[#F5F5F7] text-black',
+            className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
         {
@@ -34,7 +34,7 @@ export const BentoGrid = () => {
             title: t('navbar.watch'),
             subtitle: 'Smarter. Brighter. Mightier.',
             description: 'A healthy leap ahead.',
-            className: 'md:col-span-2 bg-[#F5F5F7] text-black',
+            className: 'md:col-span-2 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
         {
@@ -50,20 +50,20 @@ export const BentoGrid = () => {
             title: t('navbar.airpods'),
             subtitle: 'Adaptive Audio.',
             description: 'Now playing.',
-            className: 'md:col-span-1 bg-[#F5F5F7] text-black',
+            className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
     ];
 
     return (
-        <section className="py-20 px-4 md:px-8 max-w-[1400px] mx-auto bg-white">
+        <section className="py-20 px-4 md:px-8 max-w-[1400px] mx-auto bg-white dark:bg-transparent transition-colors duration-300">
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-5xl font-semibold mb-12 text-center"
+                className="text-3xl md:text-5xl font-semibold mb-12 text-center text-black dark:text-white"
             >
-                {t('grid.latest')} <span className="text-gray-400">{t('grid.whats_new')}</span>
+                {t('grid.latest')} <span className="text-gray-400 dark:text-gray-500">{t('grid.whats_new')}</span>
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

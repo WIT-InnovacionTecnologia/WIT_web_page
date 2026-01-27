@@ -23,7 +23,7 @@ export const ProductShowcase = () => {
     ];
 
     return (
-        <section className="py-20 bg-white overflow-hidden">
+        <section className="py-20 bg-white dark:bg-transparent overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 {features.map((feature, idx) => (
                     <div
@@ -38,8 +38,8 @@ export const ProductShowcase = () => {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="flex-1 text-center md:text-left"
                         >
-                            <h3 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-gray-900">{feature.title}</h3>
-                            <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed">{feature.description}</p>
+                            <h3 className="text-4xl md:text-6xl font-semibold mb-6 tracking-tight text-gray-900 dark:text-white">{feature.title}</h3>
+                            <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{feature.description}</p>
                         </motion.div>
 
                         {/* Image Placeholder */}
@@ -48,9 +48,9 @@ export const ProductShowcase = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, margin: "-20%" }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                            className="flex-1 w-full aspect-square md:aspect-[4/3] bg-gray-50 shadow-lg border border-gray-100 flex items-center justify-center relative overflow-hidden group"
+                            className="flex-1 w-full aspect-square md:aspect-[4/3] bg-gray-50 dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 flex items-center justify-center relative overflow-hidden group"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white opacity-50" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 opacity-50" />
                             <div className="z-10 text-center p-6">
                                 <span className="text-6xl mb-4 block">✨</span>
                                 <p className="text-gray-400 font-medium">Feature Image Placeholder</p>

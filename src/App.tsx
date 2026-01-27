@@ -4,12 +4,17 @@ import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
 import { AIAssistant } from './components/AIAssistant';
 
+import { LightRays } from './components/LightRays';
+
 function App() {
   return (
     <MainLayout>
-      <Hero />
-      <BentoGrid />
-      <ProductShowcase />
+      <LightRays />
+      <div className="relative z-10">
+        <Hero />
+        <BentoGrid />
+        <ProductShowcase />
+      </div>
       <AIAssistant />
     </MainLayout>
   );

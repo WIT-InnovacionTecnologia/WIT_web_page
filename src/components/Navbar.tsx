@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ShoppingBag, Search, ChevronRight, Globe } from 'lucide-react';
+import { Menu, X, ShoppingBag, Search, ChevronRight, Globe, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { navData } from '../lib/navData';
@@ -12,6 +12,30 @@ export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeHover, setActiveHover] = useState<string | null>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        // Check system preference or localStorage
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setIsDarkMode(true);
+            document.documentElement.classList.add('dark');
+        } else {
+            setIsDarkMode(false);
+            document.documentElement.classList.remove('dark');
+        }
+    }, []);
+
+    const toggleDarkMode = () => {
+        if (isDarkMode) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+            setIsDarkMode(false);
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+            setIsDarkMode(true);
+        }
+    };
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
@@ -114,7 +138,7 @@ export const Navbar = () => {
     return (
         <nav
             onMouseLeave={() => setActiveHover(null)}
-            className={`fixed top-0 w-full z-50 transition-colors duration-500 ${isOpen || activeHover || isSearchOpen ? 'bg-white text-black' : scrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 text-black' : 'bg-transparent text-black'
+            className={`fixed top-0 w-full z-50 transition-colors duration-500 ${isOpen || activeHover || isSearchOpen ? 'bg-white dark:bg-black text-black dark:text-white' : scrolled ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 text-black dark:text-white' : 'bg-transparent text-black dark:text-white'
                 }`}
         >
             <div className="max-w-[1024px] mx-auto px-4 sm:px-6 relative z-50 bg-inherit">
@@ -185,13 +209,25 @@ export const Navbar = () => {
                                     <div className="relative group">
                                         <Globe size={14} className="opacity-80 hover:opacity-100 cursor-pointer transition-opacity" />
                                         <div className="absolute right-0 top-full pt-2 w-32 hidden group-hover:block">
-                                            <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-100">
-                                                <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">English</button>
-                                                <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Español</button>
-                                                <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Português</button>
+                                            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl py-2 border border-gray-100 dark:border-gray-800">
+                                                <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">English</button>
+                                                <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">Español</button>
+                                                <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">Português</button>
                                             </div>
                                         </div>
                                     </div>
+
+                                    {/* Dark Mode Toggle */}
+                                    <button
+                                        onClick={toggleDarkMode}
+                                        className="opacity-80 hover:opacity-100 transition-opacity focus:outline-none"
+                                    >
+                                        {isDarkMode ? (
+                                            <Sun size={14} />
+                                        ) : (
+                                            <Moon size={14} />
+                                        )}
+                                    </button>
                                 </>
                             ) : (
                                 <X
