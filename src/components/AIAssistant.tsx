@@ -79,21 +79,21 @@ export const AIAssistant = () => {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="mb-4 w-[350px] md:w-[400px] h-[500px] bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl flex flex-col overflow-hidden"
+                        className="mb-4 w-[350px] md:w-[400px] h-[500px] bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl border border-white/20 dark:border-gray-700/50 shadow-2xl rounded-3xl flex flex-col overflow-hidden"
                     >
                         {/* Header */}
-                        <div className="p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-b border-gray-100 flex items-center justify-between">
+                        <div className="p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
                             <div className="flex items-center space-x-2">
                                 <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
                                     <Sparkles size={16} className="text-white" />
                                 </div>
-                                <span className="font-semibold text-gray-800">Apple Intelligence</span>
+                                <span className="font-semibold text-gray-800 dark:text-gray-200">Apple Intelligence</span>
                             </div>
                             <button
                                 onClick={() => setIsOpen(false)}
-                                className="p-1 hover:bg-gray-100 rounded-full transition-colors relative z-50" // High z-index to ensure clickability
+                                className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors relative z-50" // High z-index to ensure clickability
                             >
-                                <X size={18} className="text-gray-500" />
+                                <X size={18} className="text-gray-500 dark:text-gray-400" />
                             </button>
                         </div>
 
@@ -107,7 +107,7 @@ export const AIAssistant = () => {
                                     <div
                                         className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${msg.sender === 'user'
                                             ? 'bg-blue-600 text-white rounded-br-none'
-                                            : 'bg-white shadow-sm border border-gray-100 text-gray-800 rounded-bl-none'
+                                            : 'bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-bl-none'
                                             }`}
                                     >
                                         {msg.text}
@@ -116,7 +116,7 @@ export const AIAssistant = () => {
                             ))}
                             {isTyping && (
                                 <div className="flex justify-start">
-                                    <div className="bg-white shadow-sm border border-gray-100 px-4 py-3 rounded-2xl rounded-bl-none flex space-x-1 items-center">
+                                    <div className="bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 px-4 py-3 rounded-2xl rounded-bl-none flex space-x-1 items-center">
                                         <motion.div
                                             className="w-2 h-2 bg-gray-400 rounded-full"
                                             animate={{ scale: [1, 1.2, 1] }}
@@ -139,7 +139,7 @@ export const AIAssistant = () => {
                         </div>
 
                         {/* Input Area */}
-                        <div className="p-4 bg-white/50 border-t border-gray-100">
+                        <div className="p-4 bg-white/50 dark:bg-gray-800/50 border-t border-gray-100 dark:border-gray-700">
                             <form
                                 onSubmit={(e) => { e.preventDefault(); handleSend(); }}
                                 className="flex items-center space-x-2"
@@ -149,7 +149,7 @@ export const AIAssistant = () => {
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
                                     placeholder={t('ai.input_placeholder')}
-                                    className="flex-1 bg-gray-100 border-none outline-none px-4 py-3 rounded-full text-sm placeholder-gray-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                                    className="flex-1 bg-gray-100 dark:bg-gray-700 border-none outline-none px-4 py-3 rounded-full text-sm placeholder-gray-500 dark:placeholder-gray-400 dark:text-white focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-all"
                                 />
                                 <button
                                     type="submit"
