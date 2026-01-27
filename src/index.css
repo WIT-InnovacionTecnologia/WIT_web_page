@@ -5,6 +5,11 @@
 @layer base {
   body {
     @apply antialiased text-apple-text bg-white font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body {
+    @apply bg-black text-white;
   }
 }
 
