@@ -184,10 +184,12 @@ export const Navbar = () => {
                                     {/* Language Switcher */}
                                     <div className="relative group">
                                         <Globe size={14} className="opacity-80 hover:opacity-100 cursor-pointer transition-opacity" />
-                                        <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl py-2 hidden group-hover:block border border-gray-100">
-                                            <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">English</button>
-                                            <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Español</button>
-                                            <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Português</button>
+                                        <div className="absolute right-0 top-full pt-2 w-32 hidden group-hover:block">
+                                            <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-100">
+                                                <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">English</button>
+                                                <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Español</button>
+                                                <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Português</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </>
