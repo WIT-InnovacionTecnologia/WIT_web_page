@@ -19,7 +19,7 @@ export const Hero = () => {
                     Lovable. Drawable. Magical.
                 </p>
                 <div className="flex justify-center space-x-6">
-                    <button className="bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors text-lg font-medium">
+                    <button className="bg-blue-600 text-white rounded-full px-6 py-2 hover:bg-blue-700 transition-colors text-lg font-medium">
                         Buy
                     </button>
                     <a href="#" className="text-blue-600 hover:underline px-6 py-2 text-lg font-medium flex items-center">
