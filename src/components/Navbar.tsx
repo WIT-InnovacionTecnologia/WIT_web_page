@@ -1,15 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ShoppingBag, Search, ChevronRight } from 'lucide-react';
+import { Menu, X, ShoppingBag, Search, ChevronRight, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { navData } from '../lib/navData';
+import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
+    const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false); // Mobile menu state
     const [isSearchOpen, setIsSearchOpen] = useState(false); // Search state
     const [scrolled, setScrolled] = useState(false);
     const [activeHover, setActiveHover] = useState<string | null>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
+
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -84,11 +90,25 @@ export const Navbar = () => {
     };
 
     const searchQuickLinks = [
-        "Find a Store",
-        "Apple Vision Pro",
-        "AirPods",
+        t('navbar.store'),
+        t('navbar.vision'),
+        t('navbar.airpods'),
         "Apple Intelligence",
         "Apple Trade In"
+    ];
+
+    const navItems = [
+        { key: 'store', label: t('navbar.store') },
+        { key: 'mac', label: t('navbar.mac') },
+        { key: 'ipad', label: t('navbar.ipad') },
+        { key: 'iphone', label: t('navbar.iphone') },
+        { key: 'watch', label: t('navbar.watch') },
+        { key: 'vision', label: t('navbar.vision') },
+        { key: 'airpods', label: t('navbar.airpods') },
+        { key: 'tv_home', label: t('navbar.tv_home') },
+        { key: 'entertainment', label: t('navbar.entertainment') },
+        { key: 'accessories', label: t('navbar.accessories') },
+        { key: 'support', label: t('navbar.support') },
     ];
 
     return (
@@ -125,7 +145,7 @@ export const Navbar = () => {
                                     <input
                                         ref={searchInputRef}
                                         type="text"
-                                        placeholder="Search apple.com"
+                                        placeholder={t('navbar.search_placeholder')}
                                         className="w-full bg-transparent text-xl outline-none placeholder-gray-400 text-black"
                                     />
                                 </motion.div>
@@ -134,23 +154,23 @@ export const Navbar = () => {
 
                         {/* Links (Hidden when search is open) */}
                         <div className={`flex items-center justify-between flex-1 px-8 ${isSearchOpen ? 'hidden' : 'flex'}`}>
-                            {Object.keys(navData).map((linkName) => (
+                            {navItems.map((item) => (
                                 <div
-                                    key={linkName}
+                                    key={item.key}
                                     className="h-full flex items-center"
-                                    onMouseEnter={() => setActiveHover(linkName)}
+                                    onMouseEnter={() => setActiveHover(item.label)} // Keeping label for hover logic to match navData
                                 >
                                     <a
                                         href="#" // Placeholder path
                                         className="opacity-80 hover:opacity-100 transition-opacity tracking-wide text-current px-2 py-4"
                                     >
-                                        {linkName}
+                                        {item.label}
                                     </a>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Right Icons / Close Search */}
+                        {/* Right Icons / Close Search / Language */}
                         <div className="flex items-center space-x-6 z-10 bg-inherit pl-4">
                             {!isSearchOpen ? (
                                 <>
@@ -160,6 +180,16 @@ export const Navbar = () => {
                                         onClick={toggleSearch}
                                     />
                                     <ShoppingBag size={14} className="opacity-80 hover:opacity-100 cursor-pointer transition-opacity" />
+
+                                    {/* Language Switcher */}
+                                    <div className="relative group">
+                                        <Globe size={14} className="opacity-80 hover:opacity-100 cursor-pointer transition-opacity" />
+                                        <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl py-2 hidden group-hover:block border border-gray-100">
+                                            <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">English</button>
+                                            <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Español</button>
+                                            <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 text-xs">Português</button>
+                                        </div>
+                                    </div>
                                 </>
                             ) : (
                                 <X
@@ -247,7 +277,7 @@ export const Navbar = () => {
                         className="absolute top-[44px] left-0 w-full bg-white shadow-xl overflow-hidden hidden md:block border-t border-gray-100"
                     >
                         <div className="max-w-[600px] mx-auto px-4 py-10">
-                            <h3 className="text-gray-500 text-xs font-semibold mb-4 uppercase tracking-wider">Quick Links</h3>
+                            <h3 className="text-gray-500 text-xs font-semibold mb-4 uppercase tracking-wider">{t('navbar.quick_links')}</h3>
                             <ul className="space-y-1">
                                 {searchQuickLinks.map((link, idx) => (
                                     <motion.li
@@ -286,17 +316,23 @@ export const Navbar = () => {
                             exit="exit"
                             className="flex flex-col space-y-1"
                         >
-                            {Object.keys(navData).map((linkName) => (
+                            {navItems.map((item) => (
                                 <motion.a
-                                    key={linkName}
+                                    key={item.key}
                                     variants={itemVariants}
                                     href="#"
                                     className="text-[28px] font-semibold text-[#E8E8ED] py-2 border-b border-gray-800 leading-tight"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {linkName}
+                                    {item.label}
                                 </motion.a>
                             ))}
+                            {/* Mobile Language Switcher */}
+                            <motion.div variants={itemVariants} className="pt-8 flex gap-4">
+                                <button onClick={() => changeLanguage('en')} className="text-gray-400 text-sm hover:text-white">English</button>
+                                <button onClick={() => changeLanguage('es')} className="text-gray-400 text-sm hover:text-white">Español</button>
+                                <button onClick={() => changeLanguage('pt')} className="text-gray-400 text-sm hover:text-white">Português</button>
+                            </motion.div>
                         </motion.div>
                     </motion.div>
                 )}

@@ -1,0 +1,44 @@
+{
+    "navbar": {
+        "store": "Store",
+        "mac": "Mac",
+        "ipad": "iPad",
+        "iphone": "iPhone",
+        "watch": "Watch",
+        "vision": "Vision",
+        "airpods": "AirPods",
+        "tv_home": "TV & Home",
+        "entertainment": "Entertainment",
+        "accessories": "Accessories",
+        "support": "Support",
+        "search_placeholder": "Search apple.com",
+        "quick_links": "Quick Links"
+    },
+    "hero": {
+        "title": "Ultimate Pad",
+        "subtitle": "Lovable. Drawable. Magical.",
+        "buy": "Buy",
+        "learn_more": "Learn more"
+    },
+    "grid": {
+        "latest": "The latest.",
+        "whats_new": "Take a look at what’s new.",
+        "learn_more": "Learn more",
+        "buy": "Buy"
+    },
+    "showcase": {
+        "camera_title": "Advanced Camera.",
+        "camera_desc": "Capture your world in stunning detail. The new 48MP Main camera shoots in super-high resolution.",
+        "battery_title": "All-Day Battery.",
+        "battery_desc": "Power that keeps up with you. Up to 29 hours of video playback on the big screen.",
+        "chip_title": "A17 Pro Chip.",
+        "chip_desc": "A monster win for gaming. It’s here. The biggest redesign in the history of Apple GPUs."
+    },
+    "ai": {
+        "greeting": "Hello! I'm your Apple Intelligence assistant. How can I help you today?",
+        "input_placeholder": "Ask anything..."
+    },
+    "footer": {
+        "copyright": "Copyright © 2024 Apple Inc. All rights reserved."
+    }
+}

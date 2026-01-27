@@ -1,7 +1,10 @@
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const Hero = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="relative min-h-[calc(100vh-44px)] flex flex-col items-center pt-20 pb-10 overflow-hidden bg-white text-center">
 
@@ -13,17 +16,17 @@ export const Hero = () => {
                 className="z-10"
             >
                 <h2 className="text-5xl md:text-7xl font-semibold mb-2 text-black tracking-tight">
-                    Ultimate Pad
+                    {t('hero.title')}
                 </h2>
                 <p className="text-2xl md:text-3xl font-medium mb-6 text-black">
-                    Lovable. Drawable. Magical.
+                    {t('hero.subtitle')}
                 </p>
                 <div className="flex justify-center space-x-6">
                     <button className="bg-blue-600 text-white rounded-full px-6 py-2 hover:bg-blue-700 transition-colors text-lg font-medium">
-                        Buy
+                        {t('hero.buy')}
                     </button>
                     <a href="#" className="text-blue-600 hover:underline px-6 py-2 text-lg font-medium flex items-center">
-                        Learn more <span className="text-xs ml-1">›</span>
+                        {t('hero.learn_more')} <span className="text-xs ml-1">›</span>
                     </a>
                 </div>
             </motion.div>

@@ -1,24 +1,27 @@
 import { motion } from 'framer-motion';
-
-const features = [
-    {
-        title: 'Advanced Camera.',
-        description: 'Capture your world in stunning detail. The new 48MP Main camera shoots in super-high resolution.',
-        align: 'left'
-    },
-    {
-        title: 'All-Day Battery.',
-        description: 'Power that keeps up with you. Up to 29 hours of video playback on the big screen.',
-        align: 'right'
-    },
-    {
-        title: 'A17 Pro Chip.',
-        description: 'A monster win for gaming. It’s here. The biggest redesign in the history of Apple GPUs.',
-        align: 'left'
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 export const ProductShowcase = () => {
+    const { t } = useTranslation();
+
+    const features = [
+        {
+            title: t('showcase.camera_title'),
+            description: t('showcase.camera_desc'),
+            align: 'left'
+        },
+        {
+            title: t('showcase.battery_title'),
+            description: t('showcase.battery_desc'),
+            align: 'right'
+        },
+        {
+            title: t('showcase.chip_title'),
+            description: t('showcase.chip_desc'),
+            align: 'left'
+        }
+    ];
+
     return (
         <section className="py-20 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 md:px-8">

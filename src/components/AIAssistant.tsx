@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Send, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 type Message = {
     id: number;
@@ -9,10 +10,11 @@ type Message = {
 };
 
 export const AIAssistant = () => {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [messages, setMessages] = useState<Message[]>([
-        { id: 1, text: "Hello! I'm your Apple Intelligence assistant. How can I help you today?", sender: 'bot' }
+        { id: 1, text: t('ai.greeting'), sender: 'bot' }
     ]);
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -146,7 +148,7 @@ export const AIAssistant = () => {
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
-                                    placeholder="Ask anything..."
+                                    placeholder={t('ai.input_placeholder')}
                                     className="flex-1 bg-gray-100 border-none outline-none px-4 py-3 rounded-full text-sm placeholder-gray-500 focus:ring-2 focus:ring-blue-100 transition-all"
                                 />
                                 <button

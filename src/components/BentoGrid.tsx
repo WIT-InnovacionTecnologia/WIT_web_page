@@ -1,57 +1,60 @@
 import { motion } from 'framer-motion';
-
-const products = [
-    {
-        id: 1,
-        title: 'Vision Pro',
-        subtitle: 'Welcome to the era of spatial computing.',
-        description: 'A new dimension of technology.',
-        className: 'md:col-span-2 bg-black text-white',
-        theme: 'dark'
-    },
-    {
-        id: 2,
-        title: 'MacBook Air',
-        subtitle: 'Lean. Mean. M3 machine.',
-        description: 'Supercharged by M3.',
-        className: 'md:col-span-1 bg-[#F5F5F7] text-black',
-        theme: 'light'
-    },
-    {
-        id: 3,
-        title: 'iPhone 15 Pro',
-        subtitle: 'Titanium.',
-        description: 'So strong. So light. So Pro.',
-        className: 'md:col-span-1 bg-black text-white',
-        theme: 'dark'
-    },
-    {
-        id: 4,
-        title: 'Watch Series 9',
-        subtitle: 'Smarter. Brighter. Mightier.',
-        description: 'A healthy leap ahead.',
-        className: 'md:col-span-2 bg-[#F5F5F7] text-black',
-        theme: 'light'
-    },
-    {
-        id: 5,
-        title: 'iPad Pro',
-        subtitle: 'Supercharged by M2.',
-        description: 'The ultimate iPad experience.',
-        className: 'md:col-span-1 bg-black text-white',
-        theme: 'dark'
-    },
-    {
-        id: 6,
-        title: 'AirPods Pro',
-        subtitle: 'Adaptive Audio.',
-        description: 'Now playing.',
-        className: 'md:col-span-1 bg-[#F5F5F7] text-black',
-        theme: 'light'
-    },
-];
+import { useTranslation } from 'react-i18next';
 
 export const BentoGrid = () => {
+    const { t } = useTranslation();
+
+    const products = [
+        {
+            id: 1,
+            title: t('navbar.vision'),
+            subtitle: 'Welcome to the era of spatial computing.',
+            description: 'A new dimension of technology.',
+            className: 'md:col-span-2 bg-black text-white',
+            theme: 'dark'
+        },
+        {
+            id: 2,
+            title: t('navbar.mac'),
+            subtitle: 'Lean. Mean. M3 machine.',
+            description: 'Supercharged by M3.',
+            className: 'md:col-span-1 bg-[#F5F5F7] text-black',
+            theme: 'light'
+        },
+        {
+            id: 3,
+            title: t('navbar.iphone'),
+            subtitle: 'Titanium.',
+            description: 'So strong. So light. So Pro.',
+            className: 'md:col-span-1 bg-black text-white',
+            theme: 'dark'
+        },
+        {
+            id: 4,
+            title: t('navbar.watch'),
+            subtitle: 'Smarter. Brighter. Mightier.',
+            description: 'A healthy leap ahead.',
+            className: 'md:col-span-2 bg-[#F5F5F7] text-black',
+            theme: 'light'
+        },
+        {
+            id: 5,
+            title: t('navbar.ipad'),
+            subtitle: 'Supercharged by M2.',
+            description: 'The ultimate iPad experience.',
+            className: 'md:col-span-1 bg-black text-white',
+            theme: 'dark'
+        },
+        {
+            id: 6,
+            title: t('navbar.airpods'),
+            subtitle: 'Adaptive Audio.',
+            description: 'Now playing.',
+            className: 'md:col-span-1 bg-[#F5F5F7] text-black',
+            theme: 'light'
+        },
+    ];
+
     return (
         <section className="py-20 px-4 md:px-8 max-w-[1400px] mx-auto bg-white">
             <motion.h2
@@ -60,7 +63,7 @@ export const BentoGrid = () => {
                 viewport={{ once: true }}
                 className="text-3xl md:text-5xl font-semibold mb-12 text-center"
             >
-                The latest. <span className="text-gray-400">Take a look at what’s new.</span>
+                {t('grid.latest')} <span className="text-gray-400">{t('grid.whats_new')}</span>
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -79,8 +82,8 @@ export const BentoGrid = () => {
                             <p className="text-lg font-medium opacity-80 text-center">{product.description}</p>
 
                             <div className="mt-8 flex space-x-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className="text-blue-500 hover:underline text-sm font-medium">Learn more &gt;</button>
-                                <button className="text-blue-500 hover:underline text-sm font-medium">Buy &gt;</button>
+                                <button className="text-blue-500 hover:underline text-sm font-medium">{t('grid.learn_more')} &gt;</button>
+                                <button className="text-blue-500 hover:underline text-sm font-medium">{t('grid.buy')} &gt;</button>
                             </div>
                         </div>
 
