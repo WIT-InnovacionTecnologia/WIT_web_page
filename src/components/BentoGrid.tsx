@@ -1,0 +1,98 @@
+import { motion } from 'framer-motion';
+
+const products = [
+    {
+        id: 1,
+        title: 'Vision Pro',
+        subtitle: 'Welcome to the era of spatial computing.',
+        description: 'A new dimension of technology.',
+        className: 'md:col-span-2 bg-black text-white',
+        theme: 'dark'
+    },
+    {
+        id: 2,
+        title: 'MacBook Air',
+        subtitle: 'Lean. Mean. M3 machine.',
+        description: 'Supercharged by M3.',
+        className: 'md:col-span-1 bg-[#F5F5F7] text-black',
+        theme: 'light'
+    },
+    {
+        id: 3,
+        title: 'iPhone 15 Pro',
+        subtitle: 'Titanium.',
+        description: 'So strong. So light. So Pro.',
+        className: 'md:col-span-1 bg-black text-white',
+        theme: 'dark'
+    },
+    {
+        id: 4,
+        title: 'Watch Series 9',
+        subtitle: 'Smarter. Brighter. Mightier.',
+        description: 'A healthy leap ahead.',
+        className: 'md:col-span-2 bg-[#F5F5F7] text-black',
+        theme: 'light'
+    },
+    {
+        id: 5,
+        title: 'iPad Pro',
+        subtitle: 'Supercharged by M2.',
+        description: 'The ultimate iPad experience.',
+        className: 'md:col-span-1 bg-black text-white',
+        theme: 'dark'
+    },
+    {
+        id: 6,
+        title: 'AirPods Pro',
+        subtitle: 'Adaptive Audio.',
+        description: 'Now playing.',
+        className: 'md:col-span-1 bg-[#F5F5F7] text-black',
+        theme: 'light'
+    },
+];
+
+export const BentoGrid = () => {
+    return (
+        <section className="py-20 px-4 md:px-8 max-w-[1400px] mx-auto bg-white">
+            <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-5xl font-semibold mb-12 text-center"
+            >
+                The latest. <span className="text-gray-400">Take a look at what’s new.</span>
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {products.map((product) => (
+                    <motion.div
+                        key={product.id}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        className={`relative rounded-3xl overflow-hidden h-[500px] group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-500 ${product.className}`}
+                    >
+                        <div className="absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10">
+                            <h3 className="text-sm font-semibold uppercase tracking-wide opacity-80 mb-1">{product.title}</h3>
+                            <p className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2">{product.subtitle}</p>
+                            <p className="text-lg font-medium opacity-80 text-center">{product.description}</p>
+
+                            <div className="mt-8 flex space-x-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button className="text-blue-500 hover:underline text-sm font-medium">Learn more &gt;</button>
+                                <button className="text-blue-500 hover:underline text-sm font-medium">Buy &gt;</button>
+                            </div>
+                        </div>
+
+                        {/* Placeholder Image Area */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1/2 flex items-center justify-center">
+                            <div className={`w-3/4 h-3/4 rounded-xl flex items-center justify-center opacity-50 ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
+                                <span className="text-xs">Product Image</span>
+                            </div>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+        </section>
+    );
+};
