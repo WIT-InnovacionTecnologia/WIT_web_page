@@ -2,6 +2,7 @@ import { MainLayout } from './layouts/MainLayout';
 import { Hero } from './components/Hero';
 import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
+import { AIAssistant } from './components/AIAssistant';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <BentoGrid />
       <ProductShowcase />
+      <AIAssistant />
     </MainLayout>
   );
 }
