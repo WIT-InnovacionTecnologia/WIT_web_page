@@ -102,9 +102,13 @@ export const Navbar = () => {
 
                     {/* Desktop Layout */}
                     <div className="hidden md:flex items-center justify-between w-full text-xs font-normal relative">
-                        {/* Apple Logo */}
+                        {/* WIT Logo */}
                         <a href="/" className={`opacity-80 hover:opacity-100 transition-opacity ${isSearchOpen ? 'hidden' : 'block'}`}>
-                            <Apple size={15} fill="currentColor" className="text-current" />
+                            <img
+                                src={`${import.meta.env.BASE_URL}wit-logo.png`}
+                                alt="WIT"
+                                className="h-[20px] w-auto object-contain"
+                            />
                         </a>
 
                         {/* Search Input (Desktop) */}
