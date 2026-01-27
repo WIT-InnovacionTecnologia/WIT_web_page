@@ -45,7 +45,7 @@ export const ProductShowcase = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, margin: "-20%" }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                            className="flex-1 w-full aspect-square md:aspect-[4/3] bg-gray-50 rounded-3xl shadow-lg border border-gray-100 flex items-center justify-center relative overflow-hidden group"
+                            className="flex-1 w-full aspect-square md:aspect-[4/3] bg-gray-50 shadow-lg border border-gray-100 flex items-center justify-center relative overflow-hidden group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white opacity-50" />
                             <div className="z-10 text-center p-6">

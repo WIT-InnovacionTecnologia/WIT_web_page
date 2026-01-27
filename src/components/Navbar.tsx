@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ShoppingBag, Search, Apple, ChevronRight } from 'lucide-react';
+import { Menu, X, ShoppingBag, Search, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { navData } from '../lib/navData';
@@ -103,7 +103,7 @@ export const Navbar = () => {
                     {/* Desktop Layout */}
                     <div className="hidden md:flex items-center justify-between w-full text-xs font-normal relative">
                         {/* WIT Logo */}
-                        <a href="/" className={`opacity-80 hover:opacity-100 transition-opacity ${isSearchOpen ? 'hidden' : 'block'}`}>
+                        <a href="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
                             <img
                                 src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                 alt="WIT"
@@ -174,8 +174,12 @@ export const Navbar = () => {
                     {/* Mobile Layout */}
                     <div className="flex md:hidden items-center justify-between w-full text-current">
                         <div className="z-50 logo-container transition-opacity duration-300">
-                            <a href="/" className={`block ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
-                                <Apple size={18} fill="currentColor" />
+                            <a href="/" className={`flex items-center ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
+                                <img
+                                    src={`${import.meta.env.BASE_URL}wit-logo.png`}
+                                    alt="WIT"
+                                    className="h-[24px] w-auto object-contain"
+                                />
                             </a>
                         </div>
 

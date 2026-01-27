@@ -71,7 +71,7 @@ export const BentoGrid = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className={`relative rounded-3xl overflow-hidden h-[500px] group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-500 ${product.className}`}
+                        className={`relative overflow-hidden h-[500px] group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-500 ${product.className}`}
                     >
                         <div className="absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10">
                             <h3 className="text-sm font-semibold uppercase tracking-wide opacity-80 mb-1">{product.title}</h3>
@@ -86,7 +86,7 @@ export const BentoGrid = () => {
 
                         {/* Placeholder Image Area */}
                         <div className="absolute bottom-0 left-0 right-0 h-1/2 flex items-center justify-center">
-                            <div className={`w-3/4 h-3/4 rounded-xl flex items-center justify-center opacity-50 ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
+                            <div className={`w-3/4 h-3/4 flex items-center justify-center opacity-50 ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
                                 <span className="text-xs">Product Image</span>
                             </div>
                         </div>
