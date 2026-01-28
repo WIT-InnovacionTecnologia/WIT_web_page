@@ -5,6 +5,7 @@ import { ProductShowcase } from './components/ProductShowcase';
 import { AIAssistant } from './components/AIAssistant';
 
 import Beams from './components/Beams';
+import { LightRays } from './components/LightRays';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           scale={0.1}
           rotation={30}
         />
+        <LightRays />
       </div>
       <div className="relative z-10">
         <Hero />

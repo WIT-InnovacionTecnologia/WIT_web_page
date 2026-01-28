@@ -56,7 +56,7 @@ export const BentoGrid = () => {
     ];
 
     return (
-        <section className="py-20 px-4 md:px-8 max-w-[1400px] mx-auto bg-white dark:bg-transparent transition-colors duration-300">
+        <section className="py-20 px-4 md:px-8 bg-white dark:bg-transparent transition-colors duration-300">
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
