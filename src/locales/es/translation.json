@@ -1,44 +1,57 @@
 {
     "navbar": {
-        "store": "Tienda",
-        "mac": "Mac",
-        "ipad": "iPad",
-        "iphone": "iPhone",
-        "watch": "Watch",
-        "vision": "Vision",
-        "airpods": "AirPods",
-        "tv_home": "TV y Casa",
+        "store": "Sobre WIT",
+        "mac": "Inteligencia Artificial",
+        "ipad": "Gestión de Flotas",
+        "iphone": "Conectividad",
+        "watch": "Entretenimiento",
+        "vision": "Soluciones",
+        "airpods": "Proyectos",
+        "tv_home": "Empresa",
         "entertainment": "Entretenimiento",
-        "accessories": "Accesorios",
-        "support": "Soporte",
-        "search_placeholder": "Buscar en apple.com",
+        "accessories": "Soporte",
+        "support": "Contacto",
+        "search_placeholder": "Buscar soluciones WIT",
         "quick_links": "Enlaces Rápidos"
     },
     "hero": {
-        "title": "Ultimate Pad",
-        "subtitle": "Adorable. Dibujable. Mágico.",
-        "buy": "Comprar",
-        "learn_more": "Más información"
+        "title": "Desarrollamos el futuro de tu empresa",
+        "subtitle": "Especialistas en modernizar procesos críticos mediante Inteligencia Artificial, conectividad y telemetría avanzada.",
+        "buy": "Contacto",
+        "learn_more": "Ver soluciones"
+    },
+    "about": {
+        "title": "Nuestra Empresa",
+        "desc": "Especialistas en la creación e implementación de herramientas NTIC que permiten rentabilizar y optimizar sus procesos de negocio.",
+        "mission_title": "Misión",
+        "mission_desc": "Desarrollar soluciones que otorguen valor agregado y diferenciación, asegurando la sustentabilidad y el desarrollo.",
+        "vision_title": "Objetivo",
+        "vision_desc": "Posicionarnos como referentes tecnológicos en América Latina, impulsando un mundo moderno y eficiente."
     },
     "grid": {
-        "latest": "Lo último.",
-        "whats_new": "Echa un vistazo a las novedades.",
+        "latest": "Innovación WIT.",
+        "whats_new": "Echa un vistazo a nuestras aplicaciones.",
         "learn_more": "Más info",
-        "buy": "Comprar"
+        "buy": "Ver más"
     },
     "showcase": {
-        "camera_title": "Cámara Avanzada.",
-        "camera_desc": "Captura tu mundo con un detalle asombroso. La nueva cámara principal de 48 MP dispara en súper alta resolución.",
-        "battery_title": "Batería para todo el día.",
-        "battery_desc": "Potencia que te sigue el ritmo. Hasta 29 horas de reproducción de video en la pantalla grande.",
-        "chip_title": "Chip A17 Pro.",
-        "chip_desc": "Una victoria monstruosa para los juegos. Ya está aquí. El mayor rediseño en la historia de las GPU de Apple."
+        "ai_title": "Asistente Virtual IA",
+        "ai_desc": "Algoritmos de Inteligencia Artificial que aprenden de la interacción para entregar una atención fluida y personalizada.",
+        "fleet_title": "Gestión de Flotas (Live GPS)",
+        "fleet_desc": "Monitoreo 24/7 con telemetría avanzada y reportes personalizados para el seguimiento de vehículos en tiempo real.",
+        "movie_title": "Entretenimiento a Bordo (Go Movie)",
+        "movie_desc": "Más de 100 horas de contenido premium sin necesidad de conectividad externa para transporte público y privado.",
+        "wifi_title": "Conectividad (Urban WiFi)",
+        "wifi_desc": "Conectividad de alto estándar que entrega datos estratégicos y métricas de comportamiento de usuarios."
+    },
+    "trusted": {
+        "title": "Empresas que confían en nosotros"
     },
     "ai": {
-        "greeting": "¡Hola! Soy tu asistente de Apple Intelligence. ¿Cómo puedo ayudarte hoy?",
-        "input_placeholder": "Pregunta lo que quieras..."
+        "greeting": "¡Hola! Soy tu asistente de WIT Intelligence. ¿Cómo puedo ayudarte con nuestras soluciones hoy?",
+        "input_placeholder": "Pregunta sobre Live GPS, Go Movie o IA..."
     },
     "footer": {
-        "copyright": "Copyright © 2024 Apple Inc. Todos los derechos reservados."
+        "copyright": "Copyright © 2024 WIT - Innovación y Desarrollo. Todos los derechos reservados."
     }
 }

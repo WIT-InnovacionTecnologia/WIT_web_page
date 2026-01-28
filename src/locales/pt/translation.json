@@ -1,44 +1,57 @@
 {
     "navbar": {
-        "store": "Loja",
-        "mac": "Mac",
-        "ipad": "iPad",
-        "iphone": "iPhone",
-        "watch": "Watch",
-        "vision": "Vision",
-        "airpods": "AirPods",
-        "tv_home": "TV e Casa",
+        "store": "Sobre a WIT",
+        "mac": "IA",
+        "ipad": "Gestão de Frotas",
+        "iphone": "Conectividade",
+        "watch": "Entretenimento",
+        "vision": "Soluções",
+        "airpods": "Projetos",
+        "tv_home": "Empresa",
         "entertainment": "Entretenimento",
-        "accessories": "Acessórios",
-        "support": "Suporte",
-        "search_placeholder": "Buscar em apple.com",
+        "accessories": "Suporte",
+        "support": "Contato",
+        "search_placeholder": "Buscar soluções WIT",
         "quick_links": "Links Rápidos"
     },
     "hero": {
-        "title": "Ultimate Pad",
-        "subtitle": "Adorável. Desenhável. Mágico.",
-        "buy": "Comprar",
-        "learn_more": "Saiba mais"
+        "title": "Desenvolvemos o futuro da sua empresa",
+        "subtitle": "Especialistas em modernizar processos críticos através de IA, conectividade e telemetría avançada.",
+        "buy": "Contato",
+        "learn_more": "Ver soluções"
+    },
+    "about": {
+        "title": "Nossa Empresa",
+        "desc": "Especialistas na criação e implementação de ferramentas NTIC que permitem rentabilizar e otimizar processos de negócio.",
+        "mission_title": "Missão",
+        "mission_desc": "Desenvolver soluções que agreguem valor e diferenciação, garantindo a sustentabilidade financeira e o desenvolvimento profissional.",
+        "vision_title": "Objetivo",
+        "vision_desc": "Posicionar-nos como referências tecnológicas na América Latina, impulsionando um mundo moderno e eficiente."
     },
     "grid": {
-        "latest": "As novidades.",
-        "whats_new": "Confira o que há de novo.",
+        "latest": "Inovação WIT.",
+        "whats_new": "Confira nossos aplicativos.",
         "learn_more": "Saiba mais",
-        "buy": "Comprar"
+        "buy": "Ver mais"
     },
     "showcase": {
-        "camera_title": "Câmera Avançada.",
-        "camera_desc": "Capture seu mundo com detalhes impressionantes. A nova câmera principal de 48 MP fotografa em super alta resolução.",
-        "battery_title": "Bateria para o dia todo.",
-        "battery_desc": "Potência que acompanha você. Até 29 horas de reprodução de vídeo na tela grande.",
-        "chip_title": "Chip A17 Pro.",
-        "chip_desc": "Uma vitória monstruosa para jogos. Chegou. O maior redesenho na história das GPUs da Apple."
+        "ai_title": "Assistente Virtual IA",
+        "ai_desc": "Algoritmos de IA que aprendem com a interação para oferecer um atendimento fluido e personalizado.",
+        "fleet_title": "Gestão de Frotas (Live GPS)",
+        "fleet_desc": "Monitoramento 24/7 com telemetria avançada e relatórios personalizados para veículos.",
+        "movie_title": "Entretenimento a Bordo (Go Movie)",
+        "movie_desc": "Mais de 100 horas de conteúdo premium sem conectividade externa para transporte.",
+        "wifi_title": "Conectividade (Urban WiFi)",
+        "wifi_desc": "Conectividade de alto padrão que entrega dados estratégicos e métricas de comportamento."
+    },
+    "trusted": {
+        "title": "Empresas que confiam em nós"
     },
     "ai": {
-        "greeting": "Olá! Sou seu assistente Apple Intelligence. Como posso ajudar você hoje?",
-        "input_placeholder": "Pergunte qualquer coisa..."
+        "greeting": "Olá! Sou o seu assistente WIT Intelligence. Como posso ajudar com nossas soluções hoje?",
+        "input_placeholder": "Pergunte sobre Live GPS, Go Movie ou IA..."
     },
     "footer": {
-        "copyright": "Copyright © 2024 Apple Inc. Todos os direitos reservados."
+        "copyright": "Copyright © 2024 WIT - Inovação e Desenvolvimento. Todos os direitos reservados."
     }
 }

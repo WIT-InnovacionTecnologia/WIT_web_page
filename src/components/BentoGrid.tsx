@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import MagicBento from './animations/MagicBento';
+import type { BentoCardProps } from './animations/MagicBento';
 
 export const BentoGrid = () => {
     const { t } = useTranslation();
@@ -7,51 +9,27 @@ export const BentoGrid = () => {
     const products = [
         {
             id: 1,
-            title: t('navbar.vision'),
-            subtitle: 'Welcome to the era of spatial computing.',
-            description: 'A new dimension of technology.',
-            className: 'md:col-span-2 bg-black text-white',
-            theme: 'dark'
+            title: t('showcase.ai_title'),
+            description: 'Inteligencia que evoluciona. ' + t('showcase.ai_desc'),
+            color: '#000000'
         },
         {
             id: 2,
-            title: t('navbar.mac'),
-            subtitle: 'Lean. Mean. M3 machine.',
-            description: 'Supercharged by M3.',
-            className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
-            theme: 'light'
+            title: t('showcase.fleet_title'),
+            description: 'Control total de tu flota. ' + t('showcase.fleet_desc'),
+            color: '#1a1a1a'
         },
         {
             id: 3,
-            title: t('navbar.iphone'),
-            subtitle: 'Titanium.',
-            description: 'So strong. So light. So Pro.',
-            className: 'md:col-span-1 bg-black text-white',
-            theme: 'dark'
+            title: t('showcase.movie_title'),
+            description: 'Cine a bordo, sin límites. ' + t('showcase.movie_desc'),
+            color: '#000000'
         },
         {
             id: 4,
-            title: t('navbar.watch'),
-            subtitle: 'Smarter. Brighter. Mightier.',
-            description: 'A healthy leap ahead.',
-            className: 'md:col-span-2 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
-            theme: 'light'
-        },
-        {
-            id: 5,
-            title: t('navbar.ipad'),
-            subtitle: 'Supercharged by M2.',
-            description: 'The ultimate iPad experience.',
-            className: 'md:col-span-1 bg-black text-white',
-            theme: 'dark'
-        },
-        {
-            id: 6,
-            title: t('navbar.airpods'),
-            subtitle: 'Adaptive Audio.',
-            description: 'Now playing.',
-            className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
-            theme: 'light'
+            title: t('showcase.wifi_title'),
+            description: 'Más que solo conexión. ' + t('showcase.wifi_desc'),
+            color: '#1a1a1a'
         },
     ];
 
@@ -66,35 +44,13 @@ export const BentoGrid = () => {
                 {t('grid.latest')} <span className="text-gray-400 dark:text-gray-500">{t('grid.whats_new')}</span>
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((product) => (
-                    <motion.div
-                        key={product.id}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                        className={`relative overflow-hidden h-[500px] group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-500 ${product.className}`}
-                    >
-                        <div className="absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10">
-                            <h3 className="text-sm font-semibold uppercase tracking-wide opacity-80 mb-1">{product.title}</h3>
-                            <p className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2">{product.subtitle}</p>
-                            <p className="text-lg font-medium opacity-80 text-center">{product.description}</p>
-
-                            <div className="mt-8 flex space-x-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className="text-blue-500 hover:underline text-sm font-medium">{t('grid.learn_more')} &gt;</button>
-                                <button className="text-blue-500 hover:underline text-sm font-medium">{t('grid.buy')} &gt;</button>
-                            </div>
-                        </div>
-
-                        {/* Placeholder Image Area */}
-                        <div className="absolute bottom-0 left-0 right-0 h-1/2 flex items-center justify-center">
-                            <div className={`w-3/4 h-3/4 flex items-center justify-center opacity-50 ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
-                                <span className="text-xs">Product Image</span>
-                            </div>
-                        </div>
-                    </motion.div>
-                ))}
+            <div className="flex justify-center">
+                <MagicBento
+                    data={products as BentoCardProps[]}
+                    enableStars={true}
+                    enableTilt={true}
+                    glowColor="59, 130, 246" // WIT Blue
+                />
             </div>
         </section>
     );

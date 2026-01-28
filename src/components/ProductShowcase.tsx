@@ -6,18 +6,18 @@ export const ProductShowcase = () => {
 
     const features = [
         {
-            title: t('showcase.camera_title'),
-            description: t('showcase.camera_desc'),
+            title: t('showcase.ai_title'),
+            description: t('showcase.ai_desc'),
             align: 'left'
         },
         {
-            title: t('showcase.battery_title'),
-            description: t('showcase.battery_desc'),
+            title: t('showcase.fleet_title'),
+            description: t('showcase.fleet_desc'),
             align: 'right'
         },
         {
-            title: t('showcase.chip_title'),
-            description: t('showcase.chip_desc'),
+            title: t('showcase.wifi_title'),
+            description: t('showcase.wifi_desc'),
             align: 'left'
         }
     ];
