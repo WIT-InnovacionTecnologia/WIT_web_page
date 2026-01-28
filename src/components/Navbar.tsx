@@ -138,10 +138,10 @@ export const Navbar = () => {
     return (
         <nav
             onMouseLeave={() => setActiveHover(null)}
-            className={`fixed top-0 w-full z-50 transition-colors duration-500 ${isOpen || activeHover || isSearchOpen ? 'bg-white dark:bg-black text-black dark:text-white' : scrolled ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 text-black dark:text-white' : 'bg-transparent text-black dark:text-white'
+            className={`fixed top-0 w-full z-50 transition-colors duration-500 ${isOpen || activeHover || isSearchOpen ? 'bg-white dark:bg-black text-black dark:text-white' : scrolled ? 'bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 text-black dark:text-white' : 'bg-transparent text-black dark:text-white'
                 }`}
         >
-            <div className="max-w-[1024px] mx-auto px-4 sm:px-6 relative z-50 bg-inherit">
+            <div className="max-w-[1024px] mx-auto px-4 sm:px-6 relative z-50">
                 <div className="flex items-center justify-between h-[44px]">
 
                     {/* Desktop Layout */}
@@ -195,7 +195,7 @@ export const Navbar = () => {
                         </div>
 
                         {/* Right Icons / Close Search / Language */}
-                        <div className="flex items-center space-x-6 z-10 bg-inherit pl-4">
+                        <div className="flex items-center space-x-6 z-10 pl-4">
                             {!isSearchOpen ? (
                                 <>
                                     <Search
