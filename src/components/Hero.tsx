@@ -36,7 +36,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                className="mt-12 w-full max-w-6xl px-4"
+                className="mt-12 w-full px-4"
             >
                 <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 shadow-xl flex items-center justify-center overflow-hidden border border-gray-200 dark:border-gray-700">
                     {/* Placeholder for User Product Image */}
