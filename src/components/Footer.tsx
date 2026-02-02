@@ -1,36 +1,62 @@
-
+import logoWhite from '../assets/wit-global-partnership-white.png';
+import logoBlack from '../assets/wit-global-partnership.png';
+import footerBar from '../assets/footer-bar.png';
 
 export const Footer = () => {
+    // Text Variables
+    const copyrightText = `Copyright © ${new Date().getFullYear()} WIT. Todos los derechos reservados.`;
+
     const footerSections = [
         {
-            title: 'Shop and Learn',
-            links: ['Store', 'Mac', 'iPad', 'iPhone', 'Watch', 'Vision', 'AirPods', 'TV & Home', 'AirTag', 'Accessories', 'Gift Cards'],
+            title: 'Soluciones',
+            links: ['Desarrollo de Software', 'Consultoría TI', 'Transformación Digital', 'Ciberseguridad'],
         },
         {
-            title: 'Apple Wallet',
-            links: ['Wallet', 'Apple Card', 'Apple Pay', 'Apple Cash'],
+            title: 'Plataformas',
+            links: ['SaaS', 'Cloud Computing', 'Integraciones', 'APIs'],
         },
         {
-            title: 'Account',
-            links: ['Manage Your Apple ID', 'Apple Store Account', 'iCloud.com'],
+            title: 'Empresa',
+            links: ['Sobre Nosotros', 'Casos de Éxito', 'Partners', 'Carreras'],
         },
         {
-            title: 'Entertainment',
-            links: ['Apple One', 'Apple TV+', 'Apple Music', 'Apple Arcade', 'Apple Fitness+', 'Apple News+', 'Apple Podcasts', 'Apple Books', 'App Store'],
+            title: 'Contacto',
+            links: [
+                'Casa Matriz: Obispo Umaña 633, Estación Central, Santiago',
+                'Iquique: Barros Arana 825',
+                'Antofagasta: Pedro Aguirre Cerda 121160',
+                '+56 9 9848 1845',
+                'contacto@wit.la'
+            ],
         },
     ];
 
     return (
-        <footer className="bg-gray-100 text-gray-600 text-xs py-10">
-            <div className="w-full px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <footer id="footer" className="bg-gray-100 dark:bg-black text-gray-600 dark:text-white text-xs pt-10 border-t border-gray-200 dark:border-gray-800 flex flex-col justify-between">
+            <div className="w-full px-4 sm:px-6 lg:px-8 mb-10">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+                    {/* Logo Section */}
+                    <div className="col-span-2 md:col-span-1 mb-6 md:mb-0">
+                        <img
+                            src={logoBlack}
+                            alt="WIT Logo"
+                            className="h-24 md:h-32 w-auto dark:hidden mb-4"
+                        />
+                        <img
+                            src={logoWhite}
+                            alt="WIT Logo"
+                            className="h-24 md:h-32 w-auto hidden dark:block mb-4"
+                        />
+                    </div>
+
+                    {/* Links Sections */}
                     {footerSections.map((section) => (
                         <div key={section.title}>
-                            <h3 className="font-semibold text-gray-900 mb-2">{section.title}</h3>
+                            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{section.title}</h3>
                             <ul className="space-y-2">
                                 {section.links.map((link) => (
                                     <li key={link}>
-                                        <a href="#" className="hover:underline hover:text-gray-900 transition-colors">
+                                        <a href="#" className="hover:underline hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
                                             {link}
                                         </a>
                                     </li>
@@ -40,23 +66,21 @@ export const Footer = () => {
                     ))}
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                    <p className="mb-2">More ways to shop: <a href="#" className="text-blue-600 hover:underline">Find an Apple Store</a> or <a href="#" className="text-blue-600 hover:underline">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p>Copyright © {new Date().getFullYear()} Apple Inc. All rights reserved.</p>
-                        <div className="flex space-x-4 mt-2 md:mt-0">
-                            <a href="#" className="hover:underline">Privacy Policy</a>
-                            <span className="text-gray-300">|</span>
-                            <a href="#" className="hover:underline">Terms of Use</a>
-                            <span className="text-gray-300">|</span>
-                            <a href="#" className="hover:underline">Sales and Refunds</a>
-                            <span className="text-gray-300">|</span>
-                            <a href="#" className="hover:underline">Legal</a>
-                            <span className="text-gray-300">|</span>
-                            <a href="#" className="hover:underline">Site Map</a>
+                <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <p className="text-center">{copyrightText}</p>
+                        <div className="flex space-x-4">
+                            <a href="#" className="hover:underline">Política de Privacidad</a>
+                            <span className="text-gray-300 dark:text-white">|</span>
+                            <a href="#" className="hover:underline">Términos de Uso</a>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Colorful Footer Bar */}
+            <div className="w-full">
+                <img src={footerBar} alt="WIT Footer Bar" className="w-full h-auto object-cover" />
             </div>
         </footer>
     );
