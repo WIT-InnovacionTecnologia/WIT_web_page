@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ShoppingBag, Search, ChevronRight, Globe, Sun, Moon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { navData } from '../lib/navData';
@@ -113,6 +114,7 @@ export const Navbar = () => {
         }
     };
 
+    const searchQuickLinksTitle = t('navbar.quick_links');
     const searchQuickLinks = [
         t('navbar.store'),
         t('navbar.vision'),
@@ -122,17 +124,12 @@ export const Navbar = () => {
     ];
 
     const navItems = [
-        { key: 'store', label: t('navbar.store') },
-        { key: 'mac', label: t('navbar.mac') },
-        { key: 'ipad', label: t('navbar.ipad') },
-        { key: 'iphone', label: t('navbar.iphone') },
-        { key: 'watch', label: t('navbar.watch') },
-        { key: 'vision', label: t('navbar.vision') },
-        { key: 'airpods', label: t('navbar.airpods') },
-        { key: 'tv_home', label: t('navbar.tv_home') },
-        { key: 'entertainment', label: t('navbar.entertainment') },
-        { key: 'accessories', label: t('navbar.accessories') },
-        { key: 'support', label: t('navbar.support') },
+        { key: 'Producto', label: 'Producto' },
+        { key: 'Clientes', label: 'Clientes' },
+        { key: 'Partners', label: 'Partners' },
+        { key: 'IA', label: 'IA' },
+        { key: 'BI', label: 'BI' },
+        { key: 'Acerca de WIT', label: 'Acerca de WIT' },
     ];
 
     return (
@@ -287,12 +284,22 @@ export const Navbar = () => {
                                 {navData[activeHover].map((column, idx) => (
                                     <div key={idx} className="flex flex-col space-y-4 min-w-[150px]">
                                         <h4 className="text-gray-500 dark:text-gray-400 text-xs font-semibold">{column.title}</h4>
-                                        <ul className="space-y-2">
+                                        <ul className="space-y-2 mt-2">
                                             {column.links.map((link) => (
                                                 <li key={link}>
-                                                    <a href="#" className="text-gray-900 dark:text-gray-100 text-lg md:text-xl font-semibold hover:text-blue-600 dark:hover:text-blue-400">
-                                                        {link}
-                                                    </a>
+                                                    {link === 'Timeline' ? (
+                                                        <Link
+                                                            to="/timeline"
+                                                            className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs block py-1"
+                                                            onClick={() => setActiveHover(null)} // Close menu on click
+                                                        >
+                                                            {link}
+                                                        </Link>
+                                                    ) : (
+                                                        <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs block py-1">
+                                                            {link}
+                                                        </a>
+                                                    )}
                                                 </li>
                                             ))}
                                         </ul>
@@ -315,7 +322,7 @@ export const Navbar = () => {
                         className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
                     >
                         <div className="max-w-[600px] mx-auto px-4 py-10">
-                            <h3 className="text-gray-500 dark:text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">{t('navbar.quick_links')}</h3>
+                            <h3 className="text-gray-500 dark:text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">{searchQuickLinksTitle}</h3>
                             <ul className="space-y-1">
                                 {searchQuickLinks.map((link, idx) => (
                                     <motion.li
