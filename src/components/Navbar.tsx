@@ -17,7 +17,7 @@ export const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        // Check system preference or localStorage
+        // Check for saved user preference
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             setIsDarkMode(true);
             document.documentElement.classList.add('dark');
@@ -55,8 +55,10 @@ export const Navbar = () => {
     useEffect(() => {
         if (isOpen || isSearchOpen) {
             document.body.style.overflow = 'hidden';
+            document.body.classList.add('mobile-menu-open');
         } else {
             document.body.style.overflow = 'unset';
+            document.body.classList.remove('mobile-menu-open');
         }
     }, [isOpen, isSearchOpen]);
 
@@ -297,9 +299,9 @@ export const Navbar = () => {
                                                             {link}
                                                         </Link>
                                                     ) : (
-                                                        <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs block py-1">
+                                                        <Link to="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs block py-1">
                                                             {link}
-                                                        </a>
+                                                        </Link>
                                                     )}
                                                 </li>
                                             ))}
@@ -333,10 +335,10 @@ export const Navbar = () => {
                                         transition={{ delay: idx * 0.05 + 0.1 }}
                                         className="group"
                                     >
-                                        <a href="#" className="text-gray-900 dark:text-gray-100 text-lg hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 block py-1 px-4 -mx-4 rounded-lg flex justify-between items-center">
+                                        <Link to="#" className="text-gray-900 dark:text-gray-100 text-lg hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 block py-1 px-4 -mx-4 rounded-lg flex justify-between items-center">
                                             {link}
                                             <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 text-gray-400" />
-                                        </a>
+                                        </Link>
                                     </motion.li>
                                 ))}
                             </ul>

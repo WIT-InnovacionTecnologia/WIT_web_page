@@ -17,3 +17,7 @@
 .glass {
   @apply bg-white/70 backdrop-blur-md border-b border-white/20;
 }
+
+body.mobile-menu-open #ai-assistant {
+  display: none !important;
+}
