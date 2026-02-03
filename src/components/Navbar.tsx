@@ -17,8 +17,8 @@ export const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        // Check for saved user preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Check for saved user preference, default to light
+        if (localStorage.theme === 'dark') {
             setIsDarkMode(true);
             document.documentElement.classList.add('dark');
         } else {
