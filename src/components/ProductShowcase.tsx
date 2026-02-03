@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 export const ProductShowcase = () => {
     const { t } = useTranslation();
 
+    // Feature Sections - Change titles and descriptions here
     const features = [
         {
             title: t('showcase.camera_title'),
