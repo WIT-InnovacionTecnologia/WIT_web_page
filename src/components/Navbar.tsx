@@ -261,7 +261,7 @@ export const Navbar = () => {
 
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
-                                className={`text-current focus:outline-none transition-transform duration-300 ${isOpen ? 'rotate-90 text-white' : ''}`}
+                                className={`text-current focus:outline-none transition-transform duration-300 ${isOpen ? 'rotate-90 text-black dark:text-white' : ''}`}
                             >
                                 {isOpen ? <X size={20} /> : <Menu size={20} />}
                             </button>
@@ -352,17 +352,17 @@ export const Navbar = () => {
                 {isOpen && (
                     <motion.div
                         initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "100vh" }}
+                        animate={{ opacity: 1, height: "100dvh" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.4, ease: [0.645, 0.045, 0.355, 1.000] }}
-                        className="md:hidden fixed inset-0 bg-white dark:bg-black z-40 pt-[48px] px-8"
+                        className="md:hidden fixed inset-0 bg-white dark:bg-black z-40 pt-[48px] px-8 overflow-y-auto"
                     >
                         <motion.div
                             variants={containerVariants}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
-                            className="flex flex-col h-full"
+                            className="flex flex-col min-h-full"
                         >
                             <div className="space-y-1">
                                 {navItems.map((item) => {
