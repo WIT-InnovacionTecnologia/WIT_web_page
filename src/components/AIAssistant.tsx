@@ -11,10 +11,16 @@ type Message = {
 
 export const AIAssistant = () => {
     const { t } = useTranslation();
+
+    // Text Variables
+    const assistantTitle = "Apple Intelligence";
+    const greetingMessage = t('ai.greeting');
+    const inputPlaceholder = t('ai.input_placeholder');
+
     const [isOpen, setIsOpen] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [messages, setMessages] = useState<Message[]>([
-        { id: 1, text: t('ai.greeting'), sender: 'bot' }
+        { id: 1, text: greetingMessage, sender: 'bot' }
     ]);
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -87,7 +93,7 @@ export const AIAssistant = () => {
                                 <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
                                     <Sparkles size={16} className="text-white" />
                                 </div>
-                                <span className="font-semibold text-gray-800 dark:text-gray-200">Apple Intelligence</span>
+                                <span className="font-semibold text-gray-800 dark:text-gray-200">{assistantTitle}</span>
                             </div>
                             <button
                                 onClick={() => setIsOpen(false)}
@@ -148,7 +154,7 @@ export const AIAssistant = () => {
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
-                                    placeholder={t('ai.input_placeholder')}
+                                    placeholder={inputPlaceholder}
                                     className="flex-1 bg-gray-100 dark:bg-gray-700 border-none outline-none px-4 py-3 rounded-full text-sm placeholder-gray-500 dark:placeholder-gray-400 dark:text-white focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-all"
                                 />
                                 <button

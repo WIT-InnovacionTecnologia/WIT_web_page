@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next';
 export const BentoGrid = () => {
     const { t } = useTranslation();
 
+    // Section Titles
+    const sectionTitle = t('grid.latest');
+    const sectionSubtitle = t('grid.whats_new');
+    const learnMoreText = t('grid.learn_more');
+    const buyText = t('grid.buy');
+
     const products = [
         {
             id: 1,
@@ -63,7 +69,7 @@ export const BentoGrid = () => {
                 viewport={{ once: true }}
                 className="text-3xl md:text-5xl font-semibold mb-12 text-center text-black dark:text-white"
             >
-                {t('grid.latest')} <span className="text-gray-400 dark:text-gray-500">{t('grid.whats_new')}</span>
+                {sectionTitle} <span className="text-gray-400 dark:text-gray-500">{sectionSubtitle}</span>
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -82,8 +88,8 @@ export const BentoGrid = () => {
                             <p className="text-lg font-medium opacity-80 text-center">{product.description}</p>
 
                             <div className="mt-8 flex space-x-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className="text-blue-500 hover:underline text-sm font-medium">{t('grid.learn_more')} &gt;</button>
-                                <button className="text-blue-500 hover:underline text-sm font-medium">{t('grid.buy')} &gt;</button>
+                                <button className="text-blue-500 hover:underline text-sm font-medium">{learnMoreText} &gt;</button>
+                                <button className="text-blue-500 hover:underline text-sm font-medium">{buyText} &gt;</button>
                             </div>
                         </div>
 

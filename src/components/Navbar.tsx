@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ShoppingBag, Search, ChevronRight, Globe, Sun, Moon } from 'lucide-react';
+import { Menu, X, ShoppingBag, Search, ChevronRight, Globe, Sun, Moon, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
@@ -12,6 +12,7 @@ export const Navbar = () => {
     const [isSearchOpen, setIsSearchOpen] = useState(false); // Search state
     const [scrolled, setScrolled] = useState(false);
     const [activeHover, setActiveHover] = useState<string | null>(null);
+    const [activeMobileMenu, setActiveMobileMenu] = useState<string | null>(null);
     const searchInputRef = useRef<HTMLInputElement>(null);
     const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -144,13 +145,13 @@ export const Navbar = () => {
                     {/* Desktop Layout */}
                     <div className="hidden md:flex items-center justify-between w-full text-xs font-normal relative">
                         {/* WIT Logo */}
-                        <a href="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
+                        <Link to="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
                             <img
                                 src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                 alt="WIT"
                                 className="h-[20px] w-auto object-contain"
                             />
-                        </a>
+                        </Link>
 
                         {/* Search Input (Desktop) */}
                         <AnimatePresence>
@@ -239,13 +240,13 @@ export const Navbar = () => {
                     {/* Mobile Layout */}
                     <div className="flex md:hidden items-center justify-between w-full text-current">
                         <div className="z-50 logo-container transition-opacity duration-300">
-                            <a href="/" className={`flex items-center ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
+                            <Link to="/" className={`flex items-center ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                                 <img
                                     src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                     alt="WIT"
                                     className="h-[24px] w-auto object-contain"
                                 />
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="flex items-center gap-6 z-50">
@@ -352,31 +353,112 @@ export const Navbar = () => {
                         animate={{ opacity: 1, height: "100vh" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.4, ease: [0.645, 0.045, 0.355, 1.000] }}
-                        className="md:hidden fixed inset-0 bg-black z-40 pt-[48px] px-8"
+                        className="md:hidden fixed inset-0 bg-white dark:bg-black z-40 pt-[48px] px-8"
                     >
                         <motion.div
                             variants={containerVariants}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
-                            className="flex flex-col space-y-1"
+                            className="flex flex-col h-full"
                         >
-                            {navItems.map((item) => (
-                                <motion.a
-                                    key={item.key}
-                                    variants={itemVariants}
-                                    href="#"
-                                    className="text-[28px] font-semibold text-[#E8E8ED] py-2 border-b border-gray-800 leading-tight"
-                                    onClick={() => setIsOpen(false)}
+                            <div className="space-y-1">
+                                {navItems.map((item) => {
+                                    const hasSubMenu = navData[item.key];
+                                    const isExpanded = activeMobileMenu === item.key;
+
+                                    return (
+                                        <div key={item.key} className="border-b border-gray-200 dark:border-gray-800">
+                                            {hasSubMenu ? (
+                                                <>
+                                                    <button
+                                                        onClick={() => setActiveMobileMenu(isExpanded ? null : item.key)}
+                                                        className="flex items-center justify-between w-full text-[28px] font-semibold text-gray-900 dark:text-[#E8E8ED] py-2 leading-tight text-left"
+                                                    >
+                                                        {item.label}
+                                                        <ChevronDown
+                                                            size={24}
+                                                            className={`transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                                                        />
+                                                    </button>
+                                                    <AnimatePresence>
+                                                        {isExpanded && (
+                                                            <motion.div
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{ height: 'auto', opacity: 1 }}
+                                                                exit={{ height: 0, opacity: 0 }}
+                                                                className="overflow-hidden bg-gray-50 dark:bg-gray-900/50 rounded-lg mb-2"
+                                                            >
+                                                                <div className="py-4 px-4 space-y-6">
+                                                                    {navData[item.key].map((column, idx) => (
+                                                                        <div key={idx} className="space-y-3">
+                                                                            <h4 className="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">
+                                                                                {column.title}
+                                                                            </h4>
+                                                                            <ul className="space-y-2 pl-2 border-l-2 border-gray-200 dark:border-gray-700">
+                                                                                {column.links.map((link) => (
+                                                                                    <li key={link}>
+                                                                                        {link === 'Timeline' ? (
+                                                                                            <Link
+                                                                                                to="/timeline"
+                                                                                                className="block text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 pl-4 py-1"
+                                                                                                onClick={() => setIsOpen(false)}
+                                                                                            >
+                                                                                                {link}
+                                                                                            </Link>
+                                                                                        ) : (
+                                                                                            <a
+                                                                                                href="#"
+                                                                                                className="block text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 pl-4 py-1"
+                                                                                                onClick={() => setIsOpen(false)}
+                                                                                            >
+                                                                                                {link}
+                                                                                            </a>
+                                                                                        )}
+                                                                                    </li>
+                                                                                ))}
+                                                                            </ul>
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                            </motion.div>
+                                                        )}
+                                                    </AnimatePresence>
+                                                </>
+                                            ) : (
+                                                <motion.a
+                                                    variants={itemVariants}
+                                                    href="#"
+                                                    className="block text-[28px] font-semibold text-gray-900 dark:text-[#E8E8ED] py-2 leading-tight text-left w-full"
+                                                    onClick={() => setIsOpen(false)}
+                                                >
+                                                    {item.label}
+                                                </motion.a>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Mobile Language and Theme Switcher - Bottom Positioned */}
+                            <motion.div variants={itemVariants} className="mt-auto pb-8 flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <Globe size={20} className="text-gray-900 dark:text-white" />
+                                    <div className="flex items-center gap-2 text-sm font-medium">
+                                        <button onClick={() => changeLanguage('en')} className={`${i18n.language === 'en' ? 'text-black dark:text-white' : 'text-gray-400'} hover:text-black dark:hover:text-white transition-colors`}>EN</button>
+                                        <span className="text-gray-300 dark:text-gray-700">|</span>
+                                        <button onClick={() => changeLanguage('es')} className={`${i18n.language === 'es' ? 'text-black dark:text-white' : 'text-gray-400'} hover:text-black dark:hover:text-white transition-colors`}>ES</button>
+                                        <span className="text-gray-300 dark:text-gray-700">|</span>
+                                        <button onClick={() => changeLanguage('pt')} className={`${i18n.language === 'pt' ? 'text-black dark:text-white' : 'text-gray-400'} hover:text-black dark:hover:text-white transition-colors`}>PT</button>
+                                    </div>
+                                </div>
+
+                                <button
+                                    onClick={toggleDarkMode}
+                                    className="p-2 text-gray-900 dark:text-white opacity-80 hover:opacity-100 transition-opacity"
                                 >
-                                    {item.label}
-                                </motion.a>
-                            ))}
-                            {/* Mobile Language Switcher */}
-                            <motion.div variants={itemVariants} className="pt-8 flex gap-4">
-                                <button onClick={() => changeLanguage('en')} className="text-gray-400 text-sm hover:text-white">English</button>
-                                <button onClick={() => changeLanguage('es')} className="text-gray-400 text-sm hover:text-white">Español</button>
-                                <button onClick={() => changeLanguage('pt')} className="text-gray-400 text-sm hover:text-white">Português</button>
+                                    {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+                                </button>
                             </motion.div>
                         </motion.div>
                     </motion.div>
