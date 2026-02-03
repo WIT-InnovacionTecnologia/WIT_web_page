@@ -145,13 +145,13 @@ export const Navbar = () => {
                 <div className="flex items-center justify-between h-[44px]">
 
                     {/* Desktop Layout */}
-                    <div className="hidden md:flex items-center justify-between w-full text-xs font-normal relative">
+                    <div className="hidden md:flex items-center justify-between w-full text-sm font-normal relative">
                         {/* WIT Logo */}
                         <Link to="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
                             <img
                                 src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                 alt="WIT"
-                                className="h-[20px] w-auto object-contain"
+                                className="h-[28px] w-auto object-contain"
                             />
                         </Link>
 
@@ -246,7 +246,7 @@ export const Navbar = () => {
                                 <img
                                     src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                     alt="WIT"
-                                    className="h-[24px] w-auto object-contain"
+                                    className="h-[32px] w-auto object-contain"
                                 />
                             </Link>
                         </div>
@@ -286,20 +286,20 @@ export const Navbar = () => {
                             <div className="flex justify-start space-x-12">
                                 {navData[activeHover].map((column, idx) => (
                                     <div key={idx} className="flex flex-col space-y-4 min-w-[150px]">
-                                        <h4 className="text-gray-500 dark:text-gray-400 text-xs font-semibold">{column.title}</h4>
+                                        <h4 className="text-gray-500 dark:text-gray-400 text-sm font-semibold">{column.title}</h4>
                                         <ul className="space-y-2 mt-2">
                                             {column.links.map((link) => (
                                                 <li key={link}>
                                                     {link === 'Timeline' ? (
                                                         <Link
                                                             to="/timeline"
-                                                            className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs block py-1"
+                                                            className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-sm block py-1"
                                                             onClick={() => setActiveHover(null)} // Close menu on click
                                                         >
                                                             {link}
                                                         </Link>
                                                     ) : (
-                                                        <Link to="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs block py-1">
+                                                        <Link to="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-sm block py-1">
                                                             {link}
                                                         </Link>
                                                     )}
