@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import heroVideo from '../assets/videos/aerial-birds-eye-tracking-shot-of-car-and-truck-dr-2025-08-28-14-35-14-utc.mov';
 export const Hero = () => {
     // const { t } = useTranslation(); // Removed unused translation hook
 
@@ -44,10 +45,16 @@ export const Hero = () => {
             >
                 <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 shadow-xl flex items-center justify-center overflow-hidden border border-gray-200 dark:border-gray-700">
                     {/* Placeholder for User Product Image */}
-                    <div className="text-center">
-                        <p className="text-gray-400 text-xl md:text-2xl font-medium">Product Image Placeholder</p>
-                        <p className="text-gray-300 text-sm mt-2">Replace with your product photo</p>
-                    </div>
+                    <video
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    >
+                        <source src={heroVideo} />
+                        Tu navegador no soporta el tag de video.
+                    </video>
                 </div>
             </motion.div>
 
