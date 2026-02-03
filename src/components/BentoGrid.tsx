@@ -29,33 +29,33 @@ export const BentoGrid = () => {
         },
         {
             id: 3,
-            title: t('navbar.iphone'),
-            subtitle: 'Titanium.',
-            description: 'So strong. So light. So Pro.',
+            title: 'IoT (Internet de las Cosas)',
+            subtitle: 'Transforma tus activos en una red inteligente. Conecta y automatiza el control para optimizar el rendimiento, anticipar el desgaste de piezas y reducir el consumo de energía, mejorando la eficiencia de tus buses y la experiencia de tus usuarios.',
+            description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 4,
-            title: t('navbar.watch'),
-            subtitle: 'Smarter. Brighter. Mightier.',
-            description: 'A healthy leap ahead.',
+            title: 'Tótems Interactivos',
+            subtitle: 'Descongestiona filas con puntos de autoatención, mejora la fluidez operativa dentro de terminales. Comodidad y autonomía al pasajero al imprimir pasajes, consultar andenes, ver horarios o acceder a servicios sin esperas innecesarias.',
+            description: '',
             className: 'md:col-span-2 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
         {
             id: 5,
-            title: t('navbar.ipad'),
-            subtitle: 'Supercharged by M2.',
-            description: 'The ultimate iPad experience.',
+            title: 'Plataforma e-Commerce',
+            subtitle: 'Lleva tus ventas a las nubes con una plataforma de E-Commerce de venta 24/7. Mejora la experiencia de los usuarios digitales y recibe datos valiosos sobre su comportamiento para hacer campañas personalizadas y aumentar de forma medible tu gestión comercial.',
+            description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 6,
-            title: t('navbar.airpods'),
-            subtitle: 'Adaptive Audio.',
-            description: 'Now playing.',
+            title: 'Urban WiFi',
+            subtitle: 'Señal de alta fidelidad con hardware de grado industrial para puntos estratégicos. Transformamos las conexiones en una ventaja competitiva, fidelizando a los clientes.',
+            description: '',
             className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
