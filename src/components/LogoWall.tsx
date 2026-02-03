@@ -21,7 +21,7 @@ export const LogoWall = () => {
     const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
 
     return (
-        <section className="py-12 bg-white dark:bg-black overflow-hidden border-t border-gray-100 dark:border-gray-800">
+        <section className="relative z-0 py-12 bg-white dark:bg-black overflow-hidden border-t border-gray-100 dark:border-white/5">
             <div className="container mx-auto px-4 mb-8 text-center">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">
                     Confían en nosotros

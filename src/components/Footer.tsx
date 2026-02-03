@@ -33,7 +33,7 @@ export const Footer = () => {
     ];
 
     return (
-        <footer id="footer" className="bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-100 text-xs pt-10 border-t border-gray-200 dark:border-gray-800 flex flex-col justify-between">
+        <footer id="footer" className="relative z-10 bg-gray-100 dark:bg-zinc-900 text-gray-600 dark:text-gray-100 text-xs pt-10 border-t border-gray-200 dark:border-white/10 flex flex-col justify-between">
             <div className="w-full px-4 sm:px-6 lg:px-8 mb-10">
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
                     {/* Logo Section */}
