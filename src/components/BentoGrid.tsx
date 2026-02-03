@@ -13,49 +13,49 @@ export const BentoGrid = () => {
     const products = [
         {
             id: 1,
-            title: t('navbar.vision'),
-            subtitle: 'Welcome to the era of spatial computing.',
-            description: 'A new dimension of technology.',
+            title: 'Sentinel',
+            subtitle: 'Aumenta la seguridad de tu operación con cámaras de IA que disminuyen accidentes y costos asociados al detectar fatiga y distracciones del conductor en ruta.',
+            description: '',
             className: 'md:col-span-2 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 2,
-            title: t('navbar.mac'),
-            subtitle: 'Lean. Mean. M3 machine.',
-            description: 'Supercharged by M3.',
+            title: 'TeL (Telemetría Avanzada)',
+            subtitle: 'Visualiza alerta antes de fallar o gastar de más; anticipa averías, ahorrando combustible y manteniendo tu fl ota siempre en movimiento, optimizando cada viaje.',
+            description: '',
             className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
         {
             id: 3,
-            title: t('navbar.iphone'),
-            subtitle: 'Titanium.',
-            description: 'So strong. So light. So Pro.',
+            title: 'IoT (Internet de las Cosas)',
+            subtitle: 'Transforma tus activos en una red inteligente. Conecta y automatiza el control para optimizar el rendimiento, anticipar el desgaste de piezas y reducir el consumo de energía, mejorando la eficiencia de tus buses y la experiencia de tus usuarios.',
+            description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 4,
-            title: t('navbar.watch'),
-            subtitle: 'Smarter. Brighter. Mightier.',
-            description: 'A healthy leap ahead.',
+            title: 'Tótems Interactivos',
+            subtitle: 'Descongestiona filas con puntos de autoatención, mejora la fluidez operativa dentro de terminales. Comodidad y autonomía al pasajero al imprimir pasajes, consultar andenes, ver horarios o acceder a servicios sin esperas innecesarias.',
+            description: '',
             className: 'md:col-span-2 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
         {
             id: 5,
-            title: t('navbar.ipad'),
-            subtitle: 'Supercharged by M2.',
-            description: 'The ultimate iPad experience.',
+            title: 'Plataforma e-Commerce',
+            subtitle: 'Lleva tus ventas a las nubes con una plataforma de E-Commerce de venta 24/7. Mejora la experiencia de los usuarios digitales y recibe datos valiosos sobre su comportamiento para hacer campañas personalizadas y aumentar de forma medible tu gestión comercial.',
+            description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 6,
-            title: t('navbar.airpods'),
-            subtitle: 'Adaptive Audio.',
-            description: 'Now playing.',
+            title: 'Urban WiFi',
+            subtitle: 'Señal de alta fidelidad con hardware de grado industrial para puntos estratégicos. Transformamos las conexiones en una ventaja competitiva, fidelizando a los clientes.',
+            description: '',
             className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
@@ -83,9 +83,9 @@ export const BentoGrid = () => {
                         className={`relative overflow-hidden h-[500px] group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-500 ${product.className}`}
                     >
                         <div className="absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10">
-                            <h3 className="text-sm font-semibold uppercase tracking-wide opacity-80 mb-1">{product.title}</h3>
-                            <p className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2">{product.subtitle}</p>
-                            <p className="text-lg font-medium opacity-80 text-center">{product.description}</p>
+                            <h3 className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2">{product.title}</h3>
+                            <p className="text-lg font-medium opacity-80 text-center mb-2">{product.subtitle}</p>
+                            <p className="text-sm font-medium opacity-70 text-center">{product.description}</p>
 
                             <div className="mt-8 flex space-x-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button className="text-blue-500 hover:underline text-sm font-medium">{learnMoreText} &gt;</button>

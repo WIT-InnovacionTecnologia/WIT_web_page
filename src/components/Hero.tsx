@@ -43,7 +43,7 @@ export const Hero = () => {
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                 className="mt-12 w-full px-4"
             >
-                <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 shadow-xl flex items-center justify-center overflow-hidden border border-gray-200 dark:border-gray-700">
+                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 shadow-xl flex items-center justify-center overflow-hidden border border-gray-200 dark:border-gray-700">
                     {/* Placeholder for User Product Image */}
                     <video
                         className="w-full h-full object-cover"
@@ -55,6 +55,14 @@ export const Hero = () => {
                         <source src={heroVideo} />
                         Tu navegador no soporta el tag de video.
                     </video>
+
+                    {/* Video Overlay Text */}
+                    <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6">
+                        <h3 className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">MásGPS</h3>
+                        <p className="text-white text-lg md:text-xl font-medium max-w-2xl drop-shadow-md leading-relaxed">
+                            Mantén el control total de tu flota con nuestra plataforma MásGPS. Gestiona rutas, recibe alertas y toma decisiones en tiempo real desde cualquier dispositivo para transformar los datos de cada vehículo en decisiones que potencien la rentabilidad.
+                        </p>
+                    </div>
                 </div>
             </motion.div>
 

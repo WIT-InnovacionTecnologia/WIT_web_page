@@ -1,11 +1,11 @@
 {
     "navbar": {
         "store": "Tienda",
-        "mac": "Mac",
+        "mac": "TeL",
         "ipad": "iPad",
         "iphone": "iPhone",
         "watch": "Watch",
-        "vision": "Vision",
+        "vision": "Sentinel",
         "airpods": "AirPods",
         "tv_home": "TV y Casa",
         "entertainment": "Entretenimiento",
@@ -21,18 +21,18 @@
         "learn_more": "Más información"
     },
     "grid": {
-        "latest": "Lo último.",
-        "whats_new": "Echa un vistazo a las novedades.",
+        "latest": "El futuro, hoy.",
+        "whats_new": "Explora nuestras novedades tecnológicas.",
         "learn_more": "Más info",
         "buy": "Comprar"
     },
     "showcase": {
-        "camera_title": "Cámara Avanzada.",
-        "camera_desc": "Captura tu mundo con un detalle asombroso. La nueva cámara principal de 48 MP dispara en súper alta resolución.",
-        "battery_title": "Batería para todo el día.",
-        "battery_desc": "Potencia que te sigue el ritmo. Hasta 29 horas de reproducción de video en la pantalla grande.",
-        "chip_title": "Chip A17 Pro.",
-        "chip_desc": "Una victoria monstruosa para los juegos. Ya está aquí. El mayor rediseño en la historia de las GPU de Apple."
+        "camera_title": "IA",
+        "camera_desc": "Nuestra plataforma aprende del comportamiento de tus usuarios para ajustar rutas, anticipar temporadas altas y personalizar la atención, asegurando la máxima ocupación de tus buses y fidelizando a tus clientes.",
+        "battery_title": "P + S (Products + Services)",
+        "battery_desc": "Solución completa que pone al cliente en el centro, con una rápida resolución de incidencias. Canales centralizados de solicitudes para respuestas inmediatas —remotas en minutos o presenciales en horas—. Incluye monitoreo continuo, seguimiento detallado de tickets y resolución eficiente de incidencias.",
+        "chip_title": "ConnP (Connectivity Platforms)",
+        "chip_desc": "Integramos equipos robustos y análisis estratégico en una plataforma única (ConnP) para gestionar tus activos desde dónde estés."
     },
     "ai": {
         "greeting": "¡Hola! Soy tu asistente de Apple Intelligence. ¿Cómo puedo ayudarte hoy?",
