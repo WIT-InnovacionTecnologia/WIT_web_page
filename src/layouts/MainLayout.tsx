@@ -9,7 +9,7 @@ interface MainLayoutProps {
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-white">
+        <div className="min-h-screen flex flex-col font-sans bg-white dark:bg-black dark:text-white">
             <Navbar />
             <main className="flex-grow pt-[44px]"> {/* pt-[44px] to account for Navbar height */}
                 {children}
