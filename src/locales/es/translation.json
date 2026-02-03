@@ -1,11 +1,11 @@
 {
     "navbar": {
         "store": "Tienda",
-        "mac": "Mac",
+        "mac": "TeL",
         "ipad": "iPad",
         "iphone": "iPhone",
         "watch": "Watch",
-        "vision": "Vision",
+        "vision": "Sentinel",
         "airpods": "AirPods",
         "tv_home": "TV y Casa",
         "entertainment": "Entretenimiento",
@@ -21,8 +21,8 @@
         "learn_more": "Más información"
     },
     "grid": {
-        "latest": "Lo último.",
-        "whats_new": "Echa un vistazo a las novedades.",
+        "latest": "El futuro, hoy.",
+        "whats_new": "Explora nuestras novedades tecnológicas.",
         "learn_more": "Más info",
         "buy": "Comprar"
     },
