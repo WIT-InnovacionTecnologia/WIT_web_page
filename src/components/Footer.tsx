@@ -41,12 +41,12 @@ export const Footer = () => {
                         <img
                             src={logoBlack}
                             alt="WIT Logo"
-                            className="h-24 md:h-32 w-auto dark:hidden mb-4"
+                            className="h-28 md:h-36 w-auto dark:hidden mb-4"
                         />
                         <img
                             src={logoWhite}
                             alt="WIT Logo"
-                            className="h-24 md:h-32 w-auto hidden dark:block mb-4"
+                            className="h-28 md:h-36 w-auto hidden dark:block mb-4"
                         />
                     </div>
 
