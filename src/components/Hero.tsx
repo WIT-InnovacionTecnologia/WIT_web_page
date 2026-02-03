@@ -19,10 +19,10 @@ export const Hero = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="z-10"
             >
-                <h2 className="text-5xl md:text-7xl font-semibold mb-2 text-black dark:text-white tracking-tight">
+                <h2 className="text-5xl md:text-7xl font-semibold mb-2 text-black dark:text-white tracking-tight max-w-4xl mx-auto">
                     {title}
                 </h2>
-                <p className="text-2xl md:text-3xl font-medium mb-6 text-black dark:text-gray-200">
+                <p className="text-2xl md:text-3xl font-medium mb-6 text-black dark:text-gray-200 max-w-3xl mx-auto">
                     {subtitle}
                 </p>
                 <div className="flex justify-center space-x-6">

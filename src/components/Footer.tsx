@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logoWhite from '../assets/wit-global-partnership-white.png';
 import logoBlack from '../assets/wit-global-partnership.png';
 import footerBar from '../assets/footer-bar.png';
@@ -32,7 +33,7 @@ export const Footer = () => {
     ];
 
     return (
-        <footer id="footer" className="bg-gray-100 dark:bg-black text-gray-600 dark:text-white text-xs pt-10 border-t border-gray-200 dark:border-gray-800 flex flex-col justify-between">
+        <footer id="footer" className="bg-gray-100 dark:bg-zinc-900 text-gray-600 dark:text-gray-300 text-xs pt-10 border-t border-gray-200 dark:border-gray-800 flex flex-col justify-between">
             <div className="w-full px-4 sm:px-6 lg:px-8 mb-10">
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
                     {/* Logo Section */}
@@ -56,9 +57,9 @@ export const Footer = () => {
                             <ul className="space-y-2">
                                 {section.links.map((link) => (
                                     <li key={link}>
-                                        <a href="#" className="hover:underline hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                                        <Link to="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:underline">
                                             {link}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -70,9 +71,9 @@ export const Footer = () => {
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="text-center">{copyrightText}</p>
                         <div className="flex space-x-4">
-                            <a href="#" className="hover:underline">Política de Privacidad</a>
+                            <Link to="#" className="hover:underline">Política de Privacidad</Link>
                             <span className="text-gray-300 dark:text-white">|</span>
-                            <a href="#" className="hover:underline">Términos de Uso</a>
+                            <Link to="#" className="hover:underline">Términos de Uso</Link>
                         </div>
                     </div>
                 </div>
