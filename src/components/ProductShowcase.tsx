@@ -43,7 +43,7 @@ export const ProductShowcase = () => {
                             <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed">{feature.description}</p>
                         </motion.div>
 
-                        {/* Image Placeholder */}
+                        {/* Image/Video Placeholder */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 30 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -51,11 +51,24 @@ export const ProductShowcase = () => {
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             className="flex-1 w-full aspect-square md:aspect-[4/3] bg-gray-50 dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 flex items-center justify-center relative overflow-hidden group"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 opacity-50" />
-                            <div className="z-10 text-center p-6">
-                                <span className="text-6xl mb-4 block">✨</span>
-                                <p className="text-gray-400 font-medium">Feature Image Placeholder</p>
-                            </div>
+                            {feature.video ? (
+                                <video
+                                    src={feature.video}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                />
+                            ) : (
+                                <>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 opacity-50" />
+                                    <div className="z-10 text-center p-6">
+                                        <span className="text-6xl mb-4 block">✨</span>
+                                        <p className="text-gray-400 font-medium">Feature Image Placeholder</p>
+                                    </div>
+                                </>
+                            )}
                         </motion.div>
                     </div>
                 ))}

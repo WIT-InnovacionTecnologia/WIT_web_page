@@ -130,7 +130,7 @@
         "contact": "Contacto",
         "privacy": "Política de Privacidad",
         "terms": "Términos de Uso",
-        "copyright": "Copyright © 2024 WIT. Todos los derechos reservados."
+        "copyright": "Copyright © 2026 WIT. Todos los derechos reservados."
     },
     "hero": {
         "learn_more": "Más información",
@@ -168,10 +168,10 @@
     "showcase": {
         "camera_title": "IA",
         "camera_desc": "Nuestra plataforma aprende del comportamiento de tus usuarios para ajustar rutas, anticipar temporadas altas y personalizar la atención, asegurando la máxima ocupación de tus buses y fidelizando a tus clientes.",
-        "battery_title": "P + S (Products + Services)",
-        "battery_desc": "Solución completa que pone al cliente en el centro, con una rápida resolución de incidencias. Canales centralizados de solicitudes para respuestas inmediatas —remotas en minutos o presenciales en horas—. Incluye monitoreo continuo, seguimiento detallado de tickets y resolución eficiente de incidencias.",
-        "chip_title": "ConnP (Connectivity Platforms)",
-        "chip_desc": "Integramos equipos robustos y análisis estratégico en una plataforma única (ConnP) para gestionar tus activos desde dónde estés."
+        "battery_title": "Partnership (P+S)",
+        "battery_desc": "Creamos una alianza estratégica para modernizar tus procesos, integrando nuestros recursos y talento especializado. Compartimos desafíos y oportunidades, desarrollando juntos soluciones innovadoras que aceleran tu crecimiento.",
+        "chip_title": "Connect Plus (ConnP)",
+        "chip_desc": "Te ofrecemos conectividad de alto estándar para operaciones claves. Contamos con una conexión por fibra óptica rápida y estable y soporte 24/7, garantizamos el máximo rendimiento de tus procesos de IA y telemetría."
     },
     "ai": {
         "greeting": "¡Hola! Soy tu asistente de Apple Intelligence. ¿Cómo puedo ayudarte hoy?",

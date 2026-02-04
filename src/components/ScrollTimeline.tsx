@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 
-import pullmanBusLogo from '../assets/logo-banco-estado.png';
+import pullmanBusLogo from '../assets/light/logo-banco-estado.png';
 
 export const ScrollTimeline = () => {
     const { t } = useTranslation();
