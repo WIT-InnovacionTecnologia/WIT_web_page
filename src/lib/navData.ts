@@ -1,26 +1,26 @@
 export const navData: Record<string, { title: string; links: string[] }[]> = {
     'Producto': [
-        { title: 'Nuestras Soluciones', links: ['Desarrollo de Software', 'Consultoría TI', 'Transformación Digital', 'Ciberseguridad'] },
-        { title: 'Plataformas', links: ['SaaS', 'Cloud Computing', 'Integraciones', 'APIs'] },
+        { title: 'navbar.menu.solutions.title', links: ['navbar.menu.solutions.items.software', 'navbar.menu.solutions.items.consulting', 'navbar.menu.solutions.items.digital', 'navbar.menu.solutions.items.cyber'] },
+        { title: 'navbar.menu.platforms.title', links: ['navbar.menu.platforms.items.saas', 'navbar.menu.platforms.items.cloud', 'navbar.menu.platforms.items.integrations', 'navbar.menu.platforms.items.apis'] },
     ],
     'Clientes': [
-        { title: 'Casos de Éxito', links: ['Sector Financiero', 'Retail', 'Salud', 'Gobierno', 'Timeline'] },
-        { title: 'Testimonios', links: ['Lo que dicen nuestros clientes', 'Impacto en el negocio'] },
+        { title: 'navbar.menu.cases.title', links: ['navbar.menu.cases.items.finance', 'navbar.menu.cases.items.retail', 'navbar.menu.cases.items.health', 'navbar.menu.cases.items.government', 'navbar.menu.cases.items.timeline'] },
+        { title: 'navbar.menu.testimonials.title', links: ['navbar.menu.testimonials.items.clients', 'navbar.menu.testimonials.items.impact'] },
     ],
     'Partners': [
-        { title: 'Alianzas Estratégicas', links: ['Microsoft', 'AWS', 'Google Cloud', 'Partner Program'] },
-        { title: 'Conviértete en Partner', links: ['Beneficios', 'Requisitos', 'Registro'] },
+        { title: 'navbar.menu.alliances.title', links: ['navbar.menu.alliances.items.microsoft', 'navbar.menu.alliances.items.aws', 'navbar.menu.alliances.items.google', 'navbar.menu.alliances.items.partner'] },
+        { title: 'navbar.menu.become_partner.title', links: ['navbar.menu.become_partner.items.benefits', 'navbar.menu.become_partner.items.requirements', 'navbar.menu.become_partner.items.register'] },
     ],
     'IA': [
-        { title: 'Inteligencia Artificial', links: ['Machine Learning', 'Procesamiento de Lenguaje Natural', 'Visión por Computadora'] },
-        { title: 'Servicios de Datos', links: ['Big Data', 'Analítica Predictiva', 'Business Intelligence'] },
+        { title: 'navbar.menu.ai.title', links: ['navbar.menu.ai.items.ml', 'navbar.menu.ai.items.nlp', 'navbar.menu.ai.items.vision'] },
+        { title: 'navbar.menu.data_services.title', links: ['navbar.menu.data_services.items.bigdata', 'navbar.menu.data_services.items.analytics', 'navbar.menu.data_services.items.bi'] },
     ],
     'BI': [
-        { title: 'Business Intelligence', links: ['Dashboards Interactivos', 'Reportes Automatizados', 'KPIs'] },
-        { title: 'Herramientas', links: ['Power BI', 'Tableau', 'Looker'] },
+        { title: 'navbar.menu.bi_section.title', links: ['navbar.menu.bi_section.items.dashboards', 'navbar.menu.bi_section.items.reports', 'navbar.menu.bi_section.items.kpis'] },
+        { title: 'navbar.menu.tools.title', links: ['navbar.menu.tools.items.powerbi', 'navbar.menu.tools.items.tableau', 'navbar.menu.tools.items.looker'] },
     ],
-    'Acerca de wit': [  // Changed to match the label exactly "Acerca de wit"
-        { title: 'Sobre Nosotros', links: ['Nuestra Historia', 'Equipo', 'Cultura', 'Carreras'] },
-        { title: 'Contacto', links: ['Soporte', 'Ventas', 'Oficinas'] },
+    'Acerca de wit': [
+        { title: 'navbar.menu.about_section.title', links: ['navbar.menu.about_section.items.history', 'navbar.menu.about_section.items.team', 'navbar.menu.about_section.items.culture', 'navbar.menu.about_section.items.careers'] },
+        { title: 'navbar.menu.contact_section.title', links: ['navbar.menu.contact_section.items.support', 'navbar.menu.contact_section.items.sales', 'navbar.menu.contact_section.items.offices'] },
     ],
 };

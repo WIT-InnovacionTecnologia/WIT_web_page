@@ -61,19 +61,19 @@ export const AIAssistant = () => {
 
     const generateMockResponse = (input: string): string => {
         const lowerInput = input.toLowerCase();
-        if (lowerInput.includes('price') || lowerInput.includes('cost')) {
-            return "Our products start from $999. Would you like to see the pricing for a specific model?";
+        if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('precio') || lowerInput.includes('costo')) {
+            return t('ai.mock_response_price');
         }
         if (lowerInput.includes('mac') || lowerInput.includes('macbook')) {
-            return "The new MacBook lineup features the M3 chip, delivering incredible performance and battery life.";
+            return t('ai.mock_response_mac');
         }
         if (lowerInput.includes('iphone')) {
-            return "iPhone 15 Pro features a titanium design and the groundbreaking A17 Pro chip.";
+            return t('ai.mock_response_iphone');
         }
         if (lowerInput.includes('vision')) {
-            return "Apple Vision Pro seamlessly blends digital content with your physical space.";
+            return t('ai.mock_response_vision');
         }
-        return "I can help you explore our latest products, find a store, or answer support questions. What would you like to know?";
+        return t('ai.mock_response_default');
     };
 
     return (
