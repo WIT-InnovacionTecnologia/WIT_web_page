@@ -13,15 +13,15 @@ export const Footer = () => {
     const footerSections = [
         {
             title: t('footer.solutions'),
-            links: ['Desarrollo de Software', 'Consultoría TI', 'Transformación Digital', 'Ciberseguridad'],
+            links: [t('menu.solutions.items.software'), t('menu.solutions.items.consulting'), t('menu.solutions.items.digital'), t('menu.solutions.items.cyber')],
         },
         {
             title: t('footer.platforms'),
-            links: ['SaaS', 'Cloud Computing', 'Integraciones', 'APIs'],
+            links: [t('menu.platforms.items.saas'), t('menu.platforms.items.cloud'), t('menu.platforms.items.integrations'), t('menu.platforms.items.apis')],
         },
         {
             title: t('footer.company'),
-            links: ['Sobre Nosotros', 'Casos de Éxito', 'Partners', 'Carreras'],
+            links: [t('menu.about_section.title'), t('menu.cases.title'), t('navbar.partners'), t('menu.about_section.items.careers')],
         },
         {
             title: t('footer.contact'),

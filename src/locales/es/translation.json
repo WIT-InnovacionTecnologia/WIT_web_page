@@ -18,7 +18,110 @@
         "partners": "Partners",
         "ia": "IA",
         "bi": "BI",
-        "about": "Acerca de WIT"
+        "about": "Acerca de WIT",
+        "menu": {
+            "solutions": {
+                "title": "Nuestras Soluciones",
+                "items": {
+                    "software": "Desarrollo de Software",
+                    "consulting": "Consultoría TI",
+                    "digital": "Transformación Digital",
+                    "cyber": "Ciberseguridad"
+                }
+            },
+            "platforms": {
+                "title": "Plataformas",
+                "items": {
+                    "saas": "SaaS",
+                    "cloud": "Cloud Computing",
+                    "integrations": "Integraciones",
+                    "apis": "APIs"
+                }
+            },
+            "cases": {
+                "title": "Casos de Éxito",
+                "items": {
+                    "finance": "Sector Financiero",
+                    "retail": "Retail",
+                    "health": "Salud",
+                    "government": "Gobierno",
+                    "timeline": "Timeline"
+                }
+            },
+            "testimonials": {
+                "title": "Testimonios",
+                "items": {
+                    "clients": "Lo que dicen nuestros clientes",
+                    "impact": "Impacto en el negocio"
+                }
+            },
+            "alliances": {
+                "title": "Alianzas Estratégicas",
+                "items": {
+                    "microsoft": "Microsoft",
+                    "aws": "AWS",
+                    "google": "Google Cloud",
+                    "partner": "Partner Program"
+                }
+            },
+            "become_partner": {
+                "title": "Conviértete en Partner",
+                "items": {
+                    "benefits": "Beneficios",
+                    "requirements": "Requisitos",
+                    "register": "Registro"
+                }
+            },
+            "ai": {
+                "title": "Inteligencia Artificial",
+                "items": {
+                    "ml": "Machine Learning",
+                    "nlp": "Procesamiento de Lenguaje Natural",
+                    "vision": "Visión por Computadora"
+                }
+            },
+            "data_services": {
+                "title": "Servicios de Datos",
+                "items": {
+                    "bigdata": "Big Data",
+                    "analytics": "Analítica Predictiva",
+                    "bi": "Business Intelligence"
+                }
+            },
+            "bi_section": {
+                "title": "Business Intelligence",
+                "items": {
+                    "dashboards": "Dashboards Interactivos",
+                    "reports": "Reportes Automatizados",
+                    "kpis": "KPIs"
+                }
+            },
+            "tools": {
+                "title": "Herramientas",
+                "items": {
+                    "powerbi": "Power BI",
+                    "tableau": "Tableau",
+                    "looker": "Looker"
+                }
+            },
+            "about_section": {
+                "title": "Sobre Nosotros",
+                "items": {
+                    "history": "Nuestra Historia",
+                    "team": "Equipo",
+                    "culture": "Cultura",
+                    "careers": "Carreras"
+                }
+            },
+            "contact_section": {
+                "title": "Contacto",
+                "items": {
+                    "support": "Soporte",
+                    "sales": "Ventas",
+                    "offices": "Oficinas"
+                }
+            }
+        }
     },
     "footer": {
         "solutions": "Soluciones",
@@ -30,16 +133,21 @@
         "copyright": "Copyright © 2024 WIT. Todos los derechos reservados."
     },
     "hero": {
-        "title": "Ultimate Pad",
-        "subtitle": "Adorable. Dibujable. Mágico.",
-        "buy": "Comprar",
-        "learn_more": "Más información"
+        "learn_more": "Más información",
+        "main_title": "Desarrollamos el futuro de tu empresa",
+        "main_subtitle": "Especialistas en modernizar procesos críticos mediante Inteligencia Artificial, conectividad de alto estándar y soluciones de telemetría avanzada",
+        "cta_button": "Conócenos",
+        "video_overlay_title": "MásGPS",
+        "video_overlay_desc": "Mantén el control total de tu flota con nuestra plataforma MásGPS. Gestiona rutas, recibe alertas y toma decisiones en tiempo real desde cualquier dispositivo para transformar los datos de cada vehículo en decisiones que potencien la rentabilidad.",
+        "browser_support": "Tu navegador no soporta el tag de video."
     },
     "grid": {
         "latest": "El futuro, hoy.",
         "whats_new": "Explora nuestras novedades tecnológicas.",
         "learn_more": "Más info",
         "buy": "Comprar",
+        "sentinel_subtitle": "Aumenta la seguridad de tu operación con cámaras de IA que disminuyen accidentes y costos asociados al detectar fatiga y distracciones del conductor en ruta.",
+        "tel_subtitle": "Visualiza alerta antes de fallar o gastar de más; anticipa averías, ahorrando combustible y manteniendo tu flota siempre en movimiento, optimizando cada viaje.",
         "iot": {
             "title": "IoT (Internet de las Cosas)",
             "subtitle": "Transforma tus activos en una red inteligente. Conecta y automatiza el control para optimizar el rendimiento, anticipar el desgaste de piezas y reducir el consumo de energía, mejorando la eficiencia de tus buses y la experiencia de tus usuarios."
@@ -67,6 +175,22 @@
     },
     "ai": {
         "greeting": "¡Hola! Soy tu asistente de Apple Intelligence. ¿Cómo puedo ayudarte hoy?",
-        "input_placeholder": "Pregunta lo que quieras..."
+        "input_placeholder": "Pregunta lo que quieras...",
+        "mock_response_price": "Nuestros productos comienzan desde $999. ¿Te gustaría ver los precios de un modelo específico?",
+        "mock_response_mac": "La nueva línea MacBook cuenta con el chip M3, ofreciendo un rendimiento y duración de batería increíbles.",
+        "mock_response_iphone": "El iPhone 15 Pro presenta un diseño de titanio y el revolucionario chip A17 Pro.",
+        "mock_response_vision": "Apple Vision Pro combina a la perfección el contenido digital con tu espacio físico.",
+        "mock_response_default": "Puedo ayudarte a explorar nuestros últimos productos, encontrar una tienda o responder preguntas de soporte. ¿Qué te gustaría saber?"
+    },
+    "timeline": {
+        "title": "Nuestra Historia de Impacto",
+        "description": "Descubre cómo hemos transformado industrias clave en Chile a través de innovación tecnológica y alianzas estratégicas.",
+        "items": {
+            "metro": "Implementación de sistemas de monitoreo en tiempo real para optimizar el flujo de pasajeros y reducir tiempos de espera en horas punta.",
+            "pullman": "Modernización de la flota con sensores IoT para mantenimiento predictivo y mejora de la seguridad en ruta.",
+            "parque_arauco": "Desarrollo de una plataforma de análisis de datos para entender el comportamiento de los visitantes y personalizar la experiencia de compra.",
+            "transantiago": "Integración de GPS avanzado para seguimiento de flota y optimización de rutas en el sistema de transporte público.",
+            "claro": "Fortalecimiento de la infraestructura de red 5G y despliegue de soluciones de conectividad empresarial de alta velocidad."
+        }
     }
 }

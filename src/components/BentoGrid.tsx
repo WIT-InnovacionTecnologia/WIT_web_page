@@ -14,7 +14,7 @@ export const BentoGrid = () => {
         {
             id: 1,
             title: 'Sentinel',
-            subtitle: 'Aumenta la seguridad de tu operación con cámaras de IA que disminuyen accidentes y costos asociados al detectar fatiga y distracciones del conductor en ruta.',
+            subtitle: t('grid.sentinel_subtitle'),
             description: '',
             className: 'md:col-span-2 bg-black text-white',
             theme: 'dark'
@@ -22,7 +22,7 @@ export const BentoGrid = () => {
         {
             id: 2,
             title: 'TeL (Telemetría Avanzada)',
-            subtitle: 'Visualiza alerta antes de fallar o gastar de más; anticipa averías, ahorrando combustible y manteniendo tu fl ota siempre en movimiento, optimizando cada viaje.',
+            subtitle: t('grid.tel_subtitle'),
             description: '',
             className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
