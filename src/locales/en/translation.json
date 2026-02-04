@@ -18,7 +18,110 @@
         "partners": "Partners",
         "ia": "AI",
         "bi": "BI",
-        "about": "About WIT"
+        "about": "About WIT",
+        "menu": {
+            "solutions": {
+                "title": "Our Solutions",
+                "items": {
+                    "software": "Software Development",
+                    "consulting": "IT Consulting",
+                    "digital": "Digital Transformation",
+                    "cyber": "Cybersecurity"
+                }
+            },
+            "platforms": {
+                "title": "Platforms",
+                "items": {
+                    "saas": "SaaS",
+                    "cloud": "Cloud Computing",
+                    "integrations": "Integrations",
+                    "apis": "APIs"
+                }
+            },
+            "cases": {
+                "title": "Success Stories",
+                "items": {
+                    "finance": "Financial Sector",
+                    "retail": "Retail",
+                    "health": "Health",
+                    "government": "Government",
+                    "timeline": "Timeline"
+                }
+            },
+            "testimonials": {
+                "title": "Testimonials",
+                "items": {
+                    "clients": "What our clients say",
+                    "impact": "Business Impact"
+                }
+            },
+            "alliances": {
+                "title": "Strategic Alliances",
+                "items": {
+                    "microsoft": "Microsoft",
+                    "aws": "AWS",
+                    "google": "Google Cloud",
+                    "partner": "Partner Program"
+                }
+            },
+            "become_partner": {
+                "title": "Become a Partner",
+                "items": {
+                    "benefits": "Benefits",
+                    "requirements": "Requirements",
+                    "register": "Register"
+                }
+            },
+            "ai": {
+                "title": "Artificial Intelligence",
+                "items": {
+                    "ml": "Machine Learning",
+                    "nlp": "Natural Language Processing",
+                    "vision": "Computer Vision"
+                }
+            },
+            "data_services": {
+                "title": "Data Services",
+                "items": {
+                    "bigdata": "Big Data",
+                    "analytics": "Predictive Analytics",
+                    "bi": "Business Intelligence"
+                }
+            },
+            "bi_section": {
+                "title": "Business Intelligence",
+                "items": {
+                    "dashboards": "Interactive Dashboards",
+                    "reports": "Automated Reports",
+                    "kpis": "KPIs"
+                }
+            },
+            "tools": {
+                "title": "Tools",
+                "items": {
+                    "powerbi": "Power BI",
+                    "tableau": "Tableau",
+                    "looker": "Looker"
+                }
+            },
+            "about_section": {
+                "title": "About Us",
+                "items": {
+                    "history": "Our History",
+                    "team": "Team",
+                    "culture": "Culture",
+                    "careers": "Careers"
+                }
+            },
+            "contact_section": {
+                "title": "Contact",
+                "items": {
+                    "support": "Support",
+                    "sales": "Sales",
+                    "offices": "Offices"
+                }
+            }
+        }
     },
     "footer": {
         "solutions": "Solutions",
@@ -27,19 +130,24 @@
         "contact": "Contact",
         "privacy": "Privacy Policy",
         "terms": "Terms of Use",
-        "copyright": "Copyright © 2024 WIT. All rights reserved."
+        "copyright": "Copyright © 2026 WIT. All rights reserved."
     },
     "hero": {
-        "title": "Ultimate Pad",
-        "subtitle": "Lovable. Drawable. Magical.",
-        "buy": "Buy",
-        "learn_more": "Learn more"
+        "learn_more": "Learn more",
+        "main_title": "We develop the future of your company",
+        "main_subtitle": "Specialists in modernizing critical processes using Artificial Intelligence, high-standard connectivity, and advanced telemetry solutions",
+        "cta_button": "Get to know us",
+        "video_overlay_title": "MoreGPS",
+        "video_overlay_desc": "Maintain full control of your fleet with our MoreGPS platform. Manage routes, receive alerts, and make real-time decisions from any device to transform vehicle data into profitability-boosting decisions.",
+        "browser_support": "Your browser does not support the video tag."
     },
     "grid": {
         "latest": "The latest.",
         "whats_new": "Take a look at what’s new.",
         "learn_more": "Learn more",
         "buy": "Buy",
+        "sentinel_subtitle": "Increase your operation's safety with AI cameras that reduce accidents and associated costs by detecting driver fatigue and distractions on the road.",
+        "tel_subtitle": "Visualize alerts before failure or overspending; anticipate breakdowns, saving fuel and keeping your fleet always moving, optimizing every trip.",
         "iot": {
             "title": "IoT (Internet of Things)",
             "subtitle": "Transform your assets into a smart network. Connect and automate control to optimize performance, anticipate parts wear, and reduce energy consumption, improving your bus efficiency and user experience."
@@ -59,14 +167,30 @@
     },
     "showcase": {
         "camera_title": "AI",
-        "camera_desc": "Our platform learns from your users' behavior to adjust routes, anticipate peak seasons, and personalize service, ensuring maximum bus occupancy and building customer loyalty.",
-        "battery_title": "P + S (Products + Services)",
-        "battery_desc": "Complete solution that puts the customer at the center, with rapid incident resolution. Centralized request channels for immediate responses—remote in minutes or in-person in hours. Includes continuous monitoring, detailed ticket tracking, and efficient incident resolution.",
-        "chip_title": "ConnP (Connectivity Platforms)",
-        "chip_desc": "We integrate robust equipment and strategic analysis into a single platform (ConnP) to manage your assets from wherever you are."
+        "camera_desc": "Our platform learns from your users' behavior to adjust routes, anticipate peak seasons, and personalizing service, ensuring maximum bus occupancy and building customer loyalty.",
+        "battery_title": "Partnership (P+S)",
+        "battery_desc": "We create a strategic alliance to modernize your processes, integrating our resources and specialized talent. We share challenges and opportunities, developing together innovative solutions that accelerate your growth.",
+        "chip_title": "Connect Plus (ConnP)",
+        "chip_desc": "We offer high-standard connectivity for key operations. With fast and stable fiber optic connection and 24/7 support, we guarantee maximum performance for your AI and telemetry processes."
     },
     "ai": {
         "greeting": "Hello! I'm your Apple Intelligence assistant. How can I help you today?",
-        "input_placeholder": "Ask anything..."
+        "input_placeholder": "Ask anything...",
+        "mock_response_price": "Our products start from $999. Would you like to see the pricing for a specific model?",
+        "mock_response_mac": "The new MacBook lineup features the M3 chip, delivering incredible performance and battery life.",
+        "mock_response_iphone": "iPhone 15 Pro features a titanium design and the groundbreaking A17 Pro chip.",
+        "mock_response_vision": "Apple Vision Pro seamlessly blends digital content with your physical space.",
+        "mock_response_default": "I can help you explore our latest products, find a store, or answer support questions. What would you like to know?"
+    },
+    "timeline": {
+        "title": "Our Impact History",
+        "description": "Discover how we have transformed key industries in Chile through technological innovation and strategic alliances.",
+        "items": {
+            "metro": "Implementation of real-time monitoring systems to optimize passenger flow and reduce wait times during peak hours.",
+            "pullman": "Fleet modernization with IoT sensors for predictive maintenance and improved road safety.",
+            "parque_arauco": "Development of a data analysis platform to understand visitor behavior and personalize the shopping experience.",
+            "transantiago": "Integration of advanced GPS for fleet tracking and route optimization in the public transport system.",
+            "claro": "Strengthening 5G network infrastructure and deploying high-speed enterprise connectivity solutions."
+        }
     }
 }

@@ -286,21 +286,21 @@ export const Navbar = () => {
                             <div className="flex justify-start space-x-12">
                                 {navData[activeHover].map((column, idx) => (
                                     <div key={idx} className="flex flex-col space-y-4 min-w-[150px]">
-                                        <h4 className="text-gray-500 dark:text-gray-400 text-sm font-semibold">{column.title}</h4>
+                                        <h4 className="text-gray-500 dark:text-gray-400 text-sm font-semibold">{t(column.title)}</h4>
                                         <ul className="space-y-2 mt-2">
                                             {column.links.map((link) => (
                                                 <li key={link}>
-                                                    {link === 'Timeline' ? (
+                                                    {link.endsWith('timeline') ? (
                                                         <Link
                                                             to="/timeline"
                                                             className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-sm block py-1"
                                                             onClick={() => setActiveHover(null)} // Close menu on click
                                                         >
-                                                            {link}
+                                                            {t(link)}
                                                         </Link>
                                                     ) : (
                                                         <Link to="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-sm block py-1">
-                                                            {link}
+                                                            {t(link)}
                                                         </Link>
                                                     )}
                                                 </li>
@@ -395,18 +395,18 @@ export const Navbar = () => {
                                                                     {navData[item.key].map((column, idx) => (
                                                                         <div key={idx} className="space-y-3">
                                                                             <h4 className="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">
-                                                                                {column.title}
+                                                                                {t(column.title)}
                                                                             </h4>
                                                                             <ul className="space-y-2 pl-2 border-l-2 border-gray-200 dark:border-gray-700">
                                                                                 {column.links.map((link) => (
                                                                                     <li key={link}>
-                                                                                        {link === 'Timeline' ? (
+                                                                                        {link.endsWith('timeline') ? (
                                                                                             <Link
                                                                                                 to="/timeline"
                                                                                                 className="block text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 pl-4 py-1"
                                                                                                 onClick={() => setIsOpen(false)}
                                                                                             >
-                                                                                                {link}
+                                                                                                {t(link)}
                                                                                             </Link>
                                                                                         ) : (
                                                                                             <a
@@ -414,7 +414,7 @@ export const Navbar = () => {
                                                                                                 className="block text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 pl-4 py-1"
                                                                                                 onClick={() => setIsOpen(false)}
                                                                                             >
-                                                                                                {link}
+                                                                                                {t(link)}
                                                                                             </a>
                                                                                         )}
                                                                                     </li>

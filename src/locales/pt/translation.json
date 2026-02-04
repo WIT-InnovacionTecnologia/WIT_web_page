@@ -1,44 +1,196 @@
 {
     "navbar": {
         "store": "Loja",
-        "mac": "Mac",
+        "mac": "TeL",
         "ipad": "iPad",
         "iphone": "iPhone",
         "watch": "Watch",
-        "vision": "Vision",
+        "vision": "Sentinel",
         "airpods": "AirPods",
         "tv_home": "TV e Casa",
         "entertainment": "Entretenimento",
         "accessories": "Acessórios",
         "support": "Suporte",
         "search_placeholder": "Buscar em apple.com",
-        "quick_links": "Links Rápidos"
+        "quick_links": "Links Rápidos",
+        "product": "Produto",
+        "clients": "Clientes",
+        "partners": "Parceiros",
+        "ia": "IA",
+        "bi": "BI",
+        "about": "Sobre a WIT",
+        "menu": {
+            "solutions": {
+                "title": "Nossas Soluções",
+                "items": {
+                    "software": "Desenvolvimento de Software",
+                    "consulting": "Consultoria de TI",
+                    "digital": "Transformação Digital",
+                    "cyber": "Cibersegurança"
+                }
+            },
+            "platforms": {
+                "title": "Plataformas",
+                "items": {
+                    "saas": "SaaS",
+                    "cloud": "Computação em Nuvem",
+                    "integrations": "Integrações",
+                    "apis": "APIs"
+                }
+            },
+            "cases": {
+                "title": "Casos de Sucesso",
+                "items": {
+                    "finance": "Setor Financeiro",
+                    "retail": "Varejo",
+                    "health": "Saúde",
+                    "government": "Governo",
+                    "timeline": "Linha do Tempo"
+                }
+            },
+            "testimonials": {
+                "title": "Depoimentos",
+                "items": {
+                    "clients": "O que dizem nossos clientes",
+                    "impact": "Impacto no Negócio"
+                }
+            },
+            "alliances": {
+                "title": "Alianças Estratégicas",
+                "items": {
+                    "microsoft": "Microsoft",
+                    "aws": "AWS",
+                    "google": "Google Cloud",
+                    "partner": "Programa de Parceiros"
+                }
+            },
+            "become_partner": {
+                "title": "Torne-se um Parceiro",
+                "items": {
+                    "benefits": "Benefícios",
+                    "requirements": "Requisitos",
+                    "register": "Cadastro"
+                }
+            },
+            "ai": {
+                "title": "Inteligência Artificial",
+                "items": {
+                    "ml": "Aprendizado de Máquina",
+                    "nlp": "Processamento de Linguagem Natural",
+                    "vision": "Visão Computacional"
+                }
+            },
+            "data_services": {
+                "title": "Serviços de Dados",
+                "items": {
+                    "bigdata": "Big Data",
+                    "analytics": "Análise Preditiva",
+                    "bi": "Business Intelligence"
+                }
+            },
+            "bi_section": {
+                "title": "Business Intelligence",
+                "items": {
+                    "dashboards": "Dashboards Interativos",
+                    "reports": "Relatórios Automatizados",
+                    "kpis": "KPIs"
+                }
+            },
+            "tools": {
+                "title": "Ferramentas",
+                "items": {
+                    "powerbi": "Power BI",
+                    "tableau": "Tableau",
+                    "looker": "Looker"
+                }
+            },
+            "about_section": {
+                "title": "Sobre Nós",
+                "items": {
+                    "history": "Nossa História",
+                    "team": "Equipe",
+                    "culture": "Cultura",
+                    "careers": "Carreiras"
+                }
+            },
+            "contact_section": {
+                "title": "Contato",
+                "items": {
+                    "support": "Suporte",
+                    "sales": "Vendas",
+                    "offices": "Escritórios"
+                }
+            }
+        }
     },
     "hero": {
-        "title": "Ultimate Pad",
-        "subtitle": "Adorável. Desenhável. Mágico.",
-        "buy": "Comprar",
-        "learn_more": "Saiba mais"
+        "learn_more": "Saiba mais",
+        "main_title": "Desenvolvemos o futuro da sua empresa",
+        "main_subtitle": "Especialistas em modernizar processos críticos usando Inteligência Artificial, conectividade de alto padrão e soluções avançadas de telemetria",
+        "cta_button": "Conheça-nos",
+        "video_overlay_title": "MaisGPS",
+        "video_overlay_desc": "Mantenha o controle total da sua frota com nossa plataforma MaisGPS. Gerencie rotas, receba alertas e tome decisões em tempo real de qualquer dispositivo para transformar os dados de cada veículo em decisões que aumentam a rentabilidade.",
+        "browser_support": "Seu navegador não suporta a tag de vídeo."
     },
     "grid": {
-        "latest": "As novidades.",
+        "latest": "O futuro, hoje.",
         "whats_new": "Confira o que há de novo.",
         "learn_more": "Saiba mais",
-        "buy": "Comprar"
+        "buy": "Comprar",
+        "sentinel_subtitle": "Aumente a segurança da sua operação com câmeras de IA que reduzem acidentes e custos associados ao detectar fadiga e distrações do motorista na rota.",
+        "tel_subtitle": "Visualize alertas antes de falhar ou gastar demais; antecipe avarias, economizando combustível e mantendo sua frota sempre em movimento, otimizando cada viagem.",
+        "iot": {
+            "title": "IoT (Internet das Coisas)",
+            "subtitle": "Transforme seus ativos em uma rede inteligente. Conecte e automatize o controle para otimizar o desempenho, antecipar o desgaste de peças e reduzir o consumo de energia, melhorando a eficiência dos seus ônibus e a experiência dos usuários."
+        },
+        "totems": {
+            "title": "Totens Interativos",
+            "subtitle": "Descongestione filas com pontos de autoatendimento, melhore a fluidez operacional dentro dos terminais. Conforto e autonomia para o passageiro imprimir passagens, consultar plataformas, verificar horários ou acessar serviços sem esperas desnecessárias."
+        },
+        "ecommerce": {
+            "title": "Plataforma e-Commerce",
+            "subtitle": "Leve suas vendas para a nuvem com uma plataforma de E-Commerce 24/7. Melhore a experiência do usuário digital e receba dados valiosos sobre seu comportamento para realizar campanhas personalizadas e aumentar de forma mensurável sua gestão comercial."
+        },
+        "wifi": {
+            "title": "Wi-Fi Urbano",
+            "subtitle": "Sinal de alta fidelidade com hardware de nível industrial para pontos estratégicos. Transformamos conexões em uma vantagem competitiva, fidelizando clientes."
+        }
     },
     "showcase": {
-        "camera_title": "Câmera Avançada.",
-        "camera_desc": "Capture seu mundo com detalhes impressionantes. A nova câmera principal de 48 MP fotografa em super alta resolução.",
-        "battery_title": "Bateria para o dia todo.",
-        "battery_desc": "Potência que acompanha você. Até 29 horas de reprodução de vídeo na tela grande.",
-        "chip_title": "Chip A17 Pro.",
-        "chip_desc": "Uma vitória monstruosa para jogos. Chegou. O maior redesenho na história das GPUs da Apple."
+        "camera_title": "IA",
+        "camera_desc": "Nossa plataforma aprende com o comportamento dos seus usuários para ajustar rotas, antecipar altas temporadas e personalizar o atendimento, garantindo a ocupação máxima dos seus ônibus e fidelizando seus clientes.",
+        "battery_title": "Parceria (P+S)",
+        "battery_desc": "Criamos uma aliança estratégica para modernizar seus processos, integrando nossos recursos e talento especializado. Compartilhamos desafios e oportunidades, desenvolvendo juntos soluções inovadoras que aceleram seu crescimento.",
+        "chip_title": "Connect Plus (ConnP)",
+        "chip_desc": "Oferecemos conectividade de alto padrão para operações-chave. Com conexão de fibra óptica rápida e estável e suporte 24/7, garantimos o máximo desempenho dos seus processos de IA e telemetria."
     },
     "ai": {
         "greeting": "Olá! Sou seu assistente Apple Intelligence. Como posso ajudar você hoje?",
-        "input_placeholder": "Pergunte qualquer coisa..."
+        "input_placeholder": "Pergunte qualquer coisa...",
+        "mock_response_price": "Nossos produtos começam a partir de $999. Gostaria de ver os preços de um modelo específico?",
+        "mock_response_mac": "A nova linha MacBook conta com o chip M3, oferecendo desempenho e duração de bateria incríveis.",
+        "mock_response_iphone": "O iPhone 15 Pro apresenta um design de titânio e o revolucionário chip A17 Pro.",
+        "mock_response_vision": "O Apple Vision Pro combina perfeitamente conteúdo digital com seu espaço físico.",
+        "mock_response_default": "Posso ajudar você a explorar nossos produtos mais recentes, encontrar uma loja ou responder a perguntas de suporte. O que você gostaria de saber?"
+    },
+    "timeline": {
+        "title": "Nossa História de Impacto",
+        "description": "Descubra como transformamos indústrias-chave no Chile através de inovação tecnológica e alianças estratégicas.",
+        "items": {
+            "metro": "Implementação de sistemas de monitoramento em tempo real para otimizar o fluxo de passageiros e reduzir tempos de espera nos horários de pico.",
+            "pullman": "Modernização da frota com sensores IoT para manutenção preditiva e melhoria da segurança na rota.",
+            "parque_arauco": "Desenvolvimento de uma plataforma de análise de dados para entender o comportamento dos visitantes e personalizar a experiência de compra.",
+            "transantiago": "Integração de GPS avançado para rastreamento de frota e otimização de rotas no sistema de transporte público.",
+            "claro": "Fortalecimento da infraestrutura de rede 5G e implantação de soluções de conectividade empresarial de alta velocidade."
+        }
     },
     "footer": {
-        "copyright": "Copyright © 2024 Apple Inc. Todos os direitos reservados."
+        "solutions": "Soluções",
+        "platforms": "Plataformas",
+        "company": "Empresa",
+        "contact": "Contato",
+        "privacy": "Política de Privacidade",
+        "terms": "Termos de Uso",
+        "copyright": "Copyright © 2026 WIT. Todos os direitos reservados."
     }
 }

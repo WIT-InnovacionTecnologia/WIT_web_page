@@ -1,14 +1,16 @@
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import heroVideo from '../assets/videos/aerial-birds-eye-tracking-shot-of-car-and-truck-dr-2025-08-28-14-35-14-utc.mov';
+
 export const Hero = () => {
-    // const { t } = useTranslation(); // Removed unused translation hook
+    const { t } = useTranslation();
 
     // Text Variables for easy access
-    const title = "Desarrollamos el futuro de tu empresa";
-    const subtitle = "Especialistas en modernizar procesos críticos mediante Inteligencia Artificial, conectividad de alto estándar y soluciones de telemetría avanzada";
-    const buyButtonText = "Conócenos";
-    const learnMoreText = "hablemos";
+    const title = t('hero.main_title');
+    const subtitle = t('hero.main_subtitle');
+    const buyButtonText = t('hero.cta_button');
+    const learnMoreText = t('hero.learn_more');
 
     return (
         <section className="relative min-h-[calc(100vh-44px)] flex flex-col items-center pt-20 pb-10 overflow-hidden bg-white dark:bg-transparent text-center transition-colors duration-300">
@@ -53,14 +55,14 @@ export const Hero = () => {
                         playsInline
                     >
                         <source src={heroVideo} />
-                        Tu navegador no soporta el tag de video.
+                        {t('hero.browser_support')}
                     </video>
 
                     {/* Video Overlay Text */}
                     <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6">
-                        <h3 className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">MásGPS</h3>
+                        <h3 className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">{t('hero.video_overlay_title')}</h3>
                         <p className="text-white text-lg md:text-xl font-medium max-w-2xl drop-shadow-md leading-relaxed">
-                            Mantén el control total de tu flota con nuestra plataforma MásGPS. Gestiona rutas, recibe alertas y toma decisiones en tiempo real desde cualquier dispositivo para transformar los datos de cada vehículo en decisiones que potencien la rentabilidad.
+                            {t('hero.video_overlay_desc')}
                         </p>
                     </div>
                 </div>
