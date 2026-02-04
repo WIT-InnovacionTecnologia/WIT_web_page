@@ -12,7 +12,22 @@
         "accessories": "Accessories",
         "support": "Support",
         "search_placeholder": "Search apple.com",
-        "quick_links": "Quick Links"
+        "quick_links": "Quick Links",
+        "product": "Product",
+        "clients": "Clients",
+        "partners": "Partners",
+        "ia": "AI",
+        "bi": "BI",
+        "about": "About WIT"
+    },
+    "footer": {
+        "solutions": "Solutions",
+        "platforms": "Platforms",
+        "company": "Company",
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "copyright": "Copyright © 2024 WIT. All rights reserved."
     },
     "hero": {
         "title": "Ultimate Pad",
@@ -24,21 +39,34 @@
         "latest": "The latest.",
         "whats_new": "Take a look at what’s new.",
         "learn_more": "Learn more",
-        "buy": "Buy"
+        "buy": "Buy",
+        "iot": {
+            "title": "IoT (Internet of Things)",
+            "subtitle": "Transform your assets into a smart network. Connect and automate control to optimize performance, anticipate parts wear, and reduce energy consumption, improving your bus efficiency and user experience."
+        },
+        "totems": {
+            "title": "Interactive Totems",
+            "subtitle": "Decongest lines with self-service points, improve operational fluency within terminals. Passenger comfort and autonomy to print tickets, consult platforms, check schedules, or access services without unnecessary waits."
+        },
+        "ecommerce": {
+            "title": "e-Commerce Platform",
+            "subtitle": "Take your sales to the cloud with a 24/7 E-Commerce platform. Improve digital user experience and receive valuable data on their behavior to run personalized campaigns and measurably increase your commercial management."
+        },
+        "wifi": {
+            "title": "Urban WiFi",
+            "subtitle": "High-fidelity signal with industrial-grade hardware for strategic points. We transform connections into a competitive advantage, building customer loyalty."
+        }
     },
     "showcase": {
-        "camera_title": "Advanced Camera.",
-        "camera_desc": "Capture your world in stunning detail. The new 48MP Main camera shoots in super-high resolution.",
-        "battery_title": "All-Day Battery.",
-        "battery_desc": "Power that keeps up with you. Up to 29 hours of video playback on the big screen.",
-        "chip_title": "A17 Pro Chip.",
-        "chip_desc": "A monster win for gaming. It’s here. The biggest redesign in the history of Apple GPUs."
+        "camera_title": "AI",
+        "camera_desc": "Our platform learns from your users' behavior to adjust routes, anticipate peak seasons, and personalize service, ensuring maximum bus occupancy and building customer loyalty.",
+        "battery_title": "P + S (Products + Services)",
+        "battery_desc": "Complete solution that puts the customer at the center, with rapid incident resolution. Centralized request channels for immediate responses—remote in minutes or in-person in hours. Includes continuous monitoring, detailed ticket tracking, and efficient incident resolution.",
+        "chip_title": "ConnP (Connectivity Platforms)",
+        "chip_desc": "We integrate robust equipment and strategic analysis into a single platform (ConnP) to manage your assets from wherever you are."
     },
     "ai": {
         "greeting": "Hello! I'm your Apple Intelligence assistant. How can I help you today?",
         "input_placeholder": "Ask anything..."
-    },
-    "footer": {
-        "copyright": "Copyright © 2024 Apple Inc. All rights reserved."
     }
 }

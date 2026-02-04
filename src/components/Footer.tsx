@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logoWhite from '../assets/wit-global-partnership-white.png';
 import logoBlack from '../assets/wit-global-partnership.png';
 import footerBar from '../assets/footer-bar.png';
 
 export const Footer = () => {
+    const { t } = useTranslation();
+
     // Text Variables
-    const copyrightText = `Copyright © ${new Date().getFullYear()} WIT. Todos los derechos reservados.`;
+    const copyrightText = t('footer.copyright');
 
     const footerSections = [
         {
-            title: 'Soluciones',
+            title: t('footer.solutions'),
             links: ['Desarrollo de Software', 'Consultoría TI', 'Transformación Digital', 'Ciberseguridad'],
         },
         {
-            title: 'Plataformas',
+            title: t('footer.platforms'),
             links: ['SaaS', 'Cloud Computing', 'Integraciones', 'APIs'],
         },
         {
-            title: 'Empresa',
+            title: t('footer.company'),
             links: ['Sobre Nosotros', 'Casos de Éxito', 'Partners', 'Carreras'],
         },
         {
-            title: 'Contacto',
+            title: t('footer.contact'),
             links: [
                 'Casa Matriz: Obispo Umaña 633, Estación Central, Santiago',
                 'Iquique: Barros Arana 825',
@@ -71,9 +74,9 @@ export const Footer = () => {
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="text-center">{copyrightText}</p>
                         <div className="flex space-x-4">
-                            <Link to="#" className="hover:underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Política de Privacidad</Link>
+                            <Link to="#" className="hover:underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">{t('footer.privacy')}</Link>
                             <span className="text-gray-300 dark:text-gray-600">|</span>
-                            <Link to="#" className="hover:underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Términos de Uso</Link>
+                            <Link to="#" className="hover:underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">{t('footer.terms')}</Link>
                         </div>
                     </div>
                 </div>
