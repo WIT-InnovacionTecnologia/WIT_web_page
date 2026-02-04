@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import totemImage from '../assets/totem.jpg';
-import iotVideo from '../assets/videos/IOT.mov';
+
 import ecommerceImage from '../assets/E COMMERCE2.png';
 import wifiUrbanImage from '../assets/WIFI URBAN.jpg';
 import telImage from '../assets/TEL.png';
@@ -42,8 +42,7 @@ export const BentoGrid = () => {
             subtitle: t('grid.iot.subtitle'),
             description: '',
             className: 'md:col-span-1 bg-black text-white',
-            theme: 'dark',
-            video: iotVideo
+            theme: 'dark'
         },
         {
             id: 4,
