@@ -127,12 +127,12 @@ export const Navbar = () => {
     ];
 
     const navItems = [
-        { key: 'Producto', label: 'Producto' },
-        { key: 'Clientes', label: 'Clientes' },
-        { key: 'Partners', label: 'Partners' },
-        { key: 'IA', label: 'IA' },
-        { key: 'BI', label: 'BI' },
-        { key: 'Acerca de WIT', label: 'Acerca de WIT' },
+        { key: 'Producto', label: t('navbar.product') },
+        { key: 'Clientes', label: t('navbar.clients') },
+        { key: 'Partners', label: t('navbar.partners') },
+        { key: 'IA', label: t('navbar.ia') },
+        { key: 'BI', label: t('navbar.bi') },
+        { key: 'Acerca de wit', label: t('navbar.about') },
     ];
 
     return (
@@ -182,7 +182,7 @@ export const Navbar = () => {
                                 <div
                                     key={item.key}
                                     className="h-full flex items-center"
-                                    onMouseEnter={() => setActiveHover(item.label)} // Keeping label for hover logic to match navData
+                                    onMouseEnter={() => setActiveHover(item.key)} // Keeping label for hover logic to match navData
                                 >
                                     <a
                                         href="#" // Placeholder path

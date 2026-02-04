@@ -29,32 +29,32 @@ export const BentoGrid = () => {
         },
         {
             id: 3,
-            title: 'IoT (Internet de las Cosas)',
-            subtitle: 'Transforma tus activos en una red inteligente. Conecta y automatiza el control para optimizar el rendimiento, anticipar el desgaste de piezas y reducir el consumo de energía, mejorando la eficiencia de tus buses y la experiencia de tus usuarios.',
+            title: t('grid.iot.title'),
+            subtitle: t('grid.iot.subtitle'),
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 4,
-            title: 'Tótems Interactivos',
-            subtitle: 'Descongestiona filas con puntos de autoatención, mejora la fluidez operativa dentro de terminales. Comodidad y autonomía al pasajero al imprimir pasajes, consultar andenes, ver horarios o acceder a servicios sin esperas innecesarias.',
+            title: t('grid.totems.title'),
+            subtitle: t('grid.totems.subtitle'),
             description: '',
             className: 'md:col-span-2 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
         },
         {
             id: 5,
-            title: 'Plataforma e-Commerce',
-            subtitle: 'Lleva tus ventas a las nubes con una plataforma de E-Commerce de venta 24/7. Mejora la experiencia de los usuarios digitales y recibe datos valiosos sobre su comportamiento para hacer campañas personalizadas y aumentar de forma medible tu gestión comercial.',
+            title: t('grid.ecommerce.title'),
+            subtitle: t('grid.ecommerce.subtitle'),
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark'
         },
         {
             id: 6,
-            title: 'Urban WiFi',
-            subtitle: 'Señal de alta fidelidad con hardware de grado industrial para puntos estratégicos. Transformamos las conexiones en una ventaja competitiva, fidelizando a los clientes.',
+            title: t('grid.wifi.title'),
+            subtitle: t('grid.wifi.subtitle'),
             description: '',
             className: 'md:col-span-1 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light'
