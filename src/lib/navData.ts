@@ -29,7 +29,11 @@ export const navData: Record<string, { title: string; links: string[]; linkPaths
         { title: 'navbar.menu.tools.title', links: ['navbar.menu.tools.items.powerbi', 'navbar.menu.tools.items.tableau', 'navbar.menu.tools.items.looker'] },
     ],
     'Acerca de wit': [
-        { title: 'navbar.menu.about_section.title', links: ['navbar.menu.about_section.items.history', 'navbar.menu.about_section.items.team', 'navbar.menu.about_section.items.culture', 'navbar.menu.about_section.items.careers'] },
+        {
+            title: 'navbar.menu.about_section.title',
+            links: ['navbar.menu.about_section.items.history', 'navbar.menu.about_section.items.team', 'navbar.menu.about_section.items.culture', 'navbar.menu.about_section.items.careers'],
+            linkPaths: ['/about', '/team', '/culture', '/careers']
+        },
         { title: 'navbar.menu.contact_section.title', links: ['navbar.menu.contact_section.items.support', 'navbar.menu.contact_section.items.sales', 'navbar.menu.contact_section.items.offices'] },
     ],
 };

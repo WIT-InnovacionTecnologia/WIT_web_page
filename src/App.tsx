@@ -8,6 +8,10 @@ import { IoTPage } from './pages/IoTPage';
 import { TotemsPage } from './pages/TotemsPage';
 import { EcommercePage } from './pages/EcommercePage';
 import { WifiUrbanPage } from './pages/WifiUrbanPage';
+import { AboutPage } from './pages/AboutPage';
+import { TeamPage } from './pages/TeamPage';
+import { CulturePage } from './pages/CulturePage';
+import { CareersPage } from './pages/CareersPage';
 import { ReviewsPage } from './pages/ReviewsPage';
 import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
@@ -50,6 +54,10 @@ function App() {
         <Route path="/products/totems" element={<TotemsPage />} />
         <Route path="/products/ecommerce" element={<EcommercePage />} />
         <Route path="/products/wifi-urban" element={<WifiUrbanPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/culture" element={<CulturePage />} />
+        <Route path="/careers" element={<CareersPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
       </Routes>
     </MainLayout>

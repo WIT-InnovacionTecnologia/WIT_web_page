@@ -292,7 +292,7 @@ export const Navbar = () => {
                                                 const linkPath = column.linkPaths?.[linkIdx] || '#';
                                                 const isTimeline = link.endsWith('timeline');
                                                 const finalPath = isTimeline ? '/timeline' : linkPath;
-                                                const displayText = column.linkPaths?.[linkIdx] ? link : t(link);
+                                                const displayText = t(link);
 
                                                 return (
                                                     <li key={link}>
