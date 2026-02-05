@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
 import { Hero } from './components/Hero';
 import { TimelinePage } from './pages/TimelinePage';
+import { SentinelPage } from './pages/SentinelPage';
+import { ReviewsPage } from './pages/ReviewsPage';
 import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
 import { AIAssistant } from './components/AIAssistant';
@@ -37,6 +39,8 @@ function App() {
           </>
         } />
         <Route path="/timeline" element={<TimelinePage />} />
+        <Route path="/products/sentinel" element={<SentinelPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
       </Routes>
     </MainLayout>
   );

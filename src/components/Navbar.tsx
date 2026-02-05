@@ -145,13 +145,13 @@ export const Navbar = () => {
                 <div className="flex items-center justify-between h-[44px]">
 
                     {/* Desktop Layout */}
-                    <div className="hidden md:flex items-center justify-between w-full text-sm font-normal relative">
+                    <div className="hidden md:flex items-center justify-between w-full text-[13px] font-normal relative">
                         {/* WIT Logo */}
                         <Link to="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
                             <img
                                 src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                 alt="WIT"
-                                className="h-[28px] w-auto object-contain"
+                                className="h-[26px] w-auto object-contain"
                             />
                         </Link>
 
@@ -288,23 +288,24 @@ export const Navbar = () => {
                                     <div key={idx} className="flex flex-col space-y-4 min-w-[150px]">
                                         <h4 className="text-gray-500 dark:text-gray-400 text-sm font-semibold">{t(column.title)}</h4>
                                         <ul className="space-y-2 mt-2">
-                                            {column.links.map((link) => (
-                                                <li key={link}>
-                                                    {link.endsWith('timeline') ? (
+                                            {column.links.map((link, linkIdx) => {
+                                                const linkPath = column.linkPaths?.[linkIdx] || '#';
+                                                const isTimeline = link.endsWith('timeline');
+                                                const finalPath = isTimeline ? '/timeline' : linkPath;
+                                                const displayText = column.linkPaths?.[linkIdx] ? link : t(link);
+
+                                                return (
+                                                    <li key={link}>
                                                         <Link
-                                                            to="/timeline"
+                                                            to={finalPath}
                                                             className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-sm block py-1"
-                                                            onClick={() => setActiveHover(null)} // Close menu on click
+                                                            onClick={() => setActiveHover(null)}
                                                         >
-                                                            {t(link)}
+                                                            {displayText}
                                                         </Link>
-                                                    ) : (
-                                                        <Link to="#" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-sm block py-1">
-                                                            {t(link)}
-                                                        </Link>
-                                                    )}
-                                                </li>
-                                            ))}
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                 ))}

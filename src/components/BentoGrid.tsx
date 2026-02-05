@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import totemImage from '../assets/totem.jpg';
-
 import ecommerceImage from '../assets/E COMMERCE2.png';
 import wifiUrbanImage from '../assets/WIFI URBAN.jpg';
 import telImage from '../assets/TEL.png';
@@ -14,8 +13,6 @@ export const BentoGrid = () => {
     // Section Titles
     const sectionTitle = t('grid.latest');
     const sectionSubtitle = t('grid.whats_new');
-    const learnMoreText = t('grid.learn_more');
-    const buyText = t('grid.buy');
 
     const products = [
         {
@@ -106,8 +103,6 @@ export const BentoGrid = () => {
                             </div>
                         )}
 
-
-
                         <div className={`absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10 ${product.image ? 'text-white' : ''}`}>
                             <h3
                                 className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2"
@@ -128,18 +123,18 @@ export const BentoGrid = () => {
                                 {product.description}
                             </p>
 
-                            <div className="mt-8 flex space-x-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="mt-8 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button
-                                    className={`hover:underline text-sm font-medium ${product.image ? 'text-white' : 'text-blue-500'}`}
+                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
-                                    {learnMoreText} &gt;
+                                    {t('grid.buy')}
                                 </button>
                                 <button
-                                    className={`hover:underline text-sm font-medium ${product.image ? 'text-white' : 'text-blue-500'}`}
+                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'border-2 border-white text-white hover:bg-white/10' : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
-                                    {buyText} &gt;
+                                    {t('grid.learn_more')}
                                 </button>
                             </div>
                         </div>
@@ -147,7 +142,7 @@ export const BentoGrid = () => {
                         {/* Placeholder Content (only if no image or video) */}
                         {!product.image && (
                             <div className="absolute bottom-0 left-0 right-0 h-1/2 flex items-center justify-center overflow-hidden">
-                                <div className={`w-3/4 h-3/4 flex items-center justify-center opacity-50 ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
+                                <div className={`w-3/4 h-3/4 flex items-center justify-center ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
                                     <span className="text-xs">Product Image</span>
                                 </div>
                             </div>
