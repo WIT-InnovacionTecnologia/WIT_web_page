@@ -1,11 +1,20 @@
-export const navData: Record<string, { title: string; links: string[] }[]> = {
+export const navData: Record<string, { title: string; links: string[]; linkPaths?: string[] }[]> = {
     'Producto': [
+        {
+            title: 'navbar.menu.products.title',
+            links: ['Sentinel', 'TeL', 'IoT', 'Totems', 'E-commerce', 'WiFi Urban'],
+            linkPaths: ['/products/sentinel', '#', '#', '#', '#', '#']
+        },
         { title: 'navbar.menu.solutions.title', links: ['navbar.menu.solutions.items.software', 'navbar.menu.solutions.items.consulting', 'navbar.menu.solutions.items.digital', 'navbar.menu.solutions.items.cyber'] },
         { title: 'navbar.menu.platforms.title', links: ['navbar.menu.platforms.items.saas', 'navbar.menu.platforms.items.cloud', 'navbar.menu.platforms.items.integrations', 'navbar.menu.platforms.items.apis'] },
     ],
     'Clientes': [
         { title: 'navbar.menu.cases.title', links: ['navbar.menu.cases.items.finance', 'navbar.menu.cases.items.retail', 'navbar.menu.cases.items.health', 'navbar.menu.cases.items.government', 'navbar.menu.cases.items.timeline'] },
-        { title: 'navbar.menu.testimonials.title', links: ['navbar.menu.testimonials.items.clients', 'navbar.menu.testimonials.items.impact'] },
+        {
+            title: 'navbar.menu.testimonials.title',
+            links: ['Reseñas', 'navbar.menu.testimonials.items.clients', 'navbar.menu.testimonials.items.impact'],
+            linkPaths: ['/reviews', '#', '#']
+        },
     ],
     'Partners': [
         { title: 'navbar.menu.alliances.title', links: ['navbar.menu.alliances.items.microsoft', 'navbar.menu.alliances.items.aws', 'navbar.menu.alliances.items.google', 'navbar.menu.alliances.items.partner'] },
