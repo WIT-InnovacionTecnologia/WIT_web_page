@@ -132,11 +132,11 @@ export const BentoGrid = () => {
 
                             <div className="mt-8 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <Link
-                                    to={product.path}
+                                    to={`/request-demo?product=${product.title}`}
                                     className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
-                                    {t('grid.buy')}
+                                    {t('product.template.cta_demo')}
                                 </Link>
                                 <Link
                                     to={product.path}

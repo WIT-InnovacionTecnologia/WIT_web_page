@@ -2,17 +2,19 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { Target, Globe, Shield, Zap, Leaf, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 export const AboutPage = () => {
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
 
     const timelineData = [
-        { year: "2009", title: "El Comienzo", desc: "WIT nace con una visión: conectar lo que antes era invisible.", icon: <Zap className="w-8 h-8" /> },
-        { year: "2014", title: "Expansión IoT", desc: "Desplegamos nuestra primera red masiva de sensores en la minería chilena.", icon: <Globe className="w-8 h-8" /> },
-        { year: "2019", title: "Era de la IA", desc: "Integramos algoritmos de visión artificial para seguridad vial en tiempo real.", icon: <Target className="w-8 h-8" /> },
-        { year: "2024", title: "Liderazgo Regional", desc: "Consolidamos operaciones en todo Chile con tecnología 100% propia.", icon: <Shield className="w-8 h-8" /> }
+        { year: "2009", title: t('about.timeline.zap_title'), desc: t('about.timeline.zap_desc'), icon: <Zap className="w-8 h-8" /> },
+        { year: "2014", title: t('about.timeline.globe_title'), desc: t('about.timeline.globe_desc'), icon: <Globe className="w-8 h-8" /> },
+        { year: "2019", title: t('about.timeline.target_title'), desc: t('about.timeline.target_desc'), icon: <Target className="w-8 h-8" /> },
+        { year: "2024", title: t('about.timeline.shield_title'), desc: t('about.timeline.shield_desc'), icon: <Shield className="w-8 h-8" /> }
     ];
 
     return (
@@ -26,10 +28,10 @@ export const AboutPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-4"
                     >
-                        <span className="text-xl md:text-2xl font-semibold tracking-tight text-[#86868b]">Acerca de WIT</span>
+                        <span className="text-xl md:text-2xl font-semibold tracking-tight text-[#86868b]">{t('about.hero_tag')}</span>
                         <h1 className="text-7xl md:text-[10rem] font-bold tracking-tighter leading-[0.9] mb-12">
-                            Tecnología con <br />
-                            <span className="text-[#0071e3]">propósito humano.</span>
+                            {t('about.hero_title')} <br />
+                            <span className="text-[#0071e3]">{t('about.hero_title_blue')}</span>
                         </h1>
                     </motion.div>
                 </div>
@@ -54,7 +56,7 @@ export const AboutPage = () => {
                                     initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
-                                    className="text-8xl md:text-[12rem] font-bold text-[#f5f5f7] dark:text-[#1d1d1f] leading-none select-none tracking-tighter"
+                                    className="text-8xl md:text-[12rem] font-bold text-[#d2d2d7] dark:text-[#2d2d2f] leading-none select-none tracking-tighter"
                                 >
                                     {item.year}
                                 </motion.span>
@@ -91,11 +93,11 @@ export const AboutPage = () => {
                         >
                             <div className="flex items-center gap-4 text-[#34c759]">
                                 <Leaf className="w-10 h-10" />
-                                <span className="text-2xl font-bold tracking-tight">Compromiso WIT 2030</span>
+                                <span className="text-2xl font-bold tracking-tight">{t('about.carbon.tag')}</span>
                             </div>
                             <h2 className="text-7xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] mb-12">
-                                Carbono <br />
-                                <span className="text-[#34c759] italic">Neutral.</span>
+                                {t('about.carbon.title_1')} <br />
+                                <span className="text-[#34c759] italic">{t('about.carbon.title_2_italic')}</span>
                             </h2>
                         </motion.div>
                         <motion.div
@@ -106,20 +108,20 @@ export const AboutPage = () => {
                             className="space-y-12"
                         >
                             <p className="text-3xl text-[#86868b] leading-tight font-medium tracking-tight">
-                                Nuestro objetivo es que cada sensor, cada servidor y cada línea de código de WIT sea 100% carbono neutral para finales de la década.
+                                {t('about.carbon.desc_main')}
                             </p>
                             <p className="text-xl text-[#86868b] leading-relaxed max-w-xl">
-                                Estamos modernizando nuestra cadena de suministro y optimizando el consumo energético de nuestros dispositivos IoT para liderar la transformación sostenible de Chile.
+                                {t('about.carbon.desc_detail')}
                             </p>
                         </motion.div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {[
-                            { label: "Consumo Reducido", value: "-15%", sub: "En flotas de buses", color: "text-[#34c759]" },
-                            { label: "Emisiones", value: "-22k", sub: "Toneladas de CO2", color: "text-[#34c759]" },
-                            { label: "Hardware", value: "Reciclable", sub: "98% de componentes", color: "text-[#34c759]" },
-                            { label: "Energía", value: "Sostenible", sub: "En casa matriz", color: "text-[#34c759]" }
+                            { label: t('about.carbon.stats.consumption'), value: "-15%", sub: t('about.carbon.stats.bus_fleet'), color: "text-[#34c759]" },
+                            { label: t('about.carbon.stats.emissions'), value: "-22k", sub: t('about.carbon.stats.co2_tons'), color: "text-[#34c759]" },
+                            { label: t('about.carbon.stats.hardware'), value: t('about.carbon.stats.recyclable'), sub: t('about.carbon.stats.recyclable_sub'), color: "text-[#34c759]" },
+                            { label: t('about.carbon.stats.energy'), value: t('about.carbon.stats.sustainable'), sub: t('about.carbon.stats.house'), color: "text-[#34c759]" }
                         ].map((card, idx) => (
                             <motion.div
                                 key={idx}
@@ -150,14 +152,14 @@ export const AboutPage = () => {
                     className="max-w-5xl mx-auto space-y-16"
                 >
                     <h2 className="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.9]">
-                        Innovación que <br /> <span className="text-[#0071e3]">trasciende.</span>
+                        {t('about.footer_cta.title')} <br /> <span className="text-[#0071e3]">{t('about.footer_cta.title_blue')}</span>
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                         <Link to="/contact" className="bg-[#0071e3] text-white px-16 py-6 rounded-full font-bold text-2xl hover:scale-105 transition-transform hover:bg-[#0077ed] shadow-lg shadow-[#0071e3]/20">
-                            Contactar con Ventas
+                            {t('about.footer_cta.contact')}
                         </Link>
                         <Link to="/careers" className="text-[#0071e3] font-bold text-2xl group flex items-center gap-2">
-                            Ver carreras <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                            {t('about.footer_cta.careers')} <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </div>
                 </motion.div>

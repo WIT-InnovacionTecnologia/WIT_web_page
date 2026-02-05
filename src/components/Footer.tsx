@@ -63,7 +63,10 @@ export const Footer = () => {
                                     <ul className="space-y-6">
                                         {section.links.map((link) => (
                                             <li key={link}>
-                                                <Link to="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:underline">
+                                                <Link
+                                                    to={section.title === t('footer.contact') ? '/contact' : '#'}
+                                                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:underline"
+                                                >
                                                     {link}
                                                 </Link>
                                             </li>

@@ -25,8 +25,16 @@ export const navData: Record<string, { title: string; links: string[]; linkPaths
         { title: 'navbar.menu.data_services.title', links: ['navbar.menu.data_services.items.bigdata', 'navbar.menu.data_services.items.analytics', 'navbar.menu.data_services.items.bi'] },
     ],
     'BI': [
-        { title: 'navbar.menu.bi_section.title', links: ['navbar.menu.bi_section.items.dashboards', 'navbar.menu.bi_section.items.reports', 'navbar.menu.bi_section.items.kpis'] },
-        { title: 'navbar.menu.tools.title', links: ['navbar.menu.tools.items.powerbi', 'navbar.menu.tools.items.tableau', 'navbar.menu.tools.items.looker'] },
+        {
+            title: 'navbar.menu.bi_section.title',
+            links: ['navbar.menu.bi_section.items.dashboards', 'navbar.menu.bi_section.items.reports', 'navbar.menu.bi_section.items.kpis'],
+            linkPaths: ['/bi/dashboards', '/bi/reports', '/bi/kpis']
+        },
+        {
+            title: 'navbar.menu.tools.title',
+            links: ['navbar.menu.tools.items.powerbi', 'navbar.menu.tools.items.tableau', 'navbar.menu.tools.items.looker'],
+            linkPaths: ['/bi/power-bi', '/bi/tableau', '/bi/looker']
+        },
     ],
     'Acerca de wit': [
         {
@@ -34,6 +42,10 @@ export const navData: Record<string, { title: string; links: string[]; linkPaths
             links: ['navbar.menu.about_section.items.history', 'navbar.menu.about_section.items.team', 'navbar.menu.about_section.items.culture', 'navbar.menu.about_section.items.careers'],
             linkPaths: ['/about', '/team', '/culture', '/careers']
         },
-        { title: 'navbar.menu.contact_section.title', links: ['navbar.menu.contact_section.items.support', 'navbar.menu.contact_section.items.sales', 'navbar.menu.contact_section.items.offices'] },
+        {
+            title: 'navbar.menu.contact_section.title',
+            links: ['navbar.menu.contact_section.items.support', 'navbar.menu.contact_section.items.sales', 'navbar.menu.contact_section.items.offices'],
+            linkPaths: ['/support', '/sales', '/offices']
+        },
     ],
 };

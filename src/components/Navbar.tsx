@@ -101,6 +101,10 @@ export const Navbar = () => {
         exit: { opacity: 0, y: -10, transition: { duration: 0.2 } }
     };
 
+    const APPLE_TRANSITION = { duration: 0.4, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
+
+
+
     const dropdownVariants: Variants = {
         hidden: { opacity: 0, height: 0, y: -4 },
         visible: {
@@ -113,7 +117,7 @@ export const Navbar = () => {
             opacity: 0,
             height: 0,
             y: -4,
-            transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }
+            transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] as [number, number, number, number] }
         }
     };
 

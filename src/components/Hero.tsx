@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import heroVideo from '../assets/videos/aerial-birds-eye-tracking-shot-of-car-and-truck-dr-2025-08-28-14-35-14-utc.mov';
 
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
@@ -31,12 +32,15 @@ export const Hero = () => {
                     {subtitle}
                 </p>
                 <div className="flex justify-center space-x-8">
-                    <button className="bg-[#0071e3] text-white rounded-full px-8 py-3 hover:bg-[#0077ed] transition-colors text-xl font-semibold shadow-lg shadow-[#0071e3]/20">
+                    <button
+                        onClick={() => window.location.href = '/contact'}
+                        className="bg-[#0071e3] text-white rounded-full px-8 py-3 hover:bg-[#0077ed] transition-colors text-xl font-semibold shadow-lg shadow-[#0071e3]/20"
+                    >
                         {buyButtonText}
                     </button>
-                    <a href="#footer" className="text-[#0071e3] hover:underline px-6 py-3 text-xl font-semibold flex items-center group">
+                    <Link to="/contact" className="text-[#0071e3] hover:underline px-6 py-3 text-xl font-semibold flex items-center group">
                         {learnMoreText} <span className="text-xs ml-2 group-hover:translate-x-1 transition-transform">›</span>
-                    </a>
+                    </Link>
                 </div>
             </motion.div>
 
@@ -45,9 +49,9 @@ export const Hero = () => {
                 initial={{ opacity: 0, scale: 0.98, y: 40 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
-                className="mt-24 w-full px-4 max-w-7xl mx-auto"
+                className="mt-24 w-full"
             >
-                <div className="relative w-full aspect-[21/9] bg-[#f5f5f7] dark:bg-[#161617] rounded-[2.5rem] shadow-2xl flex items-center justify-center overflow-hidden border border-[#d2d2d7] dark:border-[#424245]">
+                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden border-y border-gray-200 dark:border-gray-700">
                     {/* Placeholder for User Product Image */}
                     <video
                         className="w-full h-full object-cover"

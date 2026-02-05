@@ -13,10 +13,20 @@ import { TeamPage } from './pages/TeamPage';
 import { CulturePage } from './pages/CulturePage';
 import { CareersPage } from './pages/CareersPage';
 import { ReviewsPage } from './pages/ReviewsPage';
+import { SupportPage } from './pages/SupportPage';
+import { SalesPage } from './pages/SalesPage';
+import { OfficesPage } from './pages/OfficesPage';
+import { ContactPage } from './pages/ContactPage';
+import { DashboardsPage } from './pages/DashboardsPage';
+import { ReportsPage } from './pages/ReportsPage';
+import { KPIsPage } from './pages/KPIsPage';
+import { PowerBIPage, TableauPage, LookerPage } from './pages/BIInfrastructurePages';
 import { ScrollToTop } from './components/ScrollToTop';
 import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
 import { AIAssistant } from './components/AIAssistant';
+
+import { DemoRequestPage } from './pages/DemoRequestPage';
 
 import Beams from './components/Beams';
 import { LightRays } from './components/LightRays';
@@ -62,6 +72,17 @@ function App() {
           <Route path="/culture" element={<CulturePage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/support" element={<SupportPage />} />
+          <Route path="/sales" element={<SalesPage />} />
+          <Route path="/offices" element={<OfficesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/request-demo" element={<DemoRequestPage />} />
+          <Route path="/bi/dashboards" element={<DashboardsPage />} />
+          <Route path="/bi/reports" element={<ReportsPage />} />
+          <Route path="/bi/kpis" element={<KPIsPage />} />
+          <Route path="/bi/power-bi" element={<PowerBIPage />} />
+          <Route path="/bi/tableau" element={<TableauPage />} />
+          <Route path="/bi/looker" element={<LookerPage />} />
         </Routes>
       </MainLayout>
     </>

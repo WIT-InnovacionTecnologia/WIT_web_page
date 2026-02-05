@@ -1,44 +1,46 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { UserCircle, X, Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const APPLE_SPRING = { type: "spring", stiffness: 260, damping: 20 } as any;
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 export const TeamPage = () => {
+    const { t } = useTranslation();
     const [selectedMember, setSelectedMember] = useState<any>(null);
 
     const leadership = [
         {
             id: 1,
-            name: "Luis Tapia",
-            role: "CEO & Founder",
-            quote: "La tecnología solo tiene sentido cuando resuelve problemas reales.",
-            bio: "Líder visionario con más de 17 años de experiencia en el sector tecnológico chileno. Luis ha guiado a WIT desde sus inicios, transformándola en un referente regional en IoT e Inteligencia Artificial.",
+            name: t('team.leadership.luis.name'),
+            role: t('team.leadership.luis.role'),
+            quote: t('team.leadership.luis.quote'),
+            bio: t('team.leadership.luis.bio'),
             image: null
         },
         {
             id: 2,
-            name: "Equipo Directivo",
-            role: "Estrategia Global",
-            quote: "Expandimos horizontes para que la innovación chilena llegue a todo el mundo.",
-            bio: "Nuestra mesa directiva combina décadas de experiencia en gestión corporativa y desarrollo tecnológico, asegurando que WIT mantenga su estándar de excelencia en cada mercado.",
+            name: t('team.leadership.directivo.name'),
+            role: t('team.leadership.directivo.role'),
+            quote: t('team.leadership.directivo.quote'),
+            bio: t('team.leadership.directivo.bio'),
             image: null
         },
         {
             id: 3,
-            name: "Head of Engineering",
-            role: "Innovación Técnica",
-            quote: "Código limpio, hardware robusto, soluciones inteligentes.",
-            bio: "Liderando a los desarrolladores e ingenieros que construyen el núcleo de WIT. Nuestra ingeniería es reconocida por su estabilidad y capacidad de escalabilidad masiva.",
+            name: t('team.leadership.engineering.name'),
+            role: t('team.leadership.engineering.role'),
+            quote: t('team.leadership.engineering.quote'),
+            bio: t('team.leadership.engineering.bio'),
             image: null
         },
         {
             id: 4,
-            name: "Head of Operations",
-            role: "Excelencia en Terreno",
-            quote: "La implementación perfecta es nuestro estándar diario.",
-            bio: "Garantizando que el hardware de WIT funcione en los ambientes más extremos del planeta, desde el desierto de Atacama hasta los centros logísticos más complejos.",
+            name: t('team.leadership.operations.name'),
+            role: t('team.leadership.operations.role'),
+            quote: t('team.leadership.operations.quote'),
+            bio: t('team.leadership.operations.bio'),
             image: null
         }
     ];
@@ -53,7 +55,7 @@ export const TeamPage = () => {
                     transition={APPLE_TRANSITION}
                     className="text-7xl md:text-8xl font-bold tracking-tight mb-8"
                 >
-                    Liderazgo en WIT
+                    {t('team.title')}
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -61,7 +63,7 @@ export const TeamPage = () => {
                     transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
                     className="text-xl md:text-2xl text-[#86868b] max-w-3xl mx-auto leading-relaxed font-medium"
                 >
-                    Nuestros líderes comparten una visión común: crear un futuro donde la tecnología y la humanidad se potencien mutuamente.
+                    {t('team.subtitle')}
                 </motion.p>
             </section>
 
@@ -87,7 +89,7 @@ export const TeamPage = () => {
                             <h3 className="text-2xl font-bold tracking-tight mb-1">{member.name}</h3>
                             <p className="text-[#86868b] font-medium mb-4">{member.role}</p>
                             <span className="text-[#0071e3] font-semibold inline-flex items-center text-sm group-hover:underline transition-all">
-                                Ver Perfil
+                                {t('team.view_profile')}
                             </span>
                         </motion.div>
                     ))}
@@ -165,10 +167,10 @@ export const TeamPage = () => {
                                         className="flex gap-6 pt-4"
                                     >
                                         <button className="flex items-center gap-3 text-lg font-bold hover:text-[#0071e3] transition-colors group">
-                                            <Linkedin className="w-6 h-6" /> <span>LinkedIn</span>
+                                            <Linkedin className="w-6 h-6" /> <span>{t('team.linkedin')}</span>
                                         </button>
                                         <button className="flex items-center gap-3 text-lg font-bold hover:text-[#0071e3] transition-colors group">
-                                            <Mail className="w-6 h-6" /> <span>Email</span>
+                                            <Mail className="w-6 h-6" /> <span>{t('team.email')}</span>
                                         </button>
                                     </motion.div>
                                 </div>

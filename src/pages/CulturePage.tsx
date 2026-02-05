@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { Sparkles, Globe, Heart, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 export const CulturePage = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
             {/* Typographic Hero */}
@@ -15,17 +18,17 @@ export const CulturePage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-4 mb-24"
                     >
-                        <span className="text-[#0071e3] font-bold tracking-[0.2em] uppercase text-sm">Cultura en WIT</span>
+                        <span className="text-[#0071e3] font-bold tracking-[0.2em] uppercase text-sm">{t('culture.tag')}</span>
                         <h1 className="text-8xl md:text-[10rem] font-bold tracking-tighter leading-[0.8] mb-12">
-                            Mentes. <br />
-                            Juntas. <br />
+                            {t('culture.hero_1')} <br />
+                            {t('culture.hero_2')} <br />
                             <motion.span
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6, duration: 1 }}
                                 className="text-[#f5f5f7] dark:text-[#1d1d1f]"
                             >
-                                Infinitas.
+                                {t('culture.hero_infinite')}
                             </motion.span>
                         </h1>
                     </motion.div>
@@ -38,7 +41,7 @@ export const CulturePage = () => {
                             transition={APPLE_TRANSITION}
                             className="text-4xl md:text-5xl font-bold tracking-tight leading-tight"
                         >
-                            La inclusión empodera nuestra innovación radical.
+                            {t('culture.empowerment_title')}
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +50,7 @@ export const CulturePage = () => {
                             transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
                             className="text-xl md:text-2xl text-[#86868b] leading-relaxed font-medium"
                         >
-                            En WIT, entendemos que los desafíos globales que enfrentamos hoy no se resuelven con pensamientos uniformes. Nuestra fuerza reside en la diversidad de nuestras perspectivas, orígenes y experiencias.
+                            {t('culture.empowerment_desc')}
                         </motion.p>
                     </div>
                 </div>
@@ -64,7 +67,7 @@ export const CulturePage = () => {
                             transition={APPLE_TRANSITION}
                             className="text-5xl md:text-7xl font-bold tracking-tight"
                         >
-                            Datos que <br /> <span className="italic font-serif text-[#0071e3]">inspiran.</span>
+                            {t('culture.stats_title')} <br /> <span className="italic font-serif text-[#0071e3]">{t('culture.stats_italic')}</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -73,15 +76,15 @@ export const CulturePage = () => {
                             transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
                             className="text-xl text-[#86868b]"
                         >
-                            Nuestro compromiso con la transparencia y el crecimiento.
+                            {t('culture.stats_desc')}
                         </motion.p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { label: "Mujeres en Tech", value: "38%", sub: "+12% vs 2023", color: "text-[#af52de]" },
-                            { label: "Remoto / Híbrido", value: "100%", sub: "Libertad total", color: "text-[#0071e3]" },
-                            { label: "Diversidad Regional", value: "15+", sub: "Comunas en Chile", color: "text-[#34c759]" }
+                            { label: t('culture.stats_labels.women'), value: "38%", sub: t('culture.stats_labels.vs_2023'), color: "text-[#af52de]" },
+                            { label: t('culture.stats_labels.remote'), value: "100%", sub: t('culture.stats_labels.freedom'), color: "text-[#0071e3]" },
+                            { label: t('culture.stats_labels.diversity'), value: "15+", sub: t('culture.stats_labels.regions'), color: "text-[#34c759]" }
                         ].map((stat, idx) => (
                             <motion.div
                                 key={idx}
@@ -113,13 +116,13 @@ export const CulturePage = () => {
                     >
                         <div className="flex items-center gap-4 text-[#ff9500]">
                             <Sparkles className="w-8 h-8" />
-                            <span className="text-xl font-bold tracking-tight">Innovación sin Barreras</span>
+                            <span className="text-xl font-bold tracking-tight">{t('culture.blocks.innovation_tag')}</span>
                         </div>
                         <h3 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
-                            Creadores, <br /> no solo <br /> usuarios.
+                            {t('culture.blocks.innovation_title')}
                         </h3>
                         <p className="text-xl text-[#86868b] leading-relaxed font-medium">
-                            En WIT, cada miembro del equipo tiene la libertad de proponer innovaciones radicales. No seguimos jerarquías obsoletas; seguimos la mejor idea, venga de donde venga.
+                            {t('culture.blocks.innovation_desc')}
                         </p>
                     </motion.div>
                     <motion.div
@@ -146,13 +149,13 @@ export const CulturePage = () => {
                     >
                         <div className="flex items-center gap-4 text-[#0071e3]">
                             <Heart className="w-8 h-8" />
-                            <span className="text-xl font-bold tracking-tight">Bienestar Humano</span>
+                            <span className="text-xl font-bold tracking-tight">{t('culture.blocks.wellbeing_tag')}</span>
                         </div>
                         <h3 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
-                            Vida, <br /> por sobre <br /> el trabajo.
+                            {t('culture.blocks.wellbeing_title')}
                         </h3>
                         <p className="text-xl text-[#86868b] leading-relaxed font-medium">
-                            Entendemos que la excelencia nace del descanso y el equilibrio. WIT se adapta a tu vida, no al revés. Fomentamos la salud mental y el tiempo de calidad fuera de las pantallas.
+                            {t('culture.blocks.wellbeing_desc')}
                         </p>
                     </motion.div>
                     <motion.div
@@ -180,14 +183,14 @@ export const CulturePage = () => {
                     className="max-w-5xl mx-auto space-y-12"
                 >
                     <h2 className="text-6xl md:text-[10rem] font-bold tracking-tighter leading-[0.8] mb-12">
-                        Somos <br /> WIT.
+                        {t('culture.final.title')}
                     </h2>
                     <p className="text-2xl md:text-3xl text-[#86868b] font-medium leading-relaxed max-w-2xl mx-auto">
-                        Únete a nosotros para construir algo que <br className="hidden md:block" /> trascienda el código y las máquinas.
+                        {t('culture.final.desc')}
                     </p>
                     <div className="pt-12">
                         <button className="bg-[#0071e3] text-white px-16 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-[#0071e3]/20">
-                            Ser parte del equipo
+                            {t('culture.final.button')}
                         </button>
                     </div>
                 </motion.div>
