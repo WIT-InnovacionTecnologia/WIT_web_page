@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import logoLight from '../assets/logoWITMiniLight.png';
 import logoDark from '../assets/logoWITMiniDark.png';
 import verticalBanner from '../assets/banner vertical wit 2026.png';
+import horizontalBanner from '../assets/footer-bar.png';
 
 export const Footer = () => {
     const { t } = useTranslation();
@@ -88,16 +89,24 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Vertical Banner - Right Side */}
+                    {/* Banner Section - Responsive Layout */}
                     <div className="lg:w-auto flex items-start justify-center lg:justify-end mt-4 lg:mt-6">
+                        {/* Vertical Banner for Desktop */}
                         <img
                             src={verticalBanner}
                             alt="WIT Vertical Banner"
-                            className="h-auto max-h-[288px] w-auto object-contain"
+                            className="hidden lg:block h-auto max-h-[288px] w-auto object-contain"
+                        />
+                        {/* Horizontal Banner for Mobile */}
+                        <img
+                            src={horizontalBanner}
+                            alt="WIT Horizontal Banner"
+                            className="block lg:hidden w-full max-w-[400px] h-auto object-contain"
                         />
                     </div>
                 </div>
             </div>
         </footer>
+
     );
 };

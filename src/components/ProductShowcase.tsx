@@ -6,7 +6,7 @@ import { Play, ArrowRight } from 'lucide-react';
 // Import assets
 import PMASS from '../assets/videos/PMASS.mov';
 import CONNP2 from '../assets/videos/connp2.mp4';
-import IA_VIDEO from '../assets/videos/aerial-birds-eye-tracking-shot-of-car-and-truck-dr-2025-08-28-14-35-14-utc.mov';
+import IA_VIDEO from '../assets/videos/AI.mp4';
 
 export const ProductShowcase = () => {
     const { t } = useTranslation();
