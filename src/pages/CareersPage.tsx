@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Search, ArrowRight, Code, Database, Settings, Layout, Cpu, Users } from 'lucide-react';
 
+const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] };
+
 export const CareersPage = () => {
     const teams = [
         { title: "Ingeniería de Software", icon: <Code />, color: "bg-[#0071e3]" },
@@ -12,14 +14,15 @@ export const CareersPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-blue-100 dark:selection:bg-blue-900/30">
-            {/* Immersive Header */}
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
+            {/* Header */}
             <section className="relative h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-50/20 to-transparent dark:from-zinc-900/20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0071e3]/5 to-transparent" />
                 <div className="max-w-6xl mx-auto text-center space-y-12 relative z-10">
                     <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={APPLE_TRANSITION}
                         className="text-7xl md:text-[9rem] font-bold tracking-tighter leading-[0.8]"
                     >
                         Haz historia <br /> <span className="text-[#0071e3]">trabajando en WIT.</span>
@@ -27,18 +30,18 @@ export const CareersPage = () => {
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-xl md:text-3xl text-gray-500 dark:text-zinc-500 max-w-3xl mx-auto leading-relaxed font-medium"
+                        transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
+                        className="text-xl md:text-3xl text-[#86868b] max-w-3xl mx-auto leading-relaxed font-medium"
                     >
                         No solo buscamos empleados. Buscamos creadores, visionarios y pensadores que quieran redefinir lo posible.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
+                        transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
                         className="pt-8"
                     >
-                        <button className="bg-black dark:bg-white text-white dark:text-black px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform flex items-center gap-4 mx-auto group">
+                        <button className="bg-[#1d1d1f] dark:bg-white text-white dark:text-[#1d1d1f] px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform flex items-center gap-4 mx-auto group shadow-xl">
                             <Search className="w-6 h-6" /> Buscar vacantes
                             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -46,36 +49,54 @@ export const CareersPage = () => {
                 </div>
             </section>
 
-            {/* Narrative Section */}
+            {/* Narrative - Work at WIT */}
             <section className="py-48 max-w-7xl mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-24 items-center">
-                    <div className="space-y-12">
-                        <span className="text-blue-600 dark:text-blue-500 font-bold tracking-[0.2em] uppercase text-sm">Trabajar en WIT</span>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={APPLE_TRANSITION}
+                        className="space-y-12"
+                    >
+                        <span className="text-[#0071e3] font-bold tracking-[0.2em] uppercase text-sm">Trabajar en WIT</span>
                         <h2 className="text-6xl md:text-8xl font-bold tracking-tight leading-[0.9]">
                             Expertos liderando expertos.
                         </h2>
-                        <p className="text-xl md:text-2xl text-gray-500 dark:text-zinc-510 leading-relaxed font-medium">
+                        <p className="text-xl md:text-2xl text-[#86868b] leading-relaxed font-medium">
                             En WIT, nos organizamos por especialidades funcionales, no por unidades de negocio. Los expertos en hardware lideran hardware. Los expertos en IA lideran IA. Esta estructura garantiza que la excelencia técnica sea el centro de cada decisión.
                         </p>
-                    </div>
-                    <div className="aspect-square bg-zinc-50 dark:bg-zinc-900 rounded-[4rem] p-12 flex items-center justify-center relative group border border-zinc-100 dark:border-zinc-900 shadow-2xl">
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={APPLE_TRANSITION}
+                        className="aspect-square bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[4rem] p-12 flex items-center justify-center relative group border border-[#f5f5f7] dark:border-[#424245] shadow-2xl"
+                    >
                         <div className="text-center space-y-6">
-                            <div className="w-32 h-32 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                            <div className="w-32 h-32 bg-[#0071e3] text-white rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-700 ease-out">
                                 <Code className="w-16 h-16" />
                             </div>
-                            <h4 className="text-3xl font-bold italic font-serif">"La ingeniería es nuestro lenguaje natal."</h4>
+                            <h4 className="text-3xl font-bold italic font-serif text-[#1d1d1f] dark:text-[#f5f5f7]">"La ingeniería es nuestro lenguaje natal."</h4>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Teams Grid */}
-            <section className="bg-zinc-50 dark:bg-zinc-900/40 py-48">
+            <section className="bg-[#f5f5f7] dark:bg-[#161617] py-48">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="mb-24 space-y-4">
-                        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter">Encuentra <br /> <span className="text-blue-600 italic">tu lugar.</span></h2>
-                        <p className="text-xl text-zinc-400 max-w-xl">Hay un espacio para cada pasión en WIT. Elige tu camino.</p>
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={APPLE_TRANSITION}
+                        className="mb-24 space-y-4"
+                    >
+                        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter">Encuentra <br /> <span className="text-[#0071e3] italic">tu lugar.</span></h2>
+                        <p className="text-xl text-[#86868b] max-w-xl">Hay un espacio para cada pasión en WIT. Elige tu camino.</p>
+                    </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {teams.map((team, idx) => (
@@ -84,16 +105,17 @@ export const CareersPage = () => {
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: idx * 0.05 }}
-                                className="group relative aspect-square bg-white dark:bg-black rounded-[3.5rem] p-12 flex flex-col justify-between border border-zinc-100 dark:border-zinc-900 hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                                transition={{ ...APPLE_TRANSITION, delay: idx * 0.05 }}
+                                whileHover={{ y: -10 }}
+                                className="group relative aspect-square bg-white dark:bg-[#1d1d1f] rounded-[3.5rem] p-12 flex flex-col justify-between border border-[#f5f5f7] dark:border-[#424245] shadow-sm hover:shadow-2xl transition-all duration-700 ease-out cursor-pointer"
                             >
-                                <div className={`w-16 h-16 ${team.color} text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                                <div className={`w-16 h-16 ${team.color} text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500`}>
                                     {team.icon}
                                 </div>
                                 <div className="space-y-4">
                                     <h3 className="text-3xl font-bold leading-tight">{team.title}</h3>
-                                    <span className="text-blue-600 dark:text-blue-500 font-bold flex items-center text-sm">
-                                        Explorar área <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    <span className="text-[#0071e3] font-bold flex items-center text-sm">
+                                        Explorar área <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-500" />
                                     </span>
                                 </div>
                             </motion.div>
@@ -105,11 +127,11 @@ export const CareersPage = () => {
             {/* Life at WIT Benefit Grid */}
             <section className="py-48 max-w-[1440px] mx-auto px-4 md:px-24">
                 <div className="text-center max-w-4xl mx-auto space-y-12 pb-32">
-                    <span className="text-blue-600 dark:text-blue-500 font-bold tracking-[0.2em] uppercase text-sm">Vida en WIT</span>
+                    <span className="text-[#0071e3] font-bold tracking-[0.2em] uppercase text-sm">Vida en WIT</span>
                     <h2 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9]">
                         Tu mejor trabajo. <br /> Tu mejor tú.
                     </h2>
-                    <p className="text-xl md:text-2xl text-gray-500 dark:text-zinc-500 font-medium">
+                    <p className="text-xl md:text-2xl text-[#86868b] font-medium">
                         Damos prioridad a las personas. Con beneficios diseñados para apoyar tu crecimiento profesional y personal.
                     </p>
                 </div>
@@ -123,17 +145,31 @@ export const CareersPage = () => {
                         { title: "Hardware de Punta", desc: "Recibe el equipo que necesitas para volar en tu trabajo (Mac / Linux)." },
                         { title: "Wit-Days", desc: "Días de descanso adicionales para desconexión total cada trimestre." }
                     ].map((benefit, idx) => (
-                        <div key={idx} className="p-12 bg-white dark:bg-zinc-950 rounded-[3rem] border border-zinc-50 dark:border-zinc-900 transition-all">
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
+                            whileHover={{ scale: 1.02 }}
+                            className="p-12 bg-[#f5f5f7] dark:bg-[#161617] rounded-[3rem] border border-transparent hover:border-[#d2d2d7] dark:hover:border-[#424245] transition-all duration-500"
+                        >
                             <h4 className="text-2xl font-bold mb-4">{benefit.title}</h4>
-                            <p className="text-lg text-gray-500 dark:text-zinc-500 leading-relaxed font-medium">{benefit.desc}</p>
-                        </div>
+                            <p className="text-lg text-[#86868b] leading-relaxed font-medium">{benefit.desc}</p>
+                        </motion.div>
                     ))}
                 </div>
             </section>
 
             {/* Final CTA */}
             <section className="bg-[#0071e3] py-48 text-center text-white px-4">
-                <div className="max-w-4xl mx-auto space-y-12">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={APPLE_TRANSITION}
+                    className="max-w-4xl mx-auto space-y-12"
+                >
                     <h2 className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] mb-12">
                         Ven a <br /> crear.
                     </h2>
@@ -143,7 +179,7 @@ export const CareersPage = () => {
                             Aplicar Ahora
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </section>
         </div>
     );

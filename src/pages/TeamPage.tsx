@@ -2,6 +2,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { UserCircle, X, Linkedin, Mail } from 'lucide-react';
 
+const APPLE_SPRING = { type: "spring", stiffness: 260, damping: 20 };
+const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] };
+
 export const TeamPage = () => {
     const [selectedMember, setSelectedMember] = useState<any>(null);
 
@@ -41,12 +44,13 @@ export const TeamPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-blue-100 dark:selection:bg-blue-900/30">
-            {/* Minimalist Header */}
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
+            {/* Header */}
             <section className="pt-48 pb-24 px-4 text-center max-w-5xl mx-auto">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
+                    transition={APPLE_TRANSITION}
                     className="text-7xl md:text-8xl font-bold tracking-tight mb-8"
                 >
                     Liderazgo en WIT
@@ -54,14 +58,14 @@ export const TeamPage = () => {
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
-                    className="text-xl md:text-2xl text-gray-500 dark:text-zinc-500 max-w-3xl mx-auto leading-relaxed"
+                    transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
+                    className="text-xl md:text-2xl text-[#86868b] max-w-3xl mx-auto leading-relaxed font-medium"
                 >
                     Nuestros líderes comparten una visión común: crear un futuro donde la tecnología y la humanidad se potencien mutuamente.
                 </motion.p>
             </section>
 
-            {/* Apple Leadership Grid Style */}
+            {/* Grid */}
             <section className="max-w-7xl mx-auto px-4 pb-48">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
                     {leadership.map((member, idx) => (
@@ -70,19 +74,19 @@ export const TeamPage = () => {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
+                            transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
                             className="group cursor-pointer"
                             onClick={() => setSelectedMember(member)}
                         >
-                            <div className="aspect-[3/4] bg-zinc-50 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
-                                <div className="absolute inset-0 flex items-center justify-center text-zinc-200 dark:text-zinc-800">
-                                    <UserCircle className="w-48 h-48 opacity-20 group-hover:scale-110 transition-transform duration-700" />
+                            <div className="aspect-[3/4] bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-3xl overflow-hidden mb-6 relative hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[0.21, 0.45, 0.32, 0.9]">
+                                <div className="absolute inset-0 flex items-center justify-center text-[#d2d2d7] dark:text-[#424245]">
+                                    <UserCircle className="w-48 h-48 opacity-20 group-hover:scale-105 transition-transform duration-1000 ease-out" />
                                 </div>
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-700" />
                             </div>
                             <h3 className="text-2xl font-bold tracking-tight mb-1">{member.name}</h3>
-                            <p className="text-zinc-500 dark:text-zinc-500 font-medium mb-4">{member.role}</p>
-                            <span className="text-[#0071e3] font-semibold inline-flex items-center text-sm">
+                            <p className="text-[#86868b] font-medium mb-4">{member.role}</p>
+                            <span className="text-[#0071e3] font-semibold inline-flex items-center text-sm group-hover:underline transition-all">
                                 Ver Perfil
                             </span>
                         </motion.div>
@@ -90,56 +94,83 @@ export const TeamPage = () => {
                 </div>
             </section>
 
-            {/* Profile Modal - Apple Style Expansion */}
+            {/* Profile Modal */}
             <AnimatePresence>
                 {selectedMember && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
+                        transition={{ duration: 0.4 }}
                         className="fixed inset-0 z-[100] bg-white/80 dark:bg-black/80 backdrop-blur-3xl flex items-center justify-center p-4 md:p-12"
                         onClick={() => setSelectedMember(null)}
                     >
                         <motion.div
-                            initial={{ scale: 0.9, y: 20, opacity: 0 }}
+                            initial={{ scale: 0.92, y: 30, opacity: 0 }}
                             animate={{ scale: 1, y: 0, opacity: 1 }}
-                            exit={{ scale: 0.9, y: 20, opacity: 0 }}
-                            className="bg-white dark:bg-zinc-950 w-full max-w-6xl max-h-[90dvh] rounded-[3rem] overflow-y-auto relative shadow-2xl border border-zinc-100 dark:border-zinc-900"
+                            exit={{ scale: 0.92, y: 30, opacity: 0 }}
+                            transition={APPLE_SPRING}
+                            className="bg-white dark:bg-[#1d1d1f] w-full max-w-6xl max-h-[90dvh] rounded-[3rem] overflow-y-auto relative shadow-2xl border border-[#f5f5f7] dark:border-[#424245]"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button
                                 onClick={() => setSelectedMember(null)}
-                                className="absolute top-8 right-8 p-3 bg-zinc-100 dark:bg-zinc-900 rounded-full hover:scale-110 transition-transform z-10"
+                                className="absolute top-8 right-8 p-3 bg-[#f5f5f7] dark:bg-[#424245] rounded-full hover:scale-110 active:scale-95 transition-transform z-10"
                             >
                                 <X className="w-6 h-6" />
                             </button>
 
                             <div className="grid md:grid-cols-2 gap-16 p-8 md:p-24 items-center">
-                                <div className="aspect-[3/4] bg-zinc-50 dark:bg-zinc-900 rounded-[2.5rem] flex items-center justify-center">
-                                    <UserCircle className="w-64 h-64 text-zinc-200 dark:text-zinc-800 opacity-20" />
-                                </div>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
+                                    className="aspect-[3/4] bg-[#f5f5f7] dark:bg-[#424245] rounded-[2.5rem] flex items-center justify-center"
+                                >
+                                    <UserCircle className="w-64 h-64 text-[#d2d2d7] dark:text-[#1d1d1f] opacity-20" />
+                                </motion.div>
                                 <div className="space-y-12">
-                                    <div className="space-y-4">
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ ...APPLE_TRANSITION, delay: 0.3 }}
+                                        className="space-y-4"
+                                    >
                                         <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none">{selectedMember.name}</h2>
-                                        <p className="text-2xl text-blue-600 dark:text-blue-500 font-semibold">{selectedMember.role}</p>
-                                    </div>
+                                        <p className="text-2xl text-[#0071e3] font-semibold">{selectedMember.role}</p>
+                                    </motion.div>
 
-                                    <p className="text-3xl md:text-4xl font-serif italic text-zinc-400 dark:text-zinc-600 leading-tight">
+                                    <motion.p
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ ...APPLE_TRANSITION, delay: 0.4 }}
+                                        className="text-3xl md:text-4xl font-serif italic text-[#86868b] leading-tight"
+                                    >
                                         "{selectedMember.quote}"
-                                    </p>
+                                    </motion.p>
 
-                                    <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                                    <motion.p
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ ...APPLE_TRANSITION, delay: 0.5 }}
+                                        className="text-xl text-[#1d1d1f] dark:text-[#f5f5f7] leading-relaxed font-medium"
+                                    >
                                         {selectedMember.bio}
-                                    </p>
+                                    </motion.p>
 
-                                    <div className="flex gap-6 pt-4">
-                                        <button className="flex items-center gap-3 text-lg font-bold hover:text-blue-600 transition-colors">
-                                            <Linkedin className="w-6 h-6" /> LinkedIn
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ ...APPLE_TRANSITION, delay: 0.6 }}
+                                        className="flex gap-6 pt-4"
+                                    >
+                                        <button className="flex items-center gap-3 text-lg font-bold hover:text-[#0071e3] transition-colors group">
+                                            <Linkedin className="w-6 h-6" /> <span>LinkedIn</span>
                                         </button>
-                                        <button className="flex items-center gap-3 text-lg font-bold hover:text-blue-600 transition-colors">
-                                            <Mail className="w-6 h-6" /> Email
+                                        <button className="flex items-center gap-3 text-lg font-bold hover:text-[#0071e3] transition-colors group">
+                                            <Mail className="w-6 h-6" /> <span>Email</span>
                                         </button>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>
