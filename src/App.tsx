@@ -3,6 +3,11 @@ import { MainLayout } from './layouts/MainLayout';
 import { Hero } from './components/Hero';
 import { TimelinePage } from './pages/TimelinePage';
 import { SentinelPage } from './pages/SentinelPage';
+import { TeLPage } from './pages/TeLPage';
+import { IoTPage } from './pages/IoTPage';
+import { TotemsPage } from './pages/TotemsPage';
+import { EcommercePage } from './pages/EcommercePage';
+import { WifiUrbanPage } from './pages/WifiUrbanPage';
 import { ReviewsPage } from './pages/ReviewsPage';
 import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
@@ -40,6 +45,11 @@ function App() {
         } />
         <Route path="/timeline" element={<TimelinePage />} />
         <Route path="/products/sentinel" element={<SentinelPage />} />
+        <Route path="/products/tel" element={<TeLPage />} />
+        <Route path="/products/iot" element={<IoTPage />} />
+        <Route path="/products/totems" element={<TotemsPage />} />
+        <Route path="/products/ecommerce" element={<EcommercePage />} />
+        <Route path="/products/wifi-urban" element={<WifiUrbanPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
       </Routes>
     </MainLayout>

@@ -17,69 +17,69 @@ interface Review {
 const mockReviews: Review[] = [
     {
         id: 1,
-        author: "María González",
+        author: "Gerencia de Operaciones",
         date: "15 de enero, 2026",
         rating: 5,
-        title: "Excelente servicio y soluciones innovadoras",
-        content: "WIT transformó completamente nuestra infraestructura tecnológica. El equipo demostró un profundo conocimiento técnico y una dedicación excepcional. La implementación de sus soluciones de IA nos permitió optimizar procesos y reducir costos operativos en un 40%.",
-        helpful: 24,
+        title: "Optimización Crítica de Flujo",
+        content: "La implementación de los sistemas de monitoreo en tiempo real de WIT ha sido fundamental para Metro. Logramos optimizar el flujo de pasajeros y reducir los tiempos de espera en horas punta de manera significativa.",
+        helpful: 45,
         verified: true,
-        company: "Banco Nacional"
+        company: "Metro de Santiago"
     },
     {
         id: 2,
-        author: "Carlos Rodríguez",
+        author: "Dirección de Innovación",
         date: "10 de enero, 2026",
         rating: 5,
-        title: "Partner tecnológico confiable",
-        content: "Llevamos 3 años trabajando con WIT y cada proyecto ha superado nuestras expectativas. Su enfoque en Business Intelligence nos ha dado insights valiosos para la toma de decisiones estratégicas.",
-        helpful: 18,
+        title: "Seguridad y Eficiencia en Ruta",
+        content: "Gracias a los sensores IoT de WIT en nuestra flota, hemos implementado una estrategia de mantenimiento predictivo que ha mejorado la seguridad en ruta y reducido fallas críticas en un 35%.",
+        helpful: 38,
         verified: true,
-        company: "Retail Plus"
+        company: "Pullman Bus"
     },
     {
         id: 3,
-        author: "Ana Martínez",
+        author: "Gerencia Comercial",
         date: "5 de enero, 2026",
         rating: 5,
-        title: "Innovación que marca la diferencia",
-        content: "La plataforma Sentinel ha revolucionado nuestra seguridad. El sistema de monitoreo inteligente detectó amenazas que nuestro sistema anterior no identificaba. Altamente recomendados.",
-        helpful: 31,
+        title: "Insights Valiosos de Clientes",
+        content: "La plataforma de análisis de datos de WIT nos ha permitido entender el comportamiento de nuestros visitantes como nunca antes, personalizando la experiencia de compra en Parque Arauco.",
+        helpful: 29,
         verified: true,
-        company: "Ministerio de Desarrollo"
+        company: "Parque Arauco"
     },
     {
         id: 4,
-        author: "Roberto Silva",
+        author: "Departamento de Tecnología",
         date: "28 de diciembre, 2025",
-        rating: 4,
-        title: "Muy buena experiencia",
-        content: "Implementamos WiFi Urban en nuestra ciudad y los resultados han sido impresionantes. El equipo técnico es muy profesional y el soporte post-venta es excelente.",
-        helpful: 12,
+        rating: 5,
+        title: "Excelencia en Conectividad 5G",
+        content: "WIT ha sido un aliado estratégico en el despliegue de nuestra infraestructura 5G. Sus soluciones de conectividad para empresas son robustas, estables y de alto rendimiento.",
+        helpful: 22,
         verified: true,
-        company: "Municipalidad"
+        company: "Claro Empresas"
     },
     {
         id: 5,
-        author: "Laura Fernández",
+        author: "Centro de Control de Flota",
         date: "20 de diciembre, 2025",
         rating: 5,
-        title: "Soluciones a medida que funcionan",
-        content: "El desarrollo de nuestra plataforma e-commerce superó todas las expectativas. WIT entendió perfectamente nuestras necesidades y entregó una solución robusta, escalable y elegante.",
-        helpful: 27,
+        title: "Control Total de Flota",
+        content: "El sistema de GPS avanzado de WIT ha transformado la gestión de Red Movilidad. La optimización de rutas y el seguimiento en tiempo real son ahora procesos fluidos y precisos.",
+        helpful: 41,
         verified: true,
-        company: "Fashion Store"
+        company: "Red Movilidad"
     },
     {
         id: 6,
-        author: "Diego Morales",
+        author: "Operaciones Portuarias",
         date: "12 de diciembre, 2025",
         rating: 5,
-        title: "Consultoría de primer nivel",
-        content: "La transformación digital que lideraron en nuestra empresa fue impecable. Desde el análisis inicial hasta la implementación final, todo estuvo perfectamente ejecutado.",
-        helpful: 19,
+        title: "Transformación Digital Impecable",
+        content: "La consultoría y despliegue tecnológico en nuestras terminales portuarias fue impecable. WIT entiende los desafíos logísticos y entrega soluciones que realmente impactan el negocio.",
+        helpful: 15,
         verified: true,
-        company: "Industrias Morales"
+        company: "Terminales del Pacífico"
     }
 ];
 
@@ -112,8 +112,8 @@ export const ReviewsPage = () => {
                     <Star
                         key={star}
                         className={`${sizeClasses[size]} ${star <= rating
-                                ? 'fill-blue-600 text-blue-600'
-                                : 'fill-gray-300 text-gray-300 dark:fill-gray-700 dark:text-gray-700'
+                            ? 'fill-blue-600 text-blue-600'
+                            : 'fill-gray-300 text-gray-300 dark:fill-gray-700 dark:text-gray-700'
                             }`}
                     />
                 ))}
@@ -192,8 +192,8 @@ export const ReviewsPage = () => {
                         <button
                             onClick={() => setFilter('all')}
                             className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${filter === 'all'
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                                ? 'bg-blue-600 text-white'
+                                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                                 }`}
                         >
                             Todas las reseñas
@@ -203,8 +203,8 @@ export const ReviewsPage = () => {
                                 key={rating}
                                 onClick={() => setFilter(rating)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors flex items-center gap-1 ${filter === rating
-                                        ? 'bg-blue-600 text-white'
-                                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                                     }`}
                             >
                                 {rating} {renderStars(rating, 'sm')}

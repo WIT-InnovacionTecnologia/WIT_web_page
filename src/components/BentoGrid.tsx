@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import totemImage from '../assets/totem.jpg';
 import ecommerceImage from '../assets/E COMMERCE2.png';
 import wifiUrbanImage from '../assets/WIFI URBAN.jpg';
@@ -22,7 +23,8 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-2 bg-black text-white',
             theme: 'dark',
-            image: sentinelImage
+            image: sentinelImage,
+            path: '/products/sentinel'
         },
         {
             id: 2,
@@ -31,7 +33,8 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
-            image: telImage
+            image: telImage,
+            path: '/products/tel'
         },
         {
             id: 3,
@@ -39,7 +42,8 @@ export const BentoGrid = () => {
             subtitle: t('grid.iot.subtitle'),
             description: '',
             className: 'md:col-span-1 bg-black text-white',
-            theme: 'dark'
+            theme: 'dark',
+            path: '/products/iot'
         },
         {
             id: 4,
@@ -48,7 +52,8 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-2 bg-[#F5F5F7] dark:bg-gray-800 text-black dark:text-white',
             theme: 'light',
-            image: totemImage
+            image: totemImage,
+            path: '/products/totems'
         },
         {
             id: 5,
@@ -57,7 +62,8 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
-            image: ecommerceImage
+            image: ecommerceImage,
+            path: '/products/ecommerce'
         },
         {
             id: 6,
@@ -66,7 +72,8 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
-            image: wifiUrbanImage
+            image: wifiUrbanImage,
+            path: '/products/wifi-urban'
         },
     ];
 
@@ -124,18 +131,20 @@ export const BentoGrid = () => {
                             </p>
 
                             <div className="mt-8 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button
+                                <Link
+                                    to={product.path}
                                     className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {t('grid.buy')}
-                                </button>
-                                <button
+                                </Link>
+                                <Link
+                                    to={product.path}
                                     className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'border-2 border-white text-white hover:bg-white/10' : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {t('grid.learn_more')}
-                                </button>
+                                </Link>
                             </div>
                         </div>
 
