@@ -177,7 +177,8 @@
         "chip_desc": "We offer high-standard connectivity for key operations. With fast and stable fiber optic connection and 24/7 support, we guarantee maximum performance for your AI and telemetry processes."
     },
     "ai": {
-        "greeting": "Hello! I'm your Apple Intelligence assistant. How can I help you today?",
+        "title": "WIT Assistant",
+        "greeting": "Hello! I'm your WIT Assistant. How can I help you today?",
         "input_placeholder": "Ask anything...",
         "mock_response_price": "Our products start from $999. Would you like to see the pricing for a specific model?",
         "mock_response_mac": "The new MacBook lineup features the M3 chip, delivering incredible performance and battery life.",

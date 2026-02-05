@@ -12,7 +12,7 @@ interface ProductPageProps {
     productName: string;
     tagline: string;
     description: string;
-    price: string;
+    price?: string;
     features: string[];
     images: ProductImage[];
     specs: { label: string; value: string }[];
@@ -90,14 +90,16 @@ export const ProductPage = ({
                     >
                         {description}
                     </motion.p>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        className="flex items-center justify-center gap-6 mb-4"
-                    >
-                        <span className="text-3xl font-semibold">{price}</span>
-                    </motion.div>
+                    {price && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="flex items-center justify-center gap-6 mb-4"
+                        >
+                            <span className="text-3xl font-semibold">{price}</span>
+                        </motion.div>
+                    )}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -105,10 +107,10 @@ export const ProductPage = ({
                         className="flex items-center justify-center gap-4"
                     >
                         <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-colors">
-                            Comprar
+                            Solicitar demo
                         </button>
                         <button className="border border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 px-6 py-3 rounded-full font-medium transition-colors">
-                            Más información
+                            Hablar con ventas
                         </button>
                     </motion.div>
                 </div>
