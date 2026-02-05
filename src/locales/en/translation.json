@@ -110,7 +110,7 @@
             "about_section": {
                 "title": "About Us",
                 "items": {
-                    "history": "Our History",
+                    "history": "History",
                     "team": "Team",
                     "culture": "Culture",
                     "careers": "Careers"
@@ -195,6 +195,330 @@
             "parque_arauco": "Development of a data analysis platform to understand visitor behavior and personalize the shopping experience.",
             "transantiago": "Integration of advanced GPS for fleet tracking and route optimization in the public transport system.",
             "claro": "Strengthening 5G network infrastructure and deploying high-speed enterprise connectivity solutions."
+        }
+    },
+    "bi": {
+        "dashboards": {
+            "tag": "Business Intelligence",
+            "title_1": "Your data.",
+            "title_2_blue": "In real time.",
+            "subtitle": "Interactive dashboards that transform complexity into clarity, designed for immediate decision making."
+        },
+        "reports": {
+            "tag": "Automation",
+            "title_1": "Reports that",
+            "title_2_blue": "write themselves.",
+            "subtitle": "Eliminate manual work. Schedule the delivery of critical information directly to your inbox or team."
+        },
+        "kpis": {
+            "tag": "Strategic Metrics",
+            "title_1": "What gets measured,",
+            "title_2_blue": "gets improved.",
+            "subtitle": "We define and visualize the key indicators that move the needle of your business."
+        },
+        "tools": {
+            "expert_partner": "WIT Expert Partner",
+            "cta_demo": "Request Demo"
+        }
+    },
+    "reviews": {
+        "hero_tag": "Real Testimonials",
+        "title": "Customer",
+        "title_blue": "reviews.",
+        "subtitle": "Our technology drives the success of leading companies in the Southern Cone.",
+        "score_label": "Global Score",
+        "score_desc": "98% of our strategic partners rate our services as hi-fi.",
+        "filter_all": "All experiences",
+        "filter_stars": "stars",
+        "results_showing": "Showing {{count}} highlighted results",
+        "verified_label": "WIT Partner",
+        "footer_title": "Your success is",
+        "footer_title_blue": "our goal.",
+        "cta_consultancy": "Schedule a Consultancy",
+        "cta_cases": "Case Studies"
+    },
+    "contact": {
+        "hero_title": "Contact.",
+        "hero_subtitle": "We are here to help you drive your company into the future.",
+        "support_title": "Technical Support",
+        "support_desc": "Get help with your Sentinel devices, MásGPS network configuration, or support on our BI and AI platforms.",
+        "support_link": "Visit Support Center",
+        "sales_title": "Sales and Alliances",
+        "sales_desc": "Talk to experts about how our technological solutions can scale the profitability of your operation.",
+        "sales_link": "Contact Sales",
+        "offices_title": "Global Presence",
+        "offices_desc": "Visit us at our offices or contact us directly in your region.",
+        "offices_link": "View Locations",
+        "call_title": "Call Us",
+        "call_desc": "Immediate attention for general inquiries.",
+        "security_title": "Security",
+        "security_desc": "Report vulnerabilities or privacy issues."
+    },
+    "support": {
+        "hero_title": "WIT Support",
+        "search_placeholder": "How can we help you?",
+        "categories": {
+            "security": {
+                "title": "Security and Accounts",
+                "desc": "Manage your access and protect your data with the highest standards."
+            },
+            "technical": {
+                "title": "Technical Support",
+                "desc": "Sentinel hardware troubleshooting and network configuration."
+            },
+            "guides": {
+                "title": "Guides and Manuals",
+                "desc": "Learn how to get the most out of our BI and AI platforms."
+            },
+            "warranty": {
+                "title": "Warranty and Services",
+                "desc": "Information on WIT coverage and preventive maintenance."
+            }
+        },
+        "cta_title": "Can't find what you're looking for?",
+        "cta_desc": "Our team of engineers is available to assist you personally.",
+        "cta_button": "Start Support Chat"
+    },
+    "offices": {
+        "hero_title": "Our Offices",
+        "hero_subtitle": "National presence to ensure the operational continuity of your IoT projects.",
+        "labels": {
+            "phone": "Phone",
+            "hours": "Hours",
+            "get_directions": "Get directions"
+        }
+    },
+    "sales": {
+        "tag": "Corporate Sales",
+        "title_1": "Take your business",
+        "title_2_blue": "to the next level.",
+        "subtitle": "Discover how WIT solutions can transform the efficiency of your commercial and security operations.",
+        "hablemos_title": "Let's talk",
+        "hablemos_desc": "Our advisory team will get in touch to design a solution tailored to your needs.",
+        "form": {
+            "name": "First Name",
+            "lastname": "Last Name",
+            "email": "Corporate Email",
+            "interest": "Product of interest",
+            "message": "Message",
+            "send": "Send Inquiry",
+            "options": {
+                "sentinel": "Sentinel",
+                "iot": "IoT Mining",
+                "smart_city": "Smart City"
+            }
+        }
+    },
+    "bi_tools": {
+        "template": {
+            "tag": "WIT Expert Partner",
+            "cta": "Request Demo"
+        },
+        "powerbi": {
+            "desc": "Native integration with the Microsoft ecosystem. Visualize your Azure and Office 365 data with WIT intelligence.",
+            "features": [
+                "Excel Integration",
+                "Teams Alerts",
+                "Azure AD Security"
+            ]
+        },
+        "tableau": {
+            "desc": "The leading visual analytics platform. Deep data exploration for curious and strategic minds.",
+            "features": [
+                "Advanced Visual Analytics",
+                "Tableau Pulse AI",
+                "Scalable Data Management"
+            ]
+        },
+        "looker": {
+            "desc": "Modernize your data architecture with Google Cloud. A unified view of your business metrics.",
+            "features": [
+                "LookML Modeling",
+                "Google Cloud Sync",
+                "Embedded Analytics"
+            ]
+        }
+    },
+    "about": {
+        "hero_tag": "About WIT",
+        "hero_title": "Technology with",
+        "hero_title_blue": "human purpose.",
+        "timeline": {
+            "zap_title": "The Beginning",
+            "zap_desc": "WIT is born with a vision: to connect what was previously invisible.",
+            "globe_title": "IoT Expansion",
+            "globe_desc": "We deploy our first massive sensor network in Chilean mining.",
+            "target_title": "AI Era",
+            "target_desc": "We integrate computer vision algorithms for real-time road safety.",
+            "shield_title": "Regional Leadership",
+            "shield_desc": "We consolidate operations across Chile with 100% own technology."
+        },
+        "carbon": {
+            "tag": "WIT 2030 Commitment",
+            "title_1": "Carbon",
+            "title_2_italic": "Neutral.",
+            "desc_main": "Our goal is for every sensor, server, and line of code at WIT to be 100% carbon neutral by the end of the decade.",
+            "desc_detail": "We are modernizing our supply chain and optimizing the energy consumption of our IoT devices to lead Chile's sustainable transformation.",
+            "stats": {
+                "consumption": "Reduced Consumption",
+                "emissions": "Emissions",
+                "hardware": "Hardware",
+                "energy": "Energy",
+                "bus_fleet": "In bus fleets",
+                "co2_tons": "CO2 Tons",
+                "recyclable": "Recyclable",
+                "sustainable": "Sustainable",
+                "house": "In headquarters",
+                "recyclable_sub": "98% components"
+            }
+        },
+        "footer_cta": {
+            "title": "Innovation that",
+            "title_blue": "transcends.",
+            "contact": "Contact Sales",
+            "careers": "View Careers"
+        }
+    },
+    "team": {
+        "title": "Leadership at WIT",
+        "subtitle": "Our leaders share a common vision: to create a future where technology and humanity empower each other.",
+        "view_profile": "View Profile",
+        "linkedin": "LinkedIn",
+        "email": "Email",
+        "leadership": {
+            "luis": {
+                "name": "Luis Tapia",
+                "role": "CEO & Founder",
+                "quote": "Technology only matches when it solves real problems.",
+                "bio": "Visionary leader with over 17 years of experience in the Chilean tech sector. Luis has guided WIT since its inception, transforming it into a regional benchmark in IoT and Artificial Intelligence."
+            },
+            "directivo": {
+                "name": "Management Team",
+                "role": "Global Strategy",
+                "quote": "We expand horizons so that Chilean innovation reaches the whole world.",
+                "bio": "Our management board combines decades of experience in corporate management and technological development, ensuring WIT maintains its standard of excellence in every market."
+            },
+            "engineering": {
+                "name": "Head of Engineering",
+                "role": "Technical Innovation",
+                "quote": "Clean code, robust hardware, smart solutions.",
+                "bio": "Leading the developers and engineers who build the core of WIT. Our engineering is recognized for its stability and massive scalability capacity."
+            },
+            "operations": {
+                "name": "Head of Operations",
+                "role": "Field Excellence",
+                "quote": "Perfect implementation is our daily standard.",
+                "bio": "Ensuring WIT hardware works in the most extreme environments on the planet, from the Atacama Desert to the most complex logistics centers."
+            }
+        }
+    },
+    "culture": {
+        "tag": "Culture at WIT",
+        "hero_1": "Minds.",
+        "hero_2": "Together.",
+        "hero_infinite": "Infinite.",
+        "empowerment_title": "Inclusion empowers our radical innovation.",
+        "empowerment_desc": "At WIT, we understand that today's global challenges aren't solved with uniform thinking. Our strength lies in the diversity of our perspectives, backgrounds, and experiences.",
+        "stats_title": "Data that",
+        "stats_italic": "inspires.",
+        "stats_desc": "Our commitment to transparency and growth.",
+        "stats_labels": {
+            "women": "Women in Tech",
+            "remote": "Remote / Hybrid",
+            "diversity": "Regional Diversity",
+            "vs_2023": "+12% vs 2023",
+            "freedom": "Total freedom",
+            "regions": "Communes in Chile"
+        },
+        "blocks": {
+            "innovation_tag": "Innovation without Barriers",
+            "innovation_title": "Creators, not just users.",
+            "innovation_desc": "At WIT, every team member has the freedom to propose radical innovations. We don't follow obsolete hierarchies; we follow the best idea, wherever it comes from.",
+            "wellbeing_tag": "Human Wellbeing",
+            "wellbeing_title": "Life, over work.",
+            "wellbeing_desc": "We understand that excellence comes from rest and balance. WIT adapts to your life, not the other way around. We encourage mental health and quality time away from screens."
+        },
+        "final": {
+            "title": "We are WIT.",
+            "desc": "Join us to build something that transcends code and machines.",
+            "button": "Join the team"
+        }
+    },
+    "product": {
+        "template": {
+            "cta_demo": "Request demo",
+            "cta_sales": "Talk to sales",
+            "features_title": "Main Features",
+            "specs_title": "Technical Specifications",
+            "cta_footer_title": "Bring {{name}} to your company",
+            "cta_footer_desc": "Contact our sales team for more information"
+        },
+        "sentinel": {
+            "tagline": "Smart surveillance for your security",
+            "description": "Advanced monitoring system with integrated AI",
+            "features": [
+                "24/7 real-time monitoring",
+                "Smart threat detection with AI",
+                "Instant alerts to multiple devices",
+                "Secure cloud storage",
+                "Intuitive and easy-to-use interface",
+                "Integration with existing systems"
+            ],
+            "specs": [
+                {
+                    "label": "Camera Resolution",
+                    "value": "4K Ultra HD"
+                },
+                {
+                    "label": "Night Vision",
+                    "value": "Up to 30m"
+                },
+                {
+                    "label": "Viewing Angle",
+                    "value": "360°"
+                },
+                {
+                    "label": "Connectivity",
+                    "value": "WiFi 6, Ethernet, 4G LTE"
+                },
+                {
+                    "label": "Storage",
+                    "value": "Unlimited Cloud or local up to 2TB"
+                },
+                {
+                    "label": "Power Supply",
+                    "value": "PoE or 12V adapter"
+                },
+                {
+                    "label": "Resistance",
+                    "value": "IP67 - Water and dust proof"
+                },
+                {
+                    "label": "Integrated AI",
+                    "value": "Facial and object recognition"
+                },
+                {
+                    "label": "Warranty",
+                    "value": "2 years"
+                }
+            ],
+            "alt": "Sentinel - Main view"
+        }
+    },
+    "demo_request": {
+        "title": "Request Demo of",
+        "subtitle": "Complete the form and a specialist will contact you for a personalized demonstration.",
+        "form": {
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email": "Corporate Email",
+            "company": "Company",
+            "job_title": "Job Title",
+            "message": "Message (optional)",
+            "submit": "Send Request",
+            "success_title": "Request received!",
+            "success_message": "Our team will contact you soon to coordinate the demo of {{product}}.",
+            "back_home": "Back to Home"
         }
     }
 }

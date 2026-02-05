@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Star, ThumbsUp, Check } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, ThumbsUp, Check, ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+
+const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 interface Review {
     id: number;
@@ -84,6 +88,7 @@ const mockReviews: Review[] = [
 ];
 
 export const ReviewsPage = () => {
+    const { t } = useTranslation();
     const [filter, setFilter] = useState<number | 'all'>('all');
 
     const filteredReviews = filter === 'all'
@@ -112,8 +117,8 @@ export const ReviewsPage = () => {
                     <Star
                         key={star}
                         className={`${sizeClasses[size]} ${star <= rating
-                            ? 'fill-blue-600 text-blue-600'
-                            : 'fill-gray-300 text-gray-300 dark:fill-gray-700 dark:text-gray-700'
+                            ? 'fill-[#0071e3] text-[#0071e3]'
+                            : 'fill-gray-200 text-gray-200 dark:fill-[#2d2d2f] dark:text-[#2d2d2f]'
                             }`}
                     />
                 ))}
@@ -122,170 +127,190 @@ export const ReviewsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-20">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 font-sans selection:bg-[#0071e3]/20">
             {/* Hero Section */}
-            <section className="py-16 px-4 bg-gray-50 dark:bg-zinc-900">
-                <div className="max-w-4xl mx-auto text-center">
+            <section className="px-4 py-24 text-center">
+                <div className="max-w-5xl mx-auto space-y-6">
+                    <motion.span
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={APPLE_TRANSITION}
+                        className="text-[#86868b] text-xl font-semibold tracking-tight block"
+                    >
+                        Testimonios Reales
+                    </motion.span>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-semibold mb-4"
+                        transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
+                        className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.9]"
                     >
-                        Reseñas de clientes
+                        Reseñas de <br /> <span className="text-[#0071e3]">clientes.</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-xl text-gray-600 dark:text-gray-400"
+                        transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
+                        className="text-2xl text-[#86868b] font-medium max-w-3xl mx-auto tracking-tight"
                     >
-                        Descubre lo que nuestros clientes dicen sobre WIT
+                        Nuestra tecnología impulsa el éxito de las empresas líderes en el Cono Sur.
                     </motion.p>
                 </div>
             </section>
 
-            {/* Rating Summary */}
-            <section className="py-12 px-4 border-b border-gray-200 dark:border-gray-800">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12">
-                        {/* Overall Rating */}
-                        <div className="text-center md:text-left">
-                            <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-                                <span className="text-6xl font-semibold">{averageRating}</span>
-                                <div>
-                                    {renderStars(5, 'lg')}
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                                        {totalReviews} reseñas
-                                    </p>
-                                </div>
+            {/* Rating Summary Section */}
+            <section className="max-w-7xl mx-auto px-4 py-20 border-t border-[#f5f5f7] dark:border-[#1d1d1f]">
+                <div className="grid lg:grid-cols-2 gap-24 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={APPLE_TRANSITION}
+                        className="space-y-12"
+                    >
+                        <div className="flex items-center gap-6">
+                            <span className="text-[10rem] font-bold tracking-tighter leading-none">{averageRating}</span>
+                            <div className="space-y-4">
+                                {renderStars(5, 'lg')}
+                                <p className="text-xl text-[#86868b] font-bold uppercase tracking-widest">
+                                    Puntaje General
+                                </p>
                             </div>
-                            <p className="text-gray-600 dark:text-gray-400">
-                                98% de nuestros clientes recomiendan WIT
-                            </p>
                         </div>
+                        <p className="text-2xl text-[#86868b] font-semibold leading-tight max-w-md">
+                            98% de nuestros socios estratégicos califican nuestros servicios como de alta fidelidad.
+                        </p>
+                    </motion.div>
 
-                        {/* Rating Distribution */}
-                        <div className="space-y-3">
-                            {ratingDistribution.map(({ stars, count, percentage }) => (
-                                <div key={stars} className="flex items-center gap-3">
-                                    <span className="text-sm w-12">{stars} estrellas</span>
-                                    <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
-                                        <div
-                                            className="h-full bg-blue-600 transition-all duration-500"
-                                            style={{ width: `${percentage}%` }}
-                                        />
-                                    </div>
-                                    <span className="text-sm text-gray-600 dark:text-gray-400 w-8">
-                                        {count}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Filters */}
-            <section className="py-6 px-4 border-b border-gray-200 dark:border-gray-800 sticky top-[44px] bg-white dark:bg-black z-40">
-                <div className="max-w-6xl mx-auto">
-                    <div className="flex gap-2 overflow-x-auto pb-2">
-                        <button
-                            onClick={() => setFilter('all')}
-                            className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${filter === 'all'
-                                ? 'bg-blue-600 text-white'
-                                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                                }`}
-                        >
-                            Todas las reseñas
-                        </button>
-                        {[5, 4, 3, 2, 1].map((rating) => (
-                            <button
-                                key={rating}
-                                onClick={() => setFilter(rating)}
-                                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors flex items-center gap-1 ${filter === rating
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                                    }`}
+                    <div className="space-y-4">
+                        {ratingDistribution.map(({ stars, percentage }, idx) => (
+                            <motion.div
+                                key={stars}
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ ...APPLE_TRANSITION, delay: idx * 0.05 }}
+                                className="flex items-center gap-4"
                             >
-                                {rating} {renderStars(rating, 'sm')}
-                            </button>
+                                <span className="text-sm font-bold text-[#86868b] w-4">{stars}</span>
+                                <div className="flex-1 h-[6px] bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-full overflow-hidden">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        whileInView={{ width: `${percentage}%` }}
+                                        viewport={{ once: true }}
+                                        transition={{ ...APPLE_TRANSITION, delay: 0.3 + idx * 0.1 }}
+                                        className="h-full bg-[#0071e3]"
+                                    />
+                                </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Reviews List */}
-            <section className="py-12 px-4">
-                <div className="max-w-6xl mx-auto space-y-6">
-                    {filteredReviews.map((review, index) => (
-                        <motion.div
-                            key={review.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+            {/* Sticky Filter Bar */}
+            <section className="sticky top-[44px] z-40 px-4 py-8 bg-white/80 dark:bg-black/80 backdrop-blur-2xl border-b border-[#f5f5f7] dark:border-[#1d1d1f]">
+                <div className="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto pb-2 scrollbar-hide">
+                    <div className="flex gap-3">
+                        <button
+                            onClick={() => setFilter('all')}
+                            className={`px-6 py-2 rounded-full text-sm font-bold tracking-tight transition-all ${filter === 'all'
+                                ? 'bg-[#0071e3] text-white shadow-lg shadow-[#0071e3]/20'
+                                : 'bg-[#f5f5f7] dark:bg-[#1d1d1f] text-[#1d1d1f] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#2d2d2f]'
+                                }`}
                         >
-                            <div className="flex items-start justify-between mb-4">
-                                <div className="flex-1">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        {renderStars(review.rating)}
-                                        {review.verified && (
-                                            <div className="flex items-center gap-1 text-blue-600 text-xs">
-                                                <Check className="w-3 h-3" />
-                                                <span>Cliente Verificado</span>
-                                            </div>
-                                        )}
-                                    </div>
-                                    <h3 className="text-xl font-semibold mb-1">{review.title}</h3>
-                                    <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                        <span className="font-medium text-black dark:text-white">
-                                            {review.author}
-                                        </span>
-                                        {review.company && (
-                                            <>
-                                                <span>•</span>
-                                                <span>{review.company}</span>
-                                            </>
-                                        )}
-                                        <span>•</span>
-                                        <span>{review.date}</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                {review.content}
-                            </p>
-
-                            <div className="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-                                <button className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                                    <ThumbsUp className="w-4 h-4" />
-                                    <span>Útil ({review.helpful})</span>
-                                </button>
-                            </div>
-                        </motion.div>
-                    ))}
+                            {t('reviews.filter_all')}
+                        </button>
+                        {[5, 4, 3].map((rating) => (
+                            <button
+                                key={rating}
+                                onClick={() => setFilter(rating)}
+                                className={`px-6 py-2 rounded-full text-sm font-bold tracking-tight transition-all flex items-center gap-2 ${filter === rating
+                                    ? 'bg-[#0071e3] text-white shadow-lg shadow-[#0071e3]/20'
+                                    : 'bg-[#f5f5f7] dark:bg-[#1d1d1f] text-[#1d1d1f] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#2d2d2f]'
+                                    }`}
+                            >
+                                {rating} {t('reviews.filter_stars')}
+                            </button>
+                        ))}
+                    </div>
+                    <div className="hidden md:block text-[#86868b] text-sm font-semibold">
+                        {t('reviews.results_showing', { count: filteredReviews.length })}
+                    </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 px-4 bg-gray-50 dark:bg-zinc-900">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-semibold mb-6">
-                        ¿Listo para transformar tu negocio?
+            {/* Reviews Grid */}
+            <section className="max-w-7xl mx-auto px-4 py-24">
+                <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                    <AnimatePresence mode="popLayout">
+                        {filteredReviews.map((review) => (
+                            <motion.div
+                                layout
+                                key={review.id}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={APPLE_TRANSITION}
+                                className="break-inside-avoid bg-white dark:bg-[#161617] border border-[#f5f5f7] dark:border-[#1d1d1f] rounded-[2.5rem] p-10 hover:shadow-2xl transition-all duration-500 group"
+                            >
+                                <div className="space-y-6">
+                                    <div className="flex justify-between items-start">
+                                        <div className="space-y-2">
+                                            {renderStars(review.rating, 'sm')}
+                                            <h3 className="text-2xl font-bold tracking-tight leading-tight group-hover:text-[#0071e3] transition-colors">
+                                                {review.title}
+                                            </h3>
+                                        </div>
+                                        {review.verified && (
+                                            <span className="flex items-center gap-1.5 text-xs font-bold text-[#34c759] uppercase tracking-widest">
+                                                <Check className="w-3.5 h-3.5 stroke-[3]" />
+                                                <span>{t('reviews.verified_label')}</span>
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    <p className="text-lg text-[#1d1d1f] dark:text-gray-300 font-medium leading-relaxed tracking-tight">
+                                        "{review.content}"
+                                    </p>
+
+                                    <div className="pt-6 border-t border-[#f5f5f7] dark:border-[#1d1d1f] flex items-center justify-between">
+                                        <div className="space-y-0.5">
+                                            <p className="font-bold tracking-tight">{review.company}</p>
+                                            <p className="text-sm text-[#86868b] font-medium">{review.author}</p>
+                                        </div>
+                                        <button className="text-[#86868b] hover:text-[#0071e3] transition-colors p-2">
+                                            <ThumbsUp className="w-5 h-5" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </div>
+            </section>
+
+            {/* Dynamic Footer CTA */}
+            <section className="py-48 px-4 text-center overflow-hidden">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={APPLE_TRANSITION}
+                    className="max-w-5xl mx-auto space-y-16"
+                >
+                    <h2 className="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.8]">
+                        {t('reviews.footer_title')} <br /> <span className="text-[#0071e3]">{t('reviews.footer_title_blue')}</span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-                        Únete a las empresas que confían en WIT
-                    </p>
-                    <div className="flex items-center justify-center gap-4">
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors">
-                            Contáctanos
-                        </button>
-                        <button className="border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 px-8 py-4 rounded-full font-medium text-lg transition-colors">
-                            Ver casos de éxito
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                        <Link to="/contact" className="bg-[#0071e3] text-white px-16 py-6 rounded-full font-bold text-2xl hover:scale-105 transition-transform shadow-2xl shadow-[#0071e3]/40">
+                            {t('reviews.cta_consultancy')}
+                        </Link>
+                        <button className="text-[#0071e3] font-bold text-2xl group flex items-center gap-2">
+                            {t('reviews.cta_cases')} <ChevronRight className="group-hover:translate-x-2 transition-transform" />
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </section>
         </div>
     );
