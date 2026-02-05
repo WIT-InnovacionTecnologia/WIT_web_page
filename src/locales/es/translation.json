@@ -141,7 +141,7 @@
         "main_subtitle": "Especialistas en modernizar procesos críticos mediante Inteligencia Artificial, conectividad de alto estándar y soluciones de telemetría avanzada",
         "cta_button": "Conócenos",
         "video_overlay_title": "MásGPS",
-        "video_overlay_desc": "Mantén el control total de tu flota con nuestra plataforma MásGPS. Gestiona rutas, recibe alertas y toma decisiones en tiempo real desde cualquier dispositivo para transformar los datos de cada vehículo en decisiones que potencien la rentabilidad.",
+        "video_overlay_desc": "Domina tu flota con una plataforma que convierte datos en tiempo real en decisiones rentables. Gestiona rutas con precisión desde cualquier dispositivo y garantiza la máxima eficiencia operativa.",
         "browser_support": "Tu navegador no soporta el tag de video."
     },
     "grid": {
@@ -149,32 +149,32 @@
         "whats_new": "Explora nuestras novedades tecnológicas.",
         "learn_more": "Más info",
         "buy": "Comprar",
-        "sentinel_subtitle": "Aumenta la seguridad de tu operación con cámaras de IA que disminuyen accidentes y costos asociados al detectar fatiga y distracciones del conductor en ruta.",
-        "tel_subtitle": "Visualiza alerta antes de fallar o gastar de más; anticipa averías, ahorrando combustible y manteniendo tu flota siempre en movimiento, optimizando cada viaje.",
+        "sentinel_subtitle": "Reduce accidentes y costos con IA que detecta fatiga y distracciones al volante en tiempo real. Protege a tus pasajeros y conductores con tecnología que anticipa riesgos antes de que ocurran.",
+        "tel_subtitle": "Maximiza la vida de tu flota anticipando averías y optimizando el consumo de combustible. Mantén tus buses siempre en movimiento con alertas preventivas que eviten paradas innecesarias.",
         "iot": {
-            "title": "IoT (Internet de las Cosas)",
-            "subtitle": "Transforma tus activos en una red inteligente. Conecta y automatiza el control para optimizar el rendimiento, anticipar el desgaste de piezas y reducir el consumo de energía, mejorando la eficiencia de tus buses y la experiencia de tus usuarios."
+            "title": "IoT",
+            "subtitle": "Automatiza el rendimiento de tus activos con sensores que reducen el desgaste y el gasto energético. Convierte tu flota en una red inteligente que eleva la calidad del servicio y la rentabilidad."
         },
         "totems": {
             "title": "Tótems Interactivos",
-            "subtitle": "Descongestiona filas con puntos de autoatención, mejora la fluidez operativa dentro de terminales. Comodidad y autonomía al pasajero al imprimir pasajes, consultar andenes, ver horarios o acceder a servicios sin esperas innecesarias."
+            "subtitle": "Elimina las filas con autoatención ágil que moderniza tus terminales de inmediato. Brinda autonomía total al pasajero para comprar e imprimir sin esperas, agilizando tu operación."
         },
         "ecommerce": {
-            "title": "Plataforma e-Commerce",
-            "subtitle": "Lleva tus ventas a las nubes con una plataforma de E-Commerce de venta 24/7. Mejora la experiencia de los usuarios digitales y recibe datos valiosos sobre su comportamiento para hacer campañas personalizadas y aumentar de forma medible tu gestión comercial."
+            "title": "e-Commerce",
+            "subtitle": "Escala tus ingresos con una plataforma que vende tus pasajes 24/7 de forma automatizada. Conoce el comportamiento de tus clientes y lanza campañas personalizadas que aseguren buses llenos."
         },
         "wifi": {
             "title": "Urban WiFi",
-            "subtitle": "Señal de alta fidelidad con hardware de grado industrial para puntos estratégicos. Transformamos las conexiones en una ventaja competitiva, fidelizando a los clientes."
+            "subtitle": "Convierte la conectividad en tu mayor ventaja competitiva con WiFi de alta fidelidad industrial. Fideliza a tus pasajeros ofreciendo una experiencia premium que los mantenga siempre conectados."
         }
     },
     "showcase": {
-        "camera_title": "IA",
-        "camera_desc": "Nuestra plataforma aprende del comportamiento de tus usuarios para ajustar rutas, anticipar temporadas altas y personalizar la atención, asegurando la máxima ocupación de tus buses y fidelizando a tus clientes.",
+        "camera_title": "Inteligencia Artificial",
+        "camera_desc": "Optimiza la ocupación con IA que predice temporadas altas y ajusta tus rutas según la demanda real. Asegura un servicio inteligente que fideliza clientes y maximiza el rendimiento de cada trayecto.",
         "battery_title": "Partnership (P+S)",
-        "battery_desc": "Creamos una alianza estratégica para modernizar tus procesos, integrando nuestros recursos y talento especializado. Compartimos desafíos y oportunidades, desarrollando juntos soluciones innovadoras que aceleran tu crecimiento.",
+        "battery_desc": "Moderniza tu gestión con una alianza estratégica que integra talento y tecnología avanzada en tu ADN. Compartimos tus desafíos operativos para desarrollar soluciones que aceleran el crecimiento de tu empresa.",
         "chip_title": "Connect Plus (ConnP)",
-        "chip_desc": "Te ofrecemos conectividad de alto estándar para operaciones claves. Contamos con una conexión por fibra óptica rápida y estable y soporte 24/7, garantizamos el máximo rendimiento de tus procesos de IA y telemetría."
+        "chip_desc": "Impulsa tu telemetría e IA con la estabilidad superior de la fibra óptica de Connect Plus. Garantiza el rendimiento de tus operaciones críticas con soporte 24/7 y una conexión ininterrumpida."
     },
     "ai": {
         "title": "Asistente WIT",

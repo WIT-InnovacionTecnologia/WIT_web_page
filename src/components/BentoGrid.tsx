@@ -7,6 +7,7 @@ import ecommerceImage from '../assets/E COMMERCE2.png';
 import wifiUrbanImage from '../assets/WIFI URBAN.jpg';
 import telImage from '../assets/TEL.png';
 import sentinelImage from '../assets/SENTINEL.png';
+import iotVideo from '../assets/videos/IOT2.mp4';
 
 export const BentoGrid = () => {
     const { t } = useTranslation();
@@ -43,6 +44,7 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
+            video: iotVideo,
             path: '/products/iot'
         },
         {
@@ -110,7 +112,21 @@ export const BentoGrid = () => {
                             </div>
                         )}
 
-                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10 ${product.image ? 'text-white' : ''}`}>
+                        {product.video && (
+                            <div className="absolute inset-0 z-0">
+                                <video
+                                    src={product.video}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+                            </div>
+                        )}
+
+                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10 ${(product.image || product.video) ? 'text-white' : ''}`}>
                             <h3
                                 className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2"
                                 style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
@@ -149,7 +165,7 @@ export const BentoGrid = () => {
                         </div>
 
                         {/* Placeholder Content (only if no image or video) */}
-                        {!product.image && (
+                        {(!product.image && !product.video) && (
                             <div className="absolute bottom-0 left-0 right-0 h-1/2 flex items-center justify-center overflow-hidden">
                                 <div className={`w-3/4 h-3/4 flex items-center justify-center ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
                                     <span className="text-xs">Product Image</span>
