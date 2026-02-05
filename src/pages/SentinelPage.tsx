@@ -6,7 +6,6 @@ export const SentinelPage = () => {
         productName: 'Sentinel',
         tagline: 'Vigilancia inteligente para tu seguridad',
         description: 'Sistema de monitoreo avanzado con IA integrada',
-        price: 'Desde $2,999',
         features: [
             'Monitoreo en tiempo real 24/7',
             'Detección inteligente de amenazas con IA',

@@ -47,12 +47,12 @@ export const Footer = () => {
                                 <img
                                     src={logoLight}
                                     alt="WIT Logo"
-                                    className="h-14 md:h-18 w-auto dark:hidden"
+                                    className="h-10 md:h-14 w-auto dark:hidden"
                                 />
                                 <img
                                     src={logoDark}
                                     alt="WIT Logo"
-                                    className="h-14 md:h-18 w-auto hidden dark:block"
+                                    className="h-10 md:h-14 w-auto hidden dark:block"
                                 />
                             </div>
 
@@ -90,7 +90,7 @@ export const Footer = () => {
                         <img
                             src={verticalBanner}
                             alt="WIT Vertical Banner"
-                            className="h-auto max-h-[360px] w-auto object-contain"
+                            className="h-auto max-h-[288px] w-auto object-contain"
                         />
                     </div>
                 </div>

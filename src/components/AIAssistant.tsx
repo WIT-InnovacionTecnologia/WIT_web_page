@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Send, X } from 'lucide-react';
+import { Sparkles, X, ArrowUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 type Message = {
@@ -13,7 +13,7 @@ export const AIAssistant = () => {
     const { t } = useTranslation();
 
     // Text Variables
-    const assistantTitle = "Apple Intelligence";
+    const assistantTitle = t('ai.title');
     const greetingMessage = t('ai.greeting');
     const inputPlaceholder = t('ai.input_placeholder');
 
@@ -160,9 +160,12 @@ export const AIAssistant = () => {
                                 <button
                                     type="submit"
                                     disabled={!inputValue.trim()}
-                                    className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    className={`p-2 rounded-full transition-all duration-300 ${inputValue.trim()
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-gray-200 dark:bg-zinc-800 text-gray-400'
+                                        }`}
                                 >
-                                    <Send size={16} />
+                                    <ArrowUp size={20} strokeWidth={3} />
                                 </button>
                             </form>
                         </div>

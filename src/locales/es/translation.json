@@ -177,7 +177,8 @@
         "chip_desc": "Te ofrecemos conectividad de alto estándar para operaciones claves. Contamos con una conexión por fibra óptica rápida y estable y soporte 24/7, garantizamos el máximo rendimiento de tus procesos de IA y telemetría."
     },
     "ai": {
-        "greeting": "¡Hola! Soy tu asistente de Apple Intelligence. ¿Cómo puedo ayudarte hoy?",
+        "title": "Asistente WIT",
+        "greeting": "¡Hola! Soy tu Asistente WIT. ¿Cómo puedo ayudarte hoy?",
         "input_placeholder": "Pregunta lo que quieras...",
         "mock_response_price": "Nuestros productos comienzan desde $999. ¿Te gustaría ver los precios de un modelo específico?",
         "mock_response_mac": "La nueva línea MacBook cuenta con el chip M3, ofreciendo un rendimiento y duración de batería increíbles.",
