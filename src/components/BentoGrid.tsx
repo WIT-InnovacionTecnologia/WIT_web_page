@@ -165,7 +165,7 @@ export const BentoGrid = () => {
                         </div>
 
                         {/* Placeholder Content (only if no image or video) */}
-                        {!product.image && (
+                        {(!product.image && !product.video) && (
                             <div className="absolute bottom-0 left-0 right-0 h-1/2 flex items-center justify-center overflow-hidden">
                                 <div className={`w-3/4 h-3/4 flex items-center justify-center ${product.theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-500'}`}>
                                     <span className="text-xs">Product Image</span>
