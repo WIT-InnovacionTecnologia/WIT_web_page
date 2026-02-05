@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Search, ArrowRight, Code, Database, Settings, Layout, Cpu, Users } from 'lucide-react';
 
-const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] };
+const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 export const CareersPage = () => {
     const teams = [

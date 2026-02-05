@@ -2,8 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { UserCircle, X, Linkedin, Mail } from 'lucide-react';
 
-const APPLE_SPRING = { type: "spring", stiffness: 260, damping: 20 };
-const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] };
+const APPLE_SPRING = { type: "spring", stiffness: 260, damping: 20 } as any;
+const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 export const TeamPage = () => {
     const [selectedMember, setSelectedMember] = useState<any>(null);

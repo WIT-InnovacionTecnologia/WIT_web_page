@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { Target, Globe, Shield, Zap, Leaf, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] };
+const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
 export const AboutPage = () => {
     const containerRef = useRef<HTMLDivElement>(null);
