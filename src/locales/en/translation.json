@@ -20,6 +20,9 @@
         "bi": "BI",
         "about": "About WIT",
         "menu": {
+            "products": {
+                "title": "Products"
+            },
             "solutions": {
                 "title": "Our Solutions",
                 "items": {
