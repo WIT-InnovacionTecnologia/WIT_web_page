@@ -13,6 +13,7 @@ import { TeamPage } from './pages/TeamPage';
 import { CulturePage } from './pages/CulturePage';
 import { CareersPage } from './pages/CareersPage';
 import { ReviewsPage } from './pages/ReviewsPage';
+import { ScrollToTop } from './components/ScrollToTop';
 import { BentoGrid } from './components/BentoGrid';
 import { ProductShowcase } from './components/ProductShowcase';
 import { AIAssistant } from './components/AIAssistant';
@@ -22,45 +23,48 @@ import { LightRays } from './components/LightRays';
 
 function App() {
   return (
-    <MainLayout>
-      <Routes>
-        <Route path="/" element={
-          <>
-            <div className="fixed inset-0 z-0 hidden dark:block">
-              <Beams
-                beamWidth={3}
-                beamHeight={35}
-                beamNumber={20}
-                lightColor="#ffffff"
-                speed={1.0}
-                noiseIntensity={2.0}
-                scale={0.1}
-                rotation={30}
-              />
-              <LightRays />
-            </div>
-            <div className="relative z-10">
-              <Hero />
-              <BentoGrid />
-              <ProductShowcase />
-            </div>
-            <AIAssistant />
-          </>
-        } />
-        <Route path="/timeline" element={<TimelinePage />} />
-        <Route path="/products/sentinel" element={<SentinelPage />} />
-        <Route path="/products/tel" element={<TeLPage />} />
-        <Route path="/products/iot" element={<IoTPage />} />
-        <Route path="/products/totems" element={<TotemsPage />} />
-        <Route path="/products/ecommerce" element={<EcommercePage />} />
-        <Route path="/products/wifi-urban" element={<WifiUrbanPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/culture" element={<CulturePage />} />
-        <Route path="/careers" element={<CareersPage />} />
-        <Route path="/reviews" element={<ReviewsPage />} />
-      </Routes>
-    </MainLayout>
+    <>
+      <ScrollToTop />
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <div className="fixed inset-0 z-0 hidden dark:block">
+                <Beams
+                  beamWidth={3}
+                  beamHeight={35}
+                  beamNumber={20}
+                  lightColor="#ffffff"
+                  speed={1.0}
+                  noiseIntensity={2.0}
+                  scale={0.1}
+                  rotation={30}
+                />
+                <LightRays />
+              </div>
+              <div className="relative z-10">
+                <Hero />
+                <BentoGrid />
+                <ProductShowcase />
+              </div>
+              <AIAssistant />
+            </>
+          } />
+          <Route path="/timeline" element={<TimelinePage />} />
+          <Route path="/products/sentinel" element={<SentinelPage />} />
+          <Route path="/products/tel" element={<TeLPage />} />
+          <Route path="/products/iot" element={<IoTPage />} />
+          <Route path="/products/totems" element={<TotemsPage />} />
+          <Route path="/products/ecommerce" element={<EcommercePage />} />
+          <Route path="/products/wifi-urban" element={<WifiUrbanPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/culture" element={<CulturePage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+        </Routes>
+      </MainLayout>
+    </>
   );
 }
 
