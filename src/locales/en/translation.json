@@ -140,8 +140,8 @@
         "main_title": "We develop the future of your company",
         "main_subtitle": "Specialists in modernizing critical processes using Artificial Intelligence, high-standard connectivity, and advanced telemetry solutions",
         "cta_button": "Get to know us",
-        "video_overlay_title": "MoreGPS",
-        "video_overlay_desc": "Maintain full control of your fleet with our MoreGPS platform. Manage routes, receive alerts, and make real-time decisions from any device to transform vehicle data into profitability-boosting decisions.",
+        "video_overlay_title": "MásGPS",
+        "video_overlay_desc": "Master your fleet with a platform that converts real-time data into profitable decisions. Manage routes with precision from any device and ensure maximum operational efficiency.",
         "browser_support": "Your browser does not support the video tag."
     },
     "grid": {
@@ -149,32 +149,32 @@
         "whats_new": "Take a look at what’s new.",
         "learn_more": "Learn more",
         "buy": "Buy",
-        "sentinel_subtitle": "Increase your operation's safety with AI cameras that reduce accidents and associated costs by detecting driver fatigue and distractions on the road.",
-        "tel_subtitle": "Visualize alerts before failure or overspending; anticipate breakdowns, saving fuel and keeping your fleet always moving, optimizing every trip.",
+        "sentinel_subtitle": "Reduce accidents and costs with AI that detects driver fatigue and distractions in real time. Protect your passengers and drivers with technology that anticipates risks before they occur.",
+        "tel_subtitle": "Maximize your fleet's lifespan by anticipating breakdowns and optimizing fuel consumption. Keep your buses always moving with preventive alerts that avoid unnecessary stops.",
         "iot": {
-            "title": "IoT (Internet of Things)",
-            "subtitle": "Transform your assets into a smart network. Connect and automate control to optimize performance, anticipate parts wear, and reduce energy consumption, improving your bus efficiency and user experience."
+            "title": "IoT",
+            "subtitle": "Automate your assets' performance with sensors that reduce wear and energy expenditure. Turn your fleet into a smart network that elevates service quality and profitability."
         },
         "totems": {
             "title": "Interactive Totems",
-            "subtitle": "Decongest lines with self-service points, improve operational fluency within terminals. Passenger comfort and autonomy to print tickets, consult platforms, check schedules, or access services without unnecessary waits."
+            "subtitle": "Eliminate lines with agile self-service that modernizes your terminals immediately. Provide total autonomy to the passenger to buy and print without waiting, streamlining your operation."
         },
         "ecommerce": {
-            "title": "e-Commerce Platform",
-            "subtitle": "Take your sales to the cloud with a 24/7 E-Commerce platform. Improve digital user experience and receive valuable data on their behavior to run personalized campaigns and measurably increase your commercial management."
+            "title": "e-Commerce",
+            "subtitle": "Scale your revenue with a platform that sells your tickets 24/7 automatically. Understand your customers' behavior and launch personalized campaigns that ensure full buses."
         },
         "wifi": {
             "title": "Urban WiFi",
-            "subtitle": "High-fidelity signal with industrial-grade hardware for strategic points. We transform connections into a competitive advantage, building customer loyalty."
+            "subtitle": "Turn connectivity into your greatest competitive advantage with industrial-grade high-fidelity WiFi. Build passenger loyalty by offering a premium experience that keeps them always connected."
         }
     },
     "showcase": {
-        "camera_title": "AI",
-        "camera_desc": "Our platform learns from your users' behavior to adjust routes, anticipate peak seasons, and personalizing service, ensuring maximum bus occupancy and building customer loyalty.",
+        "camera_title": "Artificial Intelligence",
+        "camera_desc": "Optimize occupancy with AI that predicts peak seasons and adjusts your routes based on real demand. Ensure an intelligent service that builds customer loyalty and maximizes the performance of every trip.",
         "battery_title": "Partnership (P+S)",
-        "battery_desc": "We create a strategic alliance to modernize your processes, integrating our resources and specialized talent. We share challenges and opportunities, developing together innovative solutions that accelerate your growth.",
+        "battery_desc": "Modernize your management with a strategic alliance that integrates talent and advanced technology into your DNA. We share your operational challenges to develop solutions that accelerate your company's growth.",
         "chip_title": "Connect Plus (ConnP)",
-        "chip_desc": "We offer high-standard connectivity for key operations. With fast and stable fiber optic connection and 24/7 support, we guarantee maximum performance for your AI and telemetry processes."
+        "chip_desc": "Boost your telemetry and AI with the superior stability of Connect Plus fiber optics. Guarantee the performance of your critical operations with 24/7 support and an uninterrupted connection."
     },
     "ai": {
         "title": "WIT Assistant",
