@@ -12,11 +12,11 @@ export const CulturePage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="space-y-4 mb-24"
                     >
-                        <span className="text-blue-600 dark:text-blue-500 font-bold tracking-[0.2em] uppercase text-sm">Cultura en WIT</span>
+                        <span className="text-[#0071e3] font-bold tracking-[0.2em] uppercase text-sm">Cultura en WIT</span>
                         <h1 className="text-8xl md:text-[10rem] font-bold tracking-tighter leading-[0.8] mb-12">
                             Mentes. <br />
                             Juntas. <br />
-                            <span className="text-gray-200 dark:text-zinc-900">Infinitas.</span>
+                            <span className="text-[#86868b] dark:text-[#424245]">Infinitas.</span>
                         </h1>
                     </motion.div>
 
@@ -46,15 +46,15 @@ export const CulturePage = () => {
             <section className="bg-zinc-50 dark:bg-zinc-900/30 py-48">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-24 space-y-4">
-                        <h2 className="text-5xl md:text-7xl font-bold tracking-tight">Datos que <br /> <span className="italic font-serif text-blue-600">inspiran.</span></h2>
-                        <p className="text-xl text-zinc-400">Nuestro compromiso con la transparencia y el crecimiento.</p>
+                        <h2 className="text-5xl md:text-7xl font-bold tracking-tight">Datos que <br /> <span className="italic font-serif text-[#0071e3]">inspiran.</span></h2>
+                        <p className="text-xl text-[#86868b]">Nuestro compromiso con la transparencia y el crecimiento.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { label: "Mujeres en Tech", value: "38%", sub: "+12% vs 2023", color: "text-purple-600" },
-                            { label: "Remoto / Híbrido", value: "100%", sub: "Libertad total", color: "text-blue-600" },
-                            { label: "Diversidad Regional", value: "15+", sub: "Comunas en Chile", color: "text-green-600" }
+                            { label: "Mujeres en Tech", value: "38%", sub: "+12% vs 2023", color: "text-[#af52de]" },
+                            { label: "Remoto / Híbrido", value: "100%", sub: "Libertad total", color: "text-[#0071e3]" },
+                            { label: "Diversidad Regional", value: "15+", sub: "Comunas en Chile", color: "text-[#34c759]" }
                         ].map((stat, idx) => (
                             <motion.div
                                 key={idx}
@@ -62,11 +62,11 @@ export const CulturePage = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-white dark:bg-black p-12 rounded-[3.5rem] border border-zinc-100 dark:border-zinc-900 flex flex-col items-center text-center space-y-4 hover:shadow-2xl transition-all duration-500"
+                                className="bg-white dark:bg-[#1d1d1f] p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-[#424245] flex flex-col items-center text-center space-y-4 hover:shadow-2xl transition-all duration-500"
                             >
-                                <span className="text-sm font-bold uppercase tracking-widest text-zinc-400">{stat.label}</span>
+                                <span className="text-sm font-bold uppercase tracking-widest text-[#86868b]">{stat.label}</span>
                                 <span className={`text-7xl font-black tracking-tighter ${stat.color}`}>{stat.value}</span>
-                                <span className="text-lg font-medium text-zinc-500 italic">{stat.sub}</span>
+                                <span className="text-lg font-medium text-[#86868b] italic">{stat.sub}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -133,7 +133,7 @@ export const CulturePage = () => {
                         Únete a nosotros para construir algo que <br className="hidden md:block" /> trascienda el código y las máquinas.
                     </p>
                     <div className="pt-12">
-                        <button className="bg-blue-600 text-white px-16 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-blue-600/20">
+                        <button className="bg-[#0071e3] text-white px-16 py-6 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-[#0071e3]/20">
                             Ser parte del equipo
                         </button>
                     </div>

@@ -120,10 +120,10 @@ export const AboutPage = () => {
                         Innovación que <br /> <span className="text-blue-600">trasciende.</span>
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                        <Link to="/contact" className="bg-black dark:bg-white text-white dark:text-black px-16 py-6 rounded-full font-bold text-2xl hover:scale-105 transition-transform">
+                        <Link to="/contact" className="bg-[#0071e3] text-white px-16 py-6 rounded-full font-bold text-2xl hover:scale-105 transition-transform hover:bg-[#0077ed]">
                             Contactar con Ventas
                         </Link>
-                        <Link to="/careers" className="text-blue-600 font-bold text-2xl hover:underline flex items-center gap-2">
+                        <Link to="/careers" className="text-[#0071e3] font-bold text-2xl hover:underline flex items-center gap-2">
                             Ver carreras <ArrowRight />
                         </Link>
                     </div>

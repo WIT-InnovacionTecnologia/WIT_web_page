@@ -82,7 +82,7 @@ export const TeamPage = () => {
                             </div>
                             <h3 className="text-2xl font-bold tracking-tight mb-1">{member.name}</h3>
                             <p className="text-zinc-500 dark:text-zinc-500 font-medium mb-4">{member.role}</p>
-                            <span className="text-blue-600 dark:text-blue-500 font-semibold inline-flex items-center text-sm">
+                            <span className="text-[#0071e3] font-semibold inline-flex items-center text-sm">
                                 Ver Perfil
                             </span>
                         </motion.div>

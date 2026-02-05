@@ -3,12 +3,12 @@ import { Search, ArrowRight, Code, Database, Settings, Layout, Cpu, Users } from
 
 export const CareersPage = () => {
     const teams = [
-        { title: "Ingeniería de Software", icon: <Code />, color: "bg-blue-500" },
-        { title: "Hardware e IoT", icon: <Cpu />, color: "bg-orange-500" },
-        { title: "IA y Data Science", icon: <Database />, color: "bg-purple-500" },
-        { title: "Operaciones", icon: <Settings />, color: "bg-zinc-700" },
-        { title: "Diseño de Producto", icon: <Layout />, color: "bg-pink-500" },
-        { title: "Crecimiento y Ventas", icon: <Users />, color: "bg-green-600" }
+        { title: "Ingeniería de Software", icon: <Code />, color: "bg-[#0071e3]" },
+        { title: "Hardware e IoT", icon: <Cpu />, color: "bg-[#ff9500]" },
+        { title: "IA y Data Science", icon: <Database />, color: "bg-[#af52de]" },
+        { title: "Operaciones", icon: <Settings />, color: "bg-[#1d1d1f]" },
+        { title: "Diseño de Producto", icon: <Layout />, color: "bg-[#ff2d55]" },
+        { title: "Crecimiento y Ventas", icon: <Users />, color: "bg-[#34c759]" }
     ];
 
     return (
@@ -22,7 +22,7 @@ export const CareersPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-7xl md:text-[9rem] font-bold tracking-tighter leading-[0.8]"
                     >
-                        Haz historia <br /> <span className="text-blue-600">trabajando en WIT.</span>
+                        Haz historia <br /> <span className="text-[#0071e3]">trabajando en WIT.</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
@@ -132,14 +132,14 @@ export const CareersPage = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="bg-blue-600 py-48 text-center text-white px-4">
+            <section className="bg-[#0071e3] py-48 text-center text-white px-4">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <h2 className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] mb-12">
                         Ven a <br /> crear.
                     </h2>
                     <p className="text-2xl md:text-3xl opacity-80 font-medium">Tu próximo gran desafío te espera en WIT.</p>
                     <div className="pt-12">
-                        <button className="bg-white text-blue-600 px-20 py-6 rounded-full font-bold text-2xl hover:scale-110 transition-transform shadow-2xl">
+                        <button className="bg-white text-[#0071e3] px-20 py-6 rounded-full font-bold text-2xl hover:scale-110 transition-transform shadow-2xl">
                             Aplicar Ahora
                         </button>
                     </div>
