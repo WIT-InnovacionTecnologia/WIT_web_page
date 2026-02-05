@@ -145,13 +145,13 @@ export const Navbar = () => {
                 <div className="flex items-center justify-between h-[44px]">
 
                     {/* Desktop Layout */}
-                    <div className="hidden md:flex items-center justify-between w-full text-sm font-normal relative">
+                    <div className="hidden md:flex items-center justify-between w-full text-[13px] font-normal relative">
                         {/* WIT Logo */}
                         <Link to="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
                             <img
                                 src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                 alt="WIT"
-                                className="h-[28px] w-auto object-contain"
+                                className="h-[26px] w-auto object-contain"
                             />
                         </Link>
 
