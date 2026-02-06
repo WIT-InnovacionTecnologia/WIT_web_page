@@ -9,7 +9,7 @@ export const KPIsPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
             {/* Hero */}
             <section className="max-w-7xl mx-auto px-4 py-24 text-center">
                 <motion.div
@@ -37,7 +37,7 @@ export const KPIsPage = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="bg-[#f5f5f7] dark:bg-[#111111] p-16 rounded-[4rem] space-y-12 border border-transparent dark:border-white/5"
+                        className="bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                     >
                         <div className="space-y-6">
                             <TrendingUp className="w-16 h-16 text-[#0071e3]" />

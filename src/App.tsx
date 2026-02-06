@@ -28,8 +28,6 @@ import { AIAssistant } from './components/AIAssistant';
 
 import { DemoRequestPage } from './pages/DemoRequestPage';
 
-import Beams from './components/Beams';
-import { LightRays } from './components/LightRays';
 
 function App() {
   return (

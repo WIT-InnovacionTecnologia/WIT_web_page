@@ -10,7 +10,7 @@ export const ContactPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
             {/* Hero Section */}
             <section className="max-w-7xl mx-auto px-4 py-24 text-center">
                 <motion.div
@@ -39,7 +39,7 @@ export const ContactPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-8"
                     >
-                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-2xl w-fit">
+                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 rounded-2xl w-fit">
                             <LifeBuoy size={40} />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t('contact.support_title')}</h2>
@@ -50,7 +50,7 @@ export const ContactPage = () => {
                             {t('contact.support_link')} <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </motion.div>
-                    <div className="bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-[3rem] p-12 aspect-video flex items-center justify-center">
+                    <div className="bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 rounded-[3rem] p-12 aspect-video flex items-center justify-center">
                         <MessageCircle size={100} className="text-[#0071e3] opacity-20" />
                     </div>
                 </section>
@@ -67,7 +67,7 @@ export const ContactPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-8 order-1 md:order-2"
                     >
-                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-2xl w-fit">
+                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 rounded-2xl w-fit">
                             <Briefcase size={40} />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t('contact.sales_title')}</h2>
@@ -89,7 +89,7 @@ export const ContactPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-8"
                     >
-                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-2xl w-fit">
+                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 rounded-2xl w-fit">
                             <MapPin size={40} />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t('contact.offices_title')}</h2>
@@ -100,7 +100,7 @@ export const ContactPage = () => {
                             {t('contact.offices_link')} <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </motion.div>
-                    <div className="bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-[3rem] p-12 aspect-video flex items-center justify-center">
+                    <div className="bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 rounded-[3rem] p-12 aspect-video flex items-center justify-center">
                         <MapPin size={100} className="text-[#0071e3] opacity-20" />
                     </div>
                 </section>

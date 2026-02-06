@@ -8,7 +8,7 @@ export const CulturePage = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
             {/* Typographic Hero */}
             <section className="pt-48 pb-32 px-4">
                 <div className="max-w-7xl mx-auto">
@@ -93,7 +93,7 @@ export const CulturePage = () => {
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
                                 whileHover={{ y: -10 }}
-                                className="bg-white dark:bg-[#111111] p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-white/5 flex flex-col items-center text-center space-y-4 shadow-sm hover:shadow-2xl transition-all duration-700 ease-out"
+                                className="bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                             >
                                 <span className="text-sm font-bold uppercase tracking-widest text-[#86868b]">{stat.label}</span>
                                 <span className={`text-7xl font-black tracking-tighter ${stat.color}`}>{stat.value}</span>

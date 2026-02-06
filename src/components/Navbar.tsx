@@ -293,7 +293,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black/80 dark:backdrop-blur-2xl shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-white/10"
                         onMouseEnter={() => setActiveHover(activeHover)}
                         onMouseLeave={() => setActiveHover(null)}
                     >
@@ -338,7 +338,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black/80 dark:backdrop-blur-2xl shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-white/10"
                     >
                         <div className="max-w-[600px] mx-auto px-4 py-10">
                             <h3 className="text-gray-500 dark:text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">{searchQuickLinksTitle}</h3>
@@ -371,7 +371,7 @@ export const Navbar = () => {
                         animate={{ opacity: 1, height: "100dvh" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.4, ease: [0.645, 0.045, 0.355, 1.000] }}
-                        className="md:hidden fixed inset-0 bg-white dark:bg-black z-40 pt-[48px] px-8 overflow-y-auto"
+                        className="md:hidden fixed inset-0 bg-white/95 dark:bg-black/80 backdrop-blur-3xl z-40 pt-[48px] px-8 overflow-y-auto"
                     >
                         <motion.div
                             variants={containerVariants}

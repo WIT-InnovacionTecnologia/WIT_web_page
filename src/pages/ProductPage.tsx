@@ -95,7 +95,7 @@ export const ProductPage = ({
     };
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-x-hidden">
             {/* Apple-Style Sticky Sub-nav */}
             <motion.div
                 style={{ opacity: subNavOpacity }}
@@ -219,7 +219,7 @@ export const ProductPage = ({
                                 className="absolute inset-0 flex items-center justify-center p-2 md:p-4"
                             >
                                 {images[currentImageIndex].type === 'image' ? (
-                                    <div className="relative w-full h-full max-w-full max-h-full bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+                                    <div className="relative w-full h-full max-w-full max-h-full bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
                                         <div className="w-full h-full bg-[#0a0a0a] p-[14px] rounded-[1.4rem] ring-1 ring-white/10">
                                             <div className="w-full h-full overflow-hidden rounded-[1.1rem] bg-white dark:bg-black shadow-inner border border-transparent dark:border-white/5">
                                                 <img
@@ -231,7 +231,7 @@ export const ProductPage = ({
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="relative w-full h-full max-w-full max-h-full bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+                                    <div className="relative w-full h-full max-w-full max-h-full bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
                                         <div className="w-full h-full bg-[#0a0a0a] p-[14px] rounded-[1.4rem] ring-1 ring-white/10">
                                             <div className="w-full h-full overflow-hidden rounded-[1.1rem] bg-black relative shadow-inner">
                                                 <video
@@ -294,7 +294,7 @@ export const ProductPage = ({
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: index * 0.1 }}
-                                className="bg-white dark:bg-[#111111] border border-transparent dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-700 group flex flex-col justify-between aspect-square md:aspect-auto h-[400px]"
+                                className="bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 shadow-sm hover:shadow-2xl transition-all duration-700 group flex flex-col justify-between aspect-square md:aspect-auto h-[400px]"
                             >
                                 <div className="space-y-8">
                                     <div className="w-16 h-16 rounded-2xl bg-[#0071e3]/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#0071e3]/10 transition-all duration-500">

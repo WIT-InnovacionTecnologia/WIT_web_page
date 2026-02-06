@@ -32,7 +32,7 @@ export const DemoRequestPage = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={APPLE_TRANSITION}
-                    className="max-w-md w-full bg-white dark:bg-[#111111] rounded-[2.5rem] p-12 text-center shadow-2xl space-y-8 border border-transparent dark:border-white/5"
+                    className="max-w-md w-full bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                 >
                     <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto">
                         <CheckCircle2 className="w-10 h-10 text-green-500" />
@@ -57,7 +57,7 @@ export const DemoRequestPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-32 pb-20 px-4">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-32 pb-20 px-4">
             <div className="max-w-3xl mx-auto">
                 <motion.button
                     initial={{ opacity: 0, x: -20 }}
@@ -89,7 +89,7 @@ export const DemoRequestPage = () => {
                             </p>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-6 bg-[#f5f5f7] dark:bg-[#111111] p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-transparent hover:border-[#e5e5e7] dark:hover:border-white/10 transition-all duration-500">
+                        <form onSubmit={handleSubmit} className="space-y-6 bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700">
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-[12px] font-bold text-[#86868b] uppercase tracking-widest px-4">{t('demo_request.form.first_name')}</label>

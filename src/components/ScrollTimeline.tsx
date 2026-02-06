@@ -44,7 +44,7 @@ export const ScrollTimeline = () => {
     ];
 
     return (
-        <div ref={ref} className="w-full relative bg-white dark:bg-black font-sans md:px-10 overflow-hidden">
+        <div ref={ref} className="w-full relative bg-white dark:bg-transparent font-sans md:px-10 overflow-hidden">
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black dark:text-white max-w-4xl text-center mx-auto">
                     {t('timeline.title')}
