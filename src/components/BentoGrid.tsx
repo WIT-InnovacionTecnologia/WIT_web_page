@@ -134,7 +134,7 @@ export const BentoGrid = () => {
                                 {product.title}
                             </h3>
                             <p
-                                className="text-lg font-medium opacity-90 text-center mb-2"
+                                className="text-lg font-medium opacity-0 group-hover:opacity-90 text-center mb-2 transition-opacity duration-500"
                                 style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                             >
                                 {product.subtitle}

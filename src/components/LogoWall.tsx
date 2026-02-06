@@ -21,14 +21,17 @@ import mutualDark from '../assets/dark/logo-mutual@2x.png';
 import unnamedDark from '../assets/dark/unnamed (2).png'; // Assuming this is a partner logo
 import tandemDark from '../assets/dark/TANDEM - CON SLOGAN - COLORES COMPLETOS.png';
 
+import type { CSSProperties } from 'react';
+
 interface Logo {
     src: string;
     alt: string;
     scale?: number;
+    style?: CSSProperties;
 }
 
 const lightLogos: Logo[] = [
-    { src: pullmanLight, alt: "Pullman Bus", scale: 2.0 },
+    { src: pullmanLight, alt: "Pullman Bus", scale: 2.0, style: { filter: 'invert(1) brightness(0)' } },
     { src: parqueAraucoLight, alt: "Parque Arauco", scale: 0.8 },
     { src: transantiagoLight, alt: "Transantiago" },
     { src: nilahueLight, alt: "Buses Nilahue" },
@@ -82,7 +85,10 @@ export const LogoWall = () => {
                             <img
                                 src={logo.src}
                                 alt={logo.alt}
-                                style={{ transform: logo.scale ? `scale(${logo.scale})` : 'scale(1)' }}
+                                style={{
+                                    transform: logo.scale ? `scale(${logo.scale})` : 'scale(1)',
+                                    ...logo.style
+                                }}
                                 className="max-w-full max-h-full object-contain mix-blend-multiply"
                             />
                         </div>

@@ -14,35 +14,27 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        // Preload video only after page load
-        const preloadVideo = () => {
-            const video = document.createElement("video");
-            video.preload = "auto";
-            video.src = src;
-
-            video.onloadeddata = () => {
-                setIsVideoLoaded(true);
-
-                // Attempt to play the main video
-                setTimeout(() => {
-                    if (videoRef.current) {
-                        const playPromise = videoRef.current.play();
-                        if (playPromise !== undefined) {
-                            playPromise.catch(() => {
-                                console.log("Autoplay blocked, waiting for user interaction");
-                            });
-                        }
-                    }
-                }, 500);
-            };
-        };
+        // Initial state: preload metadata only to show first frame
+        if (videoRef.current) {
+            videoRef.current.preload = "metadata";
+        }
 
         const handlePageLoad = () => {
-            preloadVideo();
+            // Once page is loaded, buffer the rest and play
+            if (videoRef.current) {
+                videoRef.current.preload = "auto";
+
+                const playPromise = videoRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        console.log("Autoplay blocked/deferred");
+                    });
+                }
+            }
         };
 
         if (document.readyState === 'complete') {
-            preloadVideo();
+            handlePageLoad();
         } else {
             window.addEventListener('load', handlePageLoad);
         }
@@ -52,23 +44,24 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
 
     return (
         <div className={`relative overflow-hidden ${className}`}>
-            {/* Placeholder while loading */}
+            {/* Placeholder / Spinner Overlay */}
             <AnimatePresence>
                 {!isVideoLoaded && (
                     <motion.div
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="absolute inset-0 z-20 bg-gray-900 flex items-center justify-center"
+                        className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center"
                     >
                         {poster && (
                             <img
                                 src={poster}
                                 alt="Loading video"
-                                className="absolute inset-0 w-full h-full object-cover opacity-50"
+                                className="absolute inset-0 w-full h-full object-cover"
                                 loading="eager"
                             />
                         )}
+                        {/* Only show spinner until we have data */}
                         <div className="relative z-10 p-4 rounded-full bg-black/20 backdrop-blur-sm">
                             <Loader2 className="h-8 w-8 text-white/70 animate-spin" />
                         </div>
@@ -79,18 +72,18 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
             {/* Main Video */}
             <video
                 ref={videoRef}
-                className={`w-full h-full object-cover transition-opacity duration-700 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
-                autoPlay
-                loop
+                className={`w-full h-full object-cover transition-opacity duration-700 opacity-100`}
                 muted
+                loop
                 playsInline
                 src={src}
+                onLoadedData={() => setIsVideoLoaded(true)}
             >
                 {/* Fallback content if needed */}
             </video>
 
             {/* Overlay Content (passed as children) */}
-            <div className={`absolute inset-0 z-10 transition-opacity duration-700 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`absolute inset-0 z-10`}>
                 {children}
             </div>
         </div>
