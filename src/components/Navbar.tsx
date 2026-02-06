@@ -217,7 +217,7 @@ export const Navbar = () => {
                                     <div className="relative group">
                                         <Globe size={14} className="opacity-80 hover:opacity-100 cursor-pointer transition-opacity" />
                                         <div className="absolute right-0 top-full pt-2 w-32 hidden group-hover:block">
-                                            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl py-2 border border-gray-100 dark:border-gray-800">
+                                            <div className="bg-white dark:bg-black rounded-lg shadow-xl py-2 border border-gray-100 dark:border-gray-800">
                                                 <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">English</button>
                                                 <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">Español</button>
                                                 <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">Português</button>
@@ -293,7 +293,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black/80 dark:backdrop-blur-2xl shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-white/10"
                         onMouseEnter={() => setActiveHover(activeHover)}
                         onMouseLeave={() => setActiveHover(null)}
                     >
@@ -338,7 +338,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black/80 dark:backdrop-blur-2xl shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-white/10"
                     >
                         <div className="max-w-[600px] mx-auto px-4 py-10">
                             <h3 className="text-gray-500 dark:text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">{searchQuickLinksTitle}</h3>
@@ -371,7 +371,7 @@ export const Navbar = () => {
                         animate={{ opacity: 1, height: "100dvh" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.4, ease: [0.645, 0.045, 0.355, 1.000] }}
-                        className="md:hidden fixed inset-0 bg-white dark:bg-black z-40 pt-[48px] px-8 overflow-y-auto"
+                        className="md:hidden fixed inset-0 bg-white/95 dark:bg-black/80 backdrop-blur-3xl z-40 pt-[48px] px-8 overflow-y-auto"
                     >
                         <motion.div
                             variants={containerVariants}
@@ -405,7 +405,7 @@ export const Navbar = () => {
                                                                 initial={{ height: 0, opacity: 0 }}
                                                                 animate={{ height: 'auto', opacity: 1 }}
                                                                 exit={{ height: 0, opacity: 0 }}
-                                                                className="overflow-hidden bg-gray-50 dark:bg-gray-900/50 rounded-lg mb-2"
+                                                                className="overflow-hidden bg-gray-50 dark:bg-black/50 rounded-lg mb-2"
                                                             >
                                                                 <div className="py-4 px-4 space-y-6">
                                                                     {navData[item.key].map((column, idx) => (

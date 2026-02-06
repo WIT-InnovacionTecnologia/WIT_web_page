@@ -44,7 +44,7 @@ export const ProductShowcase = () => {
     ];
 
     return (
-        <section className="py-24 bg-white dark:bg-black overflow-hidden transition-colors duration-300">
+        <section className="py-24 bg-white dark:bg-transparent overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6">
                 {features.map((feature, idx) => (
                     <div
@@ -84,7 +84,7 @@ export const ProductShowcase = () => {
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.21, 0.45, 0.32, 0.9] }}
                             className="flex-1 w-full max-w-full aspect-[4/3] relative flex items-center justify-center box-border"
                         >
-                            <div className="relative w-full max-w-full h-full bg-[#f5f5f7] dark:bg-[#1d1d1f] p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5 group overflow-hidden box-border">
+                            <div className="relative w-full max-w-full h-full bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700">
                                 <div className="w-full h-full bg-[#0a0a0a] p-[14px] rounded-[1.4rem] ring-1 ring-white/10">
                                     <div className="w-full h-full overflow-hidden rounded-[1.1rem] bg-black relative shadow-inner">
                                         {/* Banner Header */}

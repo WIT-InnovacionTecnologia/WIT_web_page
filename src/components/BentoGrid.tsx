@@ -144,7 +144,7 @@ export const BentoGrid = () => {
                         {/* Hover Overlay for Better Text Visibility */}
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
 
-                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-24 p-8 z-10 ${(product.image || videoUrls.iot) ? 'text-white' : ''} ${product.theme === 'light' ? 'text-black' : 'text-white'}`}>
+                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-24 p-8 z-10 text-white`}>
                             {/* ... existing header logic ... */}
                             {!product.banner && (
                                 <h3
@@ -170,14 +170,14 @@ export const BentoGrid = () => {
                             <div className="mt-8 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                                 <Link
                                     to={`/request-demo?product=${product.title}`}
-                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.theme === 'dark' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors bg-blue-600 hover:bg-blue-700 text-white`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {t('product.template.cta_demo')}
                                 </Link>
                                 <Link
                                     to={product.path}
-                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.theme === 'dark' ? 'border-2 border-white text-white hover:bg-white/10' : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'}`}
+                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors border-2 border-white text-white hover:bg-white/10`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {t('grid.learn_more')}

@@ -16,7 +16,7 @@ export const SupportPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 pb-20 selection:bg-[#0071e3]/20">
             {/* Hero Section */}
             <section className="max-w-7xl mx-auto px-4 text-center py-20">
                 <motion.div
@@ -33,7 +33,7 @@ export const SupportPage = () => {
                         <input
                             type="text"
                             placeholder={t('support.search_placeholder')}
-                            className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] border-none rounded-2xl py-6 pl-16 pr-6 text-xl outline-none focus:ring-2 focus:ring-[#0071e3] transition-all"
+                            className="w-full bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                         />
                     </div>
                 </motion.div>
@@ -49,7 +49,7 @@ export const SupportPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
-                            className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-8 rounded-[2.5rem] hover:shadow-xl transition-all cursor-pointer group border border-transparent hover:border-[#0071e3]/30"
+                            className="bg-[#f5f5f7] dark:bg-transparent p-8 rounded-[2.5rem] hover:shadow-xl transition-all cursor-pointer group border border-transparent hover:border-[#0071e3]/30 dark:border-white/5"
                         >
                             <div className="text-[#0071e3] mb-6 inline-block p-4 bg-white dark:bg-black rounded-2xl shadow-sm">
                                 {cat.icon}

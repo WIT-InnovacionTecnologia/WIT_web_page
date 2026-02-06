@@ -69,7 +69,7 @@ export const AboutPage = () => {
                             <motion.div
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                className="relative z-10 w-32 h-32 bg-white dark:bg-[#1d1d1f] rounded-full border border-[#f5f5f7] dark:border-[#424245] flex items-center justify-center text-[#0071e3] shadow-sm cursor-pointer"
+                                className="relative z-10 w-32 h-32 bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                             >
                                 {item.icon}
                             </motion.div>
@@ -129,7 +129,7 @@ export const AboutPage = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
-                                className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-12 rounded-[3.5rem] space-y-4 hover:shadow-xl transition-shadow cursor-default"
+                                className="bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                             >
                                 <span className={`text-5xl font-bold tracking-tighter block ${card.color}`}>{card.value}</span>
                                 <div className="space-y-1">
@@ -143,7 +143,7 @@ export const AboutPage = () => {
             </section>
 
             {/* Footer CTA */}
-            <section className="py-64 px-4 text-center bg-[#f5f5f7] dark:bg-[#161617]">
+            <section className="py-64 px-4 text-center bg-[#f5f5f7] dark:bg-transparent">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}

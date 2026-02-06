@@ -8,7 +8,7 @@ export const SalesPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 pb-20 selection:bg-[#0071e3]/20">
             {/* Header */}
             <section className="max-w-7xl mx-auto px-4 py-20">
                 <motion.div
@@ -28,14 +28,14 @@ export const SalesPage = () => {
             </section>
 
             {/* Direct Contact Options */}
-            <section className="max-w-7xl mx-auto px-4 py-20 border-t border-[#f5f5f7] dark:border-[#1d1d1f]">
+            <section className="max-w-7xl mx-auto px-4 py-20 border-t border-[#f5f5f7] dark:border-white/5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-12 rounded-[3.5rem] flex flex-col justify-between"
+                        className="bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                     >
                         <div className="space-y-6">
                             <Building2 className="w-12 h-12 text-[#0071e3]" />
@@ -61,21 +61,21 @@ export const SalesPage = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="bg-white dark:bg-black p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-[#1d1d1f] shadow-sm"
+                        className="bg-white dark:bg-black/40 backdrop-blur-3xl border border-[#f5f5f7] dark:border-white/5 shadow-xl transition-all duration-700"
                     >
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="text" placeholder={t('sales.form.name')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3]" />
-                                <input type="text" placeholder={t('sales.form.lastname')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3]" />
+                                <input type="text" placeholder={t('sales.form.name')} className="w-full bg-[#f5f5f7] dark:bg-black/20 backdrop-blur-xl border border-transparent dark:border-white/5" />
+                                <input type="text" placeholder={t('sales.form.lastname')} className="w-full bg-[#f5f5f7] dark:bg-black/20 backdrop-blur-xl border border-transparent dark:border-white/5" />
                             </div>
-                            <input type="email" placeholder={t('sales.form.email')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3]" />
-                            <select className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] text-gray-400">
+                            <input type="email" placeholder={t('sales.form.email')} className="w-full bg-[#f5f5f7] dark:bg-black/20 backdrop-blur-xl border border-transparent dark:border-white/5" />
+                            <select className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] text-gray-400 border border-transparent dark:border-white/5">
                                 <option>{t('sales.form.interest')}</option>
                                 <option>{t('sales.form.options.sentinel')}</option>
                                 <option>{t('sales.form.options.iot')}</option>
                                 <option>{t('sales.form.options.smart_city')}</option>
                             </select>
-                            <textarea rows={4} placeholder={t('sales.form.message')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] resize-none"></textarea>
+                            <textarea rows={4} placeholder={t('sales.form.message')} className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] resize-none border border-transparent dark:border-white/5"></textarea>
                             <button className="w-full bg-[#0071e3] text-white py-6 rounded-full font-bold text-xl hover:bg-[#0077ed] transition-all flex items-center justify-center gap-3">
                                 <Send className="w-5 h-5" /> {t('sales.form.send')}
                             </button>

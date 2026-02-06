@@ -113,7 +113,7 @@ export const AIAssistant = () => {
                                     <div
                                         className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${msg.sender === 'user'
                                             ? 'bg-blue-600 text-white rounded-br-none'
-                                            : 'bg-gray-100 dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white rounded-bl-none'
+                                            : 'bg-gray-100 dark:bg-[#111111] border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-bl-none'
                                             }`}
                                     >
                                         {msg.text}
@@ -122,7 +122,7 @@ export const AIAssistant = () => {
                             ))}
                             {isTyping && (
                                 <div className="flex justify-start">
-                                    <div className="bg-gray-100 dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 px-4 py-3 rounded-2xl rounded-bl-none flex space-x-1 items-center">
+                                    <div className="bg-gray-100 dark:bg-[#111111] border border-gray-200 dark:border-white/10 px-4 py-3 rounded-2xl rounded-bl-none flex space-x-1 items-center">
                                         <motion.div
                                             className="w-2 h-2 bg-gray-400 rounded-full"
                                             animate={{ scale: [1, 1.2, 1] }}

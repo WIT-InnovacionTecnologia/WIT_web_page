@@ -127,7 +127,7 @@ export const ReviewsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 font-sans selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 font-sans selection:bg-[#0071e3]/20">
             {/* Hero Section */}
             <section className="px-4 py-24 text-center">
                 <div className="max-w-5xl mx-auto space-y-6">

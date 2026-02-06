@@ -9,7 +9,7 @@ export const ReportsPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
             {/* Hero Section */}
             <section className="max-w-7xl mx-auto px-4 py-24">
                 <motion.div
@@ -54,7 +54,7 @@ export const ReportsPage = () => {
             </section>
 
             {/* Comparison Section */}
-            <section className="bg-[#f5f5f7] dark:bg-[#161617] py-32 mt-20">
+            <section className="bg-[#f5f5f7] dark:bg-transparent py-32 mt-20">
                 <div className="max-w-5xl mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.98 }}
