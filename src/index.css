@@ -13,7 +13,7 @@
 
   body {
     @apply antialiased bg-white;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
