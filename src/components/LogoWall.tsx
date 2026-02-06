@@ -18,7 +18,6 @@ import metroDark from '../assets/dark/Metro_de_Santiago_Logo-2blanco.png';
 import transantinDark from '../assets/dark/TRANSANTIN LOGO - blanco.png';
 import igillaimaDark from '../assets/dark/igillaima.png';
 import mutualDark from '../assets/dark/logo-mutual@2x.png';
-import unnamedDark from '../assets/dark/unnamed (2).png'; // Assuming this is a partner logo
 import tandemDark from '../assets/dark/TANDEM - CON SLOGAN - COLORES COMPLETOS.png';
 
 import type { CSSProperties } from 'react';
@@ -49,7 +48,6 @@ const darkLogos: Logo[] = [
     { src: transantinDark, alt: "Transantin" },
     { src: igillaimaDark, alt: "Igillaima" },
     { src: mutualDark, alt: "Mutual de Seguridad" },
-    { src: unnamedDark, alt: "Partner" },
     { src: tandemDark, alt: "Tandem" },
 ];
 

@@ -11,6 +11,7 @@ import { videoUrls } from '../constants/videoUrls';
 import iotBanner from '../assets/baners_vento/BANNER COLORES-01-IOT.png';
 import telBanner from '../assets/baners_vento/BANNER COLORES-05-TEL.png';
 import iotPoster from '../assets/iot-poster.jpg';
+import { SmartVideo } from './SmartVideo';
 
 export const BentoGrid = () => {
     const { t } = useTranslation();
@@ -118,19 +119,15 @@ export const BentoGrid = () => {
                             </div>
                         )}
 
+                        {/* Optimized Smart Video */}
                         {product.video && (
-                            <div className="absolute inset-0 z-0">
-                                <video
-                                    src={product.video}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    poster={product.poster}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                            <SmartVideo
+                                src={product.video}
+                                poster={product.poster}
+                                className="absolute inset-0 z-0 h-full w-full"
+                            >
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-                            </div>
+                            </SmartVideo>
                         )}
 
                         {/* Banner Image - Full Width Header Style */}
@@ -144,39 +141,43 @@ export const BentoGrid = () => {
                             </div>
                         )}
 
-                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-24 p-8 z-10 ${(product.image || product.video) ? 'text-white' : ''}`}>
+                        {/* Hover Overlay for Better Text Visibility */}
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+
+                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-24 p-8 z-10 ${(product.image || videoUrls.iot) ? 'text-white' : ''} ${product.theme === 'light' ? 'text-black' : 'text-white'}`}>
+                            {/* ... existing header logic ... */}
                             {!product.banner && (
                                 <h3
-                                    className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2"
+                                    className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2 relative z-10"
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {product.title}
                                 </h3>
                             )}
                             <p
-                                className="text-lg font-medium opacity-0 group-hover:opacity-90 text-center mb-2 transition-opacity duration-500"
+                                className="text-lg font-medium opacity-0 group-hover:opacity-90 text-center mb-2 transition-opacity duration-500 relative z-10"
                                 style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                             >
                                 {product.subtitle}
                             </p>
                             <p
-                                className="text-sm font-medium opacity-80 text-center"
+                                className="text-sm font-medium opacity-80 text-center relative z-10"
                                 style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                             >
                                 {product.description}
                             </p>
 
-                            <div className="mt-8 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="mt-8 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                                 <Link
                                     to={`/request-demo?product=${product.title}`}
-                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.theme === 'dark' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {t('product.template.cta_demo')}
                                 </Link>
                                 <Link
                                     to={product.path}
-                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.image ? 'border-2 border-white text-white hover:bg-white/10' : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'}`}
+                                    className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${product.theme === 'dark' ? 'border-2 border-white text-white hover:bg-white/10' : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'}`}
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
                                 >
                                     {t('grid.learn_more')}

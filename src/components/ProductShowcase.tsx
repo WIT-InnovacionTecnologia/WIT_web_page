@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Play, ArrowRight } from 'lucide-react';
+import { SmartVideo } from './SmartVideo';
 
 // Import assets
 import { videoUrls } from '../constants/videoUrls';
 import iaBanner from '../assets/baners_vento/BANNER COLORES-02-IA.png';
 import connPBanner from '../assets/baners_vento/BANNER COLORES-03-connP.png';
 import psBanner from '../assets/baners_vento/BANNER COLORES-04-P+S.png';
+import pmassPoster from '../assets/pmass-poster.jpg';
 
 export const ProductShowcase = () => {
     const { t } = useTranslation();
@@ -28,7 +30,8 @@ export const ProductShowcase = () => {
             align: 'right',
             media: videoUrls.pmass,
             type: 'video',
-            banner: psBanner
+            banner: psBanner,
+            poster: pmassPoster
         },
         {
             title: t('showcase.chip_title'),
@@ -95,14 +98,13 @@ export const ProductShowcase = () => {
                                             </div>
                                         )}
                                         {feature.type === 'video' ? (
-                                            <video
+                                            <SmartVideo
                                                 src={feature.media}
-                                                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-                                                autoPlay
-                                                loop
-                                                muted
-                                                playsInline
-                                            />
+                                                poster={feature.poster}
+                                                className="w-full h-full"
+                                            >
+                                                <div className="absolute inset-0 z-10 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700 bg-transparent" />
+                                            </SmartVideo>
                                         ) : (
                                             <img
                                                 src={feature.media}
