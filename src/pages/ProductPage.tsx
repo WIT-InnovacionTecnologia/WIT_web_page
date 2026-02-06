@@ -9,9 +9,10 @@ import {
     Globe,
     Smartphone,
     CheckCircle2,
-    ArrowRight
+    ArrowRight,
+    Home
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 interface ProductImage {
@@ -101,7 +102,18 @@ export const ProductPage = ({
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-[#f5f5f7] dark:border-[#1d1d1f] backdrop-blur-2xl bg-white/80 dark:bg-black/80 ${isScrolled ? 'translate-y-0' : '-translate-y-full'}`}
             >
                 <div className="max-w-7xl mx-auto px-6 h-12 flex justify-between items-center">
-                    <span className="text-xl font-semibold tracking-tight">{productName}</span>
+                    <div className="flex items-center gap-4">
+                        <Link to="/" className="text-[#1d1d1f] dark:text-[#f5f5f7] hover:text-[#0071e3] transition-colors">
+                            <Home className="w-5 h-5" />
+                        </Link>
+                        <div className="h-4 w-[1px] bg-[#d2d2d7] dark:bg-[#424245]" />
+                        <span
+                            className="text-xl font-semibold tracking-tight cursor-pointer hover:text-[#0071e3] transition-colors"
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        >
+                            {productName}
+                        </span>
+                    </div>
                     <div className="flex items-center gap-8">
                         <nav className="hidden md:flex items-center gap-6 text-[12px] font-medium tracking-tight text-[#86868b]">
                             <a href="#overview" className="hover:text-[#0071e3] transition-colors">{t('product.template.features_title')}</a>
@@ -163,7 +175,10 @@ export const ProductPage = ({
                             {t('product.template.cta_demo')}
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
-                        <button className="text-[#0071e3] font-semibold text-lg hover:underline underline-offset-4 flex items-center gap-1 group">
+                        <button
+                            onClick={() => navigate('/sales')}
+                            className="text-[#0071e3] font-semibold text-lg hover:underline underline-offset-4 flex items-center gap-1 group"
+                        >
                             {t('product.template.cta_sales')}
                             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
