@@ -14,7 +14,7 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        // Preload video
+        // Preload video only after page load
         const preloadVideo = () => {
             const video = document.createElement("video");
             video.preload = "auto";
@@ -37,7 +37,17 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
             };
         };
 
-        preloadVideo();
+        const handlePageLoad = () => {
+            preloadVideo();
+        };
+
+        if (document.readyState === 'complete') {
+            preloadVideo();
+        } else {
+            window.addEventListener('load', handlePageLoad);
+        }
+
+        return () => window.removeEventListener('load', handlePageLoad);
     }, [src]);
 
     return (
@@ -56,6 +66,7 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
                                 src={poster}
                                 alt="Loading video"
                                 className="absolute inset-0 w-full h-full object-cover opacity-50"
+                                loading="eager"
                             />
                         )}
                         <div className="relative z-10 p-4 rounded-full bg-black/20 backdrop-blur-sm">
