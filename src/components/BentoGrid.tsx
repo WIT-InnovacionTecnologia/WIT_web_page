@@ -8,6 +8,9 @@ import wifiUrbanImage from '../assets/WIFI URBAN.jpg';
 import telImage from '../assets/TEL.png';
 import sentinelImage from '../assets/SENTINEL.png';
 import { videoUrls } from '../constants/videoUrls';
+import iotBanner from '../assets/baners_vento/BANNER COLORES-01-IOT.png';
+import telBanner from '../assets/baners_vento/BANNER COLORES-05-TEL.png';
+import iotPoster from '../assets/iot-poster.jpg';
 
 export const BentoGrid = () => {
     const { t } = useTranslation();
@@ -35,7 +38,8 @@ export const BentoGrid = () => {
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
             image: telImage,
-            path: '/products/tel'
+            path: '/products/tel',
+            banner: telBanner
         },
         {
             id: 3,
@@ -45,7 +49,9 @@ export const BentoGrid = () => {
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
             video: videoUrls.iot,
-            path: '/products/iot'
+            path: '/products/iot',
+            banner: iotBanner,
+            poster: iotPoster
         },
         {
             id: 4,
@@ -120,6 +126,7 @@ export const BentoGrid = () => {
                                     loop
                                     muted
                                     playsInline
+                                    poster={product.poster}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
@@ -127,12 +134,20 @@ export const BentoGrid = () => {
                         )}
 
                         <div className={`absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10 ${(product.image || product.video) ? 'text-white' : ''}`}>
-                            <h3
-                                className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2"
-                                style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
-                            >
-                                {product.title}
-                            </h3>
+                            {product.banner ? (
+                                <img
+                                    src={product.banner}
+                                    alt={product.title}
+                                    className="h-16 w-auto object-contain mb-4 select-none pointer-events-none drop-shadow-md"
+                                />
+                            ) : (
+                                <h3
+                                    className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2"
+                                    style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
+                                >
+                                    {product.title}
+                                </h3>
+                            )}
                             <p
                                 className="text-lg font-medium opacity-0 group-hover:opacity-90 text-center mb-2 transition-opacity duration-500"
                                 style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
