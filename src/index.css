@@ -5,6 +5,12 @@
 @tailwind utilities;
 
 @layer base {
+  html, body, #root {
+    @apply w-full overflow-x-hidden relative;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     @apply antialiased bg-white;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;

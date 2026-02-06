@@ -7,7 +7,7 @@ import ecommerceImage from '../assets/E COMMERCE2.png';
 import wifiUrbanImage from '../assets/WIFI URBAN.jpg';
 import telImage from '../assets/TEL.png';
 import sentinelImage from '../assets/SENTINEL.png';
-import iotVideo from '../assets/videos/IOT2.mp4';
+import { videoUrls } from '../constants/videoUrls';
 
 export const BentoGrid = () => {
     const { t } = useTranslation();
@@ -44,7 +44,7 @@ export const BentoGrid = () => {
             description: '',
             className: 'md:col-span-1 bg-black text-white',
             theme: 'dark',
-            video: iotVideo,
+            video: videoUrls.iot,
             path: '/products/iot'
         },
         {
@@ -80,7 +80,7 @@ export const BentoGrid = () => {
     ];
 
     return (
-        <section className="py-20 px-4 md:px-8 bg-white dark:bg-transparent transition-colors duration-300">
+        <section className="py-20 px-4 md:px-8 bg-white dark:bg-transparent transition-colors duration-300 overflow-hidden">
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
