@@ -36,7 +36,7 @@ export const DashboardsPage = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={APPLE_TRANSITION}
-                        className="col-span-1 md:col-span-2 bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[3.5rem] p-12 overflow-hidden relative group"
+                        className="col-span-1 md:col-span-2 bg-[#f5f5f7] dark:bg-[#111111] rounded-[3.5rem] p-12 overflow-hidden relative group border border-transparent dark:border-white/5"
                     >
                         <div className="relative z-10 max-w-md">
                             <MousePointer2 className="w-12 h-12 text-[#0071e3] mb-8" />
@@ -50,7 +50,7 @@ export const DashboardsPage = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={APPLE_TRANSITION}
-                        className="bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[3.5rem] p-12"
+                        className="bg-[#f5f5f7] dark:bg-[#111111] rounded-[3.5rem] p-12 border border-transparent dark:border-white/5"
                     >
                         <Zap className="w-10 h-10 text-[#0071e3] mb-8" />
                         <h2 className="text-3xl font-bold mb-4">Latencia cero.</h2>
@@ -61,7 +61,7 @@ export const DashboardsPage = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={APPLE_TRANSITION}
-                        className="bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[3.5rem] p-12"
+                        className="bg-[#f5f5f7] dark:bg-[#111111] rounded-[3.5rem] p-12 border border-transparent dark:border-white/5"
                     >
                         <Database className="w-10 h-10 text-[#0071e3] mb-8" />
                         <h2 className="text-3xl font-bold mb-4">Multi-fuente.</h2>
@@ -72,7 +72,7 @@ export const DashboardsPage = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={APPLE_TRANSITION}
-                        className="col-span-1 md:col-span-2 bg-black dark:bg-white text-white dark:text-black rounded-[3.5rem] p-12"
+                        className="col-span-1 md:col-span-2 bg-black dark:bg-white text-white dark:text-black rounded-[3.5rem] p-12 border border-transparent dark:border-white/5"
                     >
                         <BarChart3 className="w-12 h-12 text-[#0071e3] mb-8" />
                         <h2 className="text-4xl font-bold mb-4">Visualización Premium.</h2>

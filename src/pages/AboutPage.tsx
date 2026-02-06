@@ -143,7 +143,7 @@ export const AboutPage = () => {
             </section>
 
             {/* Footer CTA */}
-            <section className="py-64 px-4 text-center bg-[#f5f5f7] dark:bg-[#161617]">
+            <section className="py-64 px-4 text-center bg-[#f5f5f7] dark:bg-transparent">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}

@@ -107,7 +107,7 @@ export const ContactPage = () => {
             </div>
 
             {/* Direct Channels */}
-            <section className="bg-[#f5f5f7] dark:bg-[#161617] py-32 mt-20">
+            <section className="bg-[#f5f5f7] dark:bg-transparent py-32 mt-20">
                 <div className="max-w-5xl mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-12">
                         <div className="bg-white dark:bg-black p-12 rounded-[3.5rem] shadow-xl border border-[#d2d2d7] dark:border-[#424245] space-y-6">

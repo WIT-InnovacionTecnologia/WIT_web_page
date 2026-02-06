@@ -28,14 +28,14 @@ export const SalesPage = () => {
             </section>
 
             {/* Direct Contact Options */}
-            <section className="max-w-7xl mx-auto px-4 py-20 border-t border-[#f5f5f7] dark:border-[#1d1d1f]">
+            <section className="max-w-7xl mx-auto px-4 py-20 border-t border-[#f5f5f7] dark:border-white/5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-12 rounded-[3.5rem] flex flex-col justify-between"
+                        className="bg-[#f5f5f7] dark:bg-[#111111] p-12 rounded-[3.5rem] flex flex-col justify-between border border-transparent dark:border-white/5"
                     >
                         <div className="space-y-6">
                             <Building2 className="w-12 h-12 text-[#0071e3]" />
@@ -61,7 +61,7 @@ export const SalesPage = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="bg-white dark:bg-black p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-[#1d1d1f] shadow-sm"
+                        className="bg-white dark:bg-black p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-white/5 shadow-sm"
                     >
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

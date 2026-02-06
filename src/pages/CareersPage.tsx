@@ -85,7 +85,7 @@ export const CareersPage = () => {
             </section>
 
             {/* Teams Grid */}
-            <section className="bg-[#f5f5f7] dark:bg-[#161617] py-48">
+            <section className="bg-[#f5f5f7] dark:bg-transparent py-48">
                 <div className="max-w-7xl mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -152,7 +152,7 @@ export const CareersPage = () => {
                             viewport={{ once: true }}
                             transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
                             whileHover={{ scale: 1.02 }}
-                            className="p-12 bg-[#f5f5f7] dark:bg-[#161617] rounded-[3rem] border border-transparent hover:border-[#d2d2d7] dark:hover:border-[#424245] transition-all duration-500"
+                            className="p-12 bg-[#f5f5f7] dark:bg-transparent rounded-[3rem] border border-transparent hover:border-[#d2d2d7] dark:hover:border-[#424245] transition-all duration-500"
                         >
                             <h4 className="text-2xl font-bold mb-4">{benefit.title}</h4>
                             <p className="text-lg text-[#86868b] leading-relaxed font-medium">{benefit.desc}</p>

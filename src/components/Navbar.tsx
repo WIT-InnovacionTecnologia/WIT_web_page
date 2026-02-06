@@ -217,7 +217,7 @@ export const Navbar = () => {
                                     <div className="relative group">
                                         <Globe size={14} className="opacity-80 hover:opacity-100 cursor-pointer transition-opacity" />
                                         <div className="absolute right-0 top-full pt-2 w-32 hidden group-hover:block">
-                                            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl py-2 border border-gray-100 dark:border-gray-800">
+                                            <div className="bg-white dark:bg-black rounded-lg shadow-xl py-2 border border-gray-100 dark:border-gray-800">
                                                 <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">English</button>
                                                 <button onClick={() => changeLanguage('es')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">Español</button>
                                                 <button onClick={() => changeLanguage('pt')} className="block w-full text-left px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs dark:text-gray-200">Português</button>
@@ -293,7 +293,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
                         onMouseEnter={() => setActiveHover(activeHover)}
                         onMouseLeave={() => setActiveHover(null)}
                     >
@@ -338,7 +338,7 @@ export const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-gray-900 shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
+                        className="absolute top-[44px] left-0 w-full bg-white dark:bg-black shadow-xl overflow-hidden hidden md:block border-t border-gray-100 dark:border-gray-800"
                     >
                         <div className="max-w-[600px] mx-auto px-4 py-10">
                             <h3 className="text-gray-500 dark:text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">{searchQuickLinksTitle}</h3>

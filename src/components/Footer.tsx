@@ -38,7 +38,7 @@ export const Footer = () => {
     ];
 
     return (
-        <footer id="footer" className="relative z-10 bg-gray-100 dark:bg-zinc-900 text-gray-600 dark:text-gray-100 text-sm pt-10 border-t border-gray-200 dark:border-white/10">
+        <footer id="footer" className="relative z-10 bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-100 text-sm pt-10 border-t border-gray-200 dark:border-white/10">
             <div className="w-full px-4 sm:px-6 lg:px-8 pb-10">
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Main Footer Content */}

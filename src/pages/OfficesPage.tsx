@@ -64,7 +64,7 @@ export const OfficesPage = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={APPLE_TRANSITION}
-                            className="bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[3.5rem] overflow-hidden flex flex-col lg:flex-row shadow-sm hover:shadow-xl transition-shadow"
+                            className="bg-[#f5f5f7] dark:bg-[#111111] rounded-[3.5rem] overflow-hidden flex flex-col lg:flex-row shadow-sm hover:shadow-xl transition-shadow border border-transparent dark:border-white/5"
                         >
                             <div className="lg:w-1/2 aspect-video lg:aspect-auto">
                                 <img

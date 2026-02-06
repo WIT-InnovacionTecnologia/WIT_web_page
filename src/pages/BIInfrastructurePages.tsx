@@ -50,7 +50,7 @@ const ToolTemplate = ({ name, description, color, features }: ToolPageProps) => 
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
-                        className="bg-[#f5f5f7] dark:bg-[#1d1d1f] aspect-square rounded-[4rem] flex items-center justify-center p-20 shadow-inner group"
+                        className="bg-[#f5f5f7] dark:bg-[#111111] aspect-square rounded-[4rem] flex items-center justify-center p-20 shadow-inner group border border-transparent dark:border-white/5"
                     >
                         <div className={`w-full h-full rounded-[3rem] bg-gradient-to-br transition-all duration-700 ${color === 'text-[#f2c811]' ? 'from-yellow-400/20' : color === 'text-[#e94e1b]' ? 'from-orange-500/20' : 'from-blue-500/20'} to-transparent flex items-center justify-center`}>
                             <LinkIcon className="w-32 h-32 opacity-20 group-hover:opacity-40 transition-opacity" />
@@ -68,7 +68,7 @@ const ToolTemplate = ({ name, description, color, features }: ToolPageProps) => 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
-                            className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-10 rounded-[3rem] space-y-4"
+                            className="bg-[#f5f5f7] dark:bg-transparent p-10 rounded-[3rem] space-y-4 border border-transparent dark:border-white/10"
                         >
                             <CheckCircle2 className={`w-8 h-8 ${color}`} />
                             <h3 className="text-xl font-bold">{feature}</h3>

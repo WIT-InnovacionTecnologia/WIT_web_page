@@ -80,7 +80,7 @@ export const TeamPage = () => {
                             className="group cursor-pointer"
                             onClick={() => setSelectedMember(member)}
                         >
-                            <div className="aspect-[3/4] bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-3xl overflow-hidden mb-6 relative hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[0.21, 0.45, 0.32, 0.9]">
+                            <div className="aspect-[3/4] bg-[#f5f5f7] dark:bg-[#111111] rounded-3xl overflow-hidden mb-6 relative hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[0.21, 0.45, 0.32, 0.9] border border-transparent dark:border-white/5">
                                 <div className="absolute inset-0 flex items-center justify-center text-[#d2d2d7] dark:text-[#424245]">
                                     <UserCircle className="w-48 h-48 opacity-20 group-hover:scale-105 transition-transform duration-1000 ease-out" />
                                 </div>

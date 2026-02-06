@@ -33,7 +33,7 @@ export const SupportPage = () => {
                         <input
                             type="text"
                             placeholder={t('support.search_placeholder')}
-                            className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] border-none rounded-2xl py-6 pl-16 pr-6 text-xl outline-none focus:ring-2 focus:ring-[#0071e3] transition-all"
+                            className="w-full bg-[#f5f5f7] dark:bg-[#111111] border-none rounded-2xl py-6 pl-16 pr-6 text-xl outline-none focus:ring-2 focus:ring-[#0071e3] transition-all border border-transparent dark:border-white/5"
                         />
                     </div>
                 </motion.div>
@@ -49,7 +49,7 @@ export const SupportPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
-                            className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-8 rounded-[2.5rem] hover:shadow-xl transition-all cursor-pointer group border border-transparent hover:border-[#0071e3]/30"
+                            className="bg-[#f5f5f7] dark:bg-transparent p-8 rounded-[2.5rem] hover:shadow-xl transition-all cursor-pointer group border border-transparent hover:border-[#0071e3]/30 dark:border-white/5"
                         >
                             <div className="text-[#0071e3] mb-6 inline-block p-4 bg-white dark:bg-black rounded-2xl shadow-sm">
                                 {cat.icon}

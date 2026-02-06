@@ -37,7 +37,7 @@ export const KPIsPage = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="bg-[#f5f5f7] dark:bg-[#1d1d1f] p-16 rounded-[4rem] space-y-12"
+                        className="bg-[#f5f5f7] dark:bg-[#111111] p-16 rounded-[4rem] space-y-12 border border-transparent dark:border-white/5"
                     >
                         <div className="space-y-6">
                             <TrendingUp className="w-16 h-16 text-[#0071e3]" />

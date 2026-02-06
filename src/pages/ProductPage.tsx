@@ -194,7 +194,7 @@ export const ProductPage = ({
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="relative aspect-[16/10] bg-[#f5f5f7] dark:bg-[#161617] rounded-[3.5rem] overflow-hidden group shadow-2xl"
+                        className="relative aspect-[16/10] bg-[#f5f5f7] dark:bg-transparent rounded-[3.5rem] overflow-hidden group shadow-2xl"
                     >
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
@@ -269,7 +269,7 @@ export const ProductPage = ({
             </section>
 
             {/* Apple Grid Features */}
-            <section id="overview" className="py-48 px-6 bg-[#f5f5f7] dark:bg-[#161617]">
+            <section id="overview" className="py-48 px-6 bg-[#f5f5f7] dark:bg-transparent">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0 }}

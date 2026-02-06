@@ -57,7 +57,7 @@ export const CulturePage = () => {
             </section>
 
             {/* Growth Stat Section */}
-            <section className="bg-[#f5f5f7] dark:bg-[#161617] py-48">
+            <section className="bg-[#f5f5f7] dark:bg-transparent py-48">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-24 space-y-4">
                         <motion.h2
