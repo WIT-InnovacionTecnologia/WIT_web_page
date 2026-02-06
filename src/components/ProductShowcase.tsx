@@ -5,6 +5,9 @@ import { Play, ArrowRight } from 'lucide-react';
 
 // Import assets
 import { videoUrls } from '../constants/videoUrls';
+import iaBanner from '../assets/baners_vento/BANNER COLORES-02-IA.png';
+import connPBanner from '../assets/baners_vento/BANNER COLORES-03-connP.png';
+import psBanner from '../assets/baners_vento/BANNER COLORES-04-P+S.png';
 
 export const ProductShowcase = () => {
     const { t } = useTranslation();
@@ -16,21 +19,24 @@ export const ProductShowcase = () => {
             description: t('showcase.camera_desc'),
             align: 'left',
             media: videoUrls.ai,
-            type: 'video'
+            type: 'video',
+            banner: iaBanner
         },
         {
             title: t('showcase.battery_title'),
             description: t('showcase.battery_desc'),
             align: 'right',
             media: videoUrls.pmass,
-            type: 'video'
+            type: 'video',
+            banner: psBanner
         },
         {
             title: t('showcase.chip_title'),
             description: t('showcase.chip_desc'),
             align: 'left',
             media: videoUrls.connp2,
-            type: 'video'
+            type: 'video',
+            banner: connPBanner
         }
     ];
 
@@ -78,6 +84,16 @@ export const ProductShowcase = () => {
                             <div className="relative w-full max-w-full h-full bg-[#f5f5f7] dark:bg-[#1d1d1f] p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5 group overflow-hidden box-border">
                                 <div className="w-full h-full bg-[#0a0a0a] p-[14px] rounded-[1.4rem] ring-1 ring-white/10">
                                     <div className="w-full h-full overflow-hidden rounded-[1.1rem] bg-black relative shadow-inner">
+                                        {/* Banner Header */}
+                                        {feature.banner && (
+                                            <div className="absolute top-0 left-0 right-0 z-20 w-full">
+                                                <img
+                                                    src={feature.banner}
+                                                    alt={feature.title}
+                                                    className="w-full h-auto object-cover select-none pointer-events-none"
+                                                />
+                                            </div>
+                                        )}
                                         {feature.type === 'video' ? (
                                             <video
                                                 src={feature.media}

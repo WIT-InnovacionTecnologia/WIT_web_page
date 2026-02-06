@@ -133,14 +133,19 @@ export const BentoGrid = () => {
                             </div>
                         )}
 
-                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-12 p-8 z-10 ${(product.image || product.video) ? 'text-white' : ''}`}>
-                            {product.banner ? (
+                        {/* Banner Image - Full Width Header Style */}
+                        {product.banner && (
+                            <div className="absolute top-0 left-0 right-0 z-20 w-full">
                                 <img
                                     src={product.banner}
                                     alt={product.title}
-                                    className="h-16 w-auto object-contain mb-4 select-none pointer-events-none drop-shadow-md"
+                                    className="w-full h-auto object-cover select-none pointer-events-none shadow-sm"
                                 />
-                            ) : (
+                            </div>
+                        )}
+
+                        <div className={`absolute inset-0 flex flex-col items-center justify-start pt-24 p-8 z-10 ${(product.image || product.video) ? 'text-white' : ''}`}>
+                            {!product.banner && (
                                 <h3
                                     className="text-3xl md:text-4xl font-semibold text-center leading-tight mb-2"
                                     style={product.id === 5 ? { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' } : {}}
