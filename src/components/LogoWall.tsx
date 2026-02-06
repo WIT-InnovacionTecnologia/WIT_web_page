@@ -57,7 +57,7 @@ export const LogoWall = () => {
     const repeatedDarkLogos = [...darkLogos, ...darkLogos, ...darkLogos, ...darkLogos];
 
     return (
-        <section className="relative z-0 py-12 bg-white dark:bg-black overflow-hidden border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
+        <section className="relative z-0 py-12 bg-transparent overflow-hidden border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
             <div className="container mx-auto px-4 mb-8 text-center">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">
                     Confían en nosotros

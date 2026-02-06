@@ -18,7 +18,7 @@ export const Hero = () => {
     const learnMoreText = t('hero.learn_more');
 
     return (
-        <section className="relative min-h-[calc(100vh-44px)] flex flex-col items-center pt-20 pb-10 overflow-hidden bg-white dark:bg-black text-center transition-colors duration-500">
+        <section className="relative min-h-[calc(100vh-44px)] flex flex-col items-center pt-20 pb-10 overflow-hidden bg-white dark:bg-transparent text-center transition-colors duration-500">
 
             {/* Text Content */}
             <motion.div
@@ -53,9 +53,7 @@ export const Hero = () => {
                 transition={{ ...APPLE_TRANSITION, delay: 0.2 }}
                 className="mt-24 w-full"
             >
-                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden border-y border-gray-200 dark:border-gray-700">
-                    {/* Placeholder for User Product Image */}
-                    {/* Placeholder for User Product Image */}
+                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] flex items-center justify-center overflow-hidden border-y border-gray-200 dark:border-gray-700">
                     <SmartVideo
                         src={videoUrls.hero}
                         className="w-full h-full"

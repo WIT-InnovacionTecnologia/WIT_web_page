@@ -44,7 +44,7 @@ export const ProductShowcase = () => {
     ];
 
     return (
-        <section className="py-24 bg-white dark:bg-black overflow-hidden transition-colors duration-300">
+        <section className="py-24 bg-white dark:bg-transparent overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6">
                 {features.map((feature, idx) => (
                     <div
