@@ -14,23 +14,42 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        // Initial state: preload metadata only to show first frame
-        if (videoRef.current) {
-            videoRef.current.preload = "metadata";
-        }
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Observer to handle Play/Pause based on visibility
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Element is visible - try to play
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(() => {
+                                // Auto-play was prevented
+                                // Show a muted play button UI if needed, or just fail silently for bg videos
+                            });
+                        }
+                    } else {
+                        // Element is not visible - pause
+                        video.pause();
+                    }
+                });
+            },
+            {
+                threshold: 0.2, // Play when 20% visible
+                rootMargin: "50px" // Pre-load/play slightly before entering viewport
+            }
+        );
+
+        observer.observe(video);
+
+        // Initial setup: preload metadata
+        video.preload = "metadata";
 
         const handlePageLoad = () => {
-            // Once page is loaded, buffer the rest and play
-            if (videoRef.current) {
-                videoRef.current.preload = "auto";
-
-                const playPromise = videoRef.current.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(() => {
-                        console.log("Autoplay blocked/deferred");
-                    });
-                }
-            }
+            // Allow aggressive loading only after critical resources are done
+            if (video) video.preload = "auto";
         };
 
         if (document.readyState === 'complete') {
@@ -39,7 +58,10 @@ export const SmartVideo = ({ src, poster, className = "", children }: SmartVideo
             window.addEventListener('load', handlePageLoad);
         }
 
-        return () => window.removeEventListener('load', handlePageLoad);
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('load', handlePageLoad);
+        };
     }, [src]);
 
     return (

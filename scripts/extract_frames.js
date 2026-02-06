@@ -48,6 +48,12 @@ const run = async () => {
         path.join(publicDir, 'IOT2.mp4'),
         path.join(assetsDir, 'iot-poster.jpg')
     );
+
+    // 3. PMASS (Partnership) Video Frame
+    await extractFrame(
+        path.join(publicDir, 'PMASS.mov'),
+        path.join(assetsDir, 'pmass-poster.jpg')
+    );
 };
 
 run();
