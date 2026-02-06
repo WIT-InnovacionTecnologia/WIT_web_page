@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { videoUrls } from '../constants/videoUrls';
+import { SmartVideo } from './SmartVideo';
 
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
@@ -53,16 +54,12 @@ export const Hero = () => {
             >
                 <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden border-y border-gray-200 dark:border-gray-700">
                     {/* Placeholder for User Product Image */}
-                    <video
-                        className="w-full h-full object-cover"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
+                    {/* Placeholder for User Product Image */}
+                    <SmartVideo
+                        src={videoUrls.hero}
+                        className="w-full h-full"
                     >
-                        <source src={videoUrls.hero} />
-                        {t('hero.browser_support')}
-                    </video>
+                    </SmartVideo>
 
                     {/* Video Overlay Text */}
                     <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-12">
