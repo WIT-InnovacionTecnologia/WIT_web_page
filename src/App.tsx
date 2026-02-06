@@ -39,20 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <div className="fixed inset-0 z-0 hidden dark:block">
-                <Beams
-                  beamWidth={3}
-                  beamHeight={35}
-                  beamNumber={20}
-                  lightColor="#ffffff"
-                  speed={1.0}
-                  noiseIntensity={2.0}
-                  scale={0.1}
-                  rotation={30}
-                />
-                <LightRays />
-              </div>
-              <div className="relative z-10">
+              <div className="relative">
                 <Hero />
                 <BentoGrid />
                 <ProductShowcase />

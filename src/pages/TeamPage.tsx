@@ -112,7 +112,7 @@ export const TeamPage = () => {
                             animate={{ scale: 1, y: 0, opacity: 1 }}
                             exit={{ scale: 0.92, y: 30, opacity: 0 }}
                             transition={APPLE_SPRING}
-                            className="bg-white dark:bg-[#1d1d1f] w-full max-w-6xl max-h-[90dvh] rounded-[3rem] overflow-y-auto relative shadow-2xl border border-[#f5f5f7] dark:border-[#424245]"
+                            className="bg-white dark:bg-[#111111] w-full max-w-6xl max-h-[90dvh] rounded-[3rem] overflow-y-auto relative shadow-2xl border border-[#f5f5f7] dark:border-white/5"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button

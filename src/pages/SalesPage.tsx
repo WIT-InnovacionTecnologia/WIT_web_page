@@ -65,17 +65,17 @@ export const SalesPage = () => {
                     >
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="text" placeholder={t('sales.form.name')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3]" />
-                                <input type="text" placeholder={t('sales.form.lastname')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3]" />
+                                <input type="text" placeholder={t('sales.form.name')} className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] border border-transparent dark:border-white/5" />
+                                <input type="text" placeholder={t('sales.form.lastname')} className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] border border-transparent dark:border-white/5" />
                             </div>
-                            <input type="email" placeholder={t('sales.form.email')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3]" />
-                            <select className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] text-gray-400">
+                            <input type="email" placeholder={t('sales.form.email')} className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] border border-transparent dark:border-white/5" />
+                            <select className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] text-gray-400 border border-transparent dark:border-white/5">
                                 <option>{t('sales.form.interest')}</option>
                                 <option>{t('sales.form.options.sentinel')}</option>
                                 <option>{t('sales.form.options.iot')}</option>
                                 <option>{t('sales.form.options.smart_city')}</option>
                             </select>
-                            <textarea rows={4} placeholder={t('sales.form.message')} className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] resize-none"></textarea>
+                            <textarea rows={4} placeholder={t('sales.form.message')} className="w-full bg-[#f5f5f7] dark:bg-[#111111] rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-[#0071e3] resize-none border border-transparent dark:border-white/5"></textarea>
                             <button className="w-full bg-[#0071e3] text-white py-6 rounded-full font-bold text-xl hover:bg-[#0077ed] transition-all flex items-center justify-center gap-3">
                                 <Send className="w-5 h-5" /> {t('sales.form.send')}
                             </button>

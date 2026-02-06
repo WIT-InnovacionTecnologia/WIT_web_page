@@ -27,10 +27,10 @@ export const Hero = () => {
                 transition={APPLE_TRANSITION}
                 className="z-10"
             >
-                <h2 className="text-5xl md:text-7xl font-semibold mb-2 text-black dark:text-white tracking-tight max-w-4xl mx-auto">
+                <h2 className="text-4xl md:text-7xl font-semibold mb-2 text-black dark:text-white tracking-tight max-w-4xl mx-auto px-4">
                     {title}
                 </h2>
-                <p className="text-2xl md:text-3xl font-medium mb-12 text-[#86868b] max-w-3xl mx-auto">
+                <p className="text-xl md:text-3xl font-medium mb-12 text-[#86868b] max-w-3xl mx-auto px-6">
                     {subtitle}
                 </p>
                 <div className="flex justify-center space-x-8">
@@ -62,12 +62,12 @@ export const Hero = () => {
                     </SmartVideo>
 
                     {/* Video Overlay Text */}
-                    <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-12">
+                    <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-6 md:p-12">
                         <motion.h3
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={APPLE_TRANSITION}
-                            className="text-white text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl"
+                            className="text-white text-2xl md:text-6xl font-bold mb-4 md:mb-6 drop-shadow-2xl px-4"
                         >
                             {t('hero.video_overlay_title')}
                         </motion.h3>
@@ -75,7 +75,7 @@ export const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ ...APPLE_TRANSITION, delay: 0.1 }}
-                            className="text-white text-xl md:text-2xl font-medium max-w-3xl drop-shadow-xl leading-relaxed opacity-90"
+                            className="text-white text-sm md:text-2xl font-medium max-w-3xl drop-shadow-xl leading-relaxed opacity-90 px-6"
                         >
                             {t('hero.video_overlay_desc')}
                         </motion.p>

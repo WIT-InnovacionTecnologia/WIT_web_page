@@ -405,7 +405,7 @@ export const Navbar = () => {
                                                                 initial={{ height: 0, opacity: 0 }}
                                                                 animate={{ height: 'auto', opacity: 1 }}
                                                                 exit={{ height: 0, opacity: 0 }}
-                                                                className="overflow-hidden bg-gray-50 dark:bg-gray-900/50 rounded-lg mb-2"
+                                                                className="overflow-hidden bg-gray-50 dark:bg-black/50 rounded-lg mb-2"
                                                             >
                                                                 <div className="py-4 px-4 space-y-6">
                                                                     {navData[item.key].map((column, idx) => (

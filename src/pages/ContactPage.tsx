@@ -39,7 +39,7 @@ export const ContactPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-8"
                     >
-                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-2xl w-fit">
+                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-2xl w-fit">
                             <LifeBuoy size={40} />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t('contact.support_title')}</h2>
@@ -50,7 +50,7 @@ export const ContactPage = () => {
                             {t('contact.support_link')} <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </motion.div>
-                    <div className="bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[3rem] p-12 aspect-video flex items-center justify-center">
+                    <div className="bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-[3rem] p-12 aspect-video flex items-center justify-center">
                         <MessageCircle size={100} className="text-[#0071e3] opacity-20" />
                     </div>
                 </section>
@@ -67,7 +67,7 @@ export const ContactPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-8 order-1 md:order-2"
                     >
-                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-2xl w-fit">
+                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-2xl w-fit">
                             <Briefcase size={40} />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t('contact.sales_title')}</h2>
@@ -89,7 +89,7 @@ export const ContactPage = () => {
                         transition={APPLE_TRANSITION}
                         className="space-y-8"
                     >
-                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-2xl w-fit">
+                        <div className="text-[#0071e3] p-4 bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-2xl w-fit">
                             <MapPin size={40} />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t('contact.offices_title')}</h2>
@@ -100,7 +100,7 @@ export const ContactPage = () => {
                             {t('contact.offices_link')} <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </motion.div>
-                    <div className="bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[3rem] p-12 aspect-video flex items-center justify-center">
+                    <div className="bg-[#f5f5f7] dark:bg-[#111111] border border-transparent dark:border-white/5 rounded-[3rem] p-12 aspect-video flex items-center justify-center">
                         <MapPin size={100} className="text-[#0071e3] opacity-20" />
                     </div>
                 </section>

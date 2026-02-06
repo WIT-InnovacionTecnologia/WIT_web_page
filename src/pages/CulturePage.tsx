@@ -93,7 +93,7 @@ export const CulturePage = () => {
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
                                 whileHover={{ y: -10 }}
-                                className="bg-white dark:bg-[#1d1d1f] p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-[#424245] flex flex-col items-center text-center space-y-4 shadow-sm hover:shadow-2xl transition-all duration-700 ease-out"
+                                className="bg-white dark:bg-[#111111] p-12 rounded-[3.5rem] border border-[#f5f5f7] dark:border-white/5 flex flex-col items-center text-center space-y-4 shadow-sm hover:shadow-2xl transition-all duration-700 ease-out"
                             >
                                 <span className="text-sm font-bold uppercase tracking-widest text-[#86868b]">{stat.label}</span>
                                 <span className={`text-7xl font-black tracking-tighter ${stat.color}`}>{stat.value}</span>
@@ -130,7 +130,7 @@ export const CulturePage = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="aspect-[4/5] bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[4rem] overflow-hidden relative group"
+                        className="aspect-[4/5] bg-[#f5f5f7] dark:bg-black/40 border border-transparent dark:border-white/5 rounded-[4rem] overflow-hidden relative group"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-[#ff9500]/10 to-transparent" />
                         <div className="absolute inset-0 flex items-center justify-center opacity-10">
@@ -163,7 +163,7 @@ export const CulturePage = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="md:order-1 aspect-[4/5] bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[4rem] overflow-hidden relative group"
+                        className="md:order-1 aspect-[4/5] bg-[#f5f5f7] dark:bg-black/40 border border-transparent dark:border-white/5 rounded-[4rem] overflow-hidden relative group"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-[#0071e3]/10 to-transparent" />
                         <div className="absolute inset-0 flex items-center justify-center opacity-10">

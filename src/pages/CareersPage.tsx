@@ -72,7 +72,7 @@ export const CareersPage = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={APPLE_TRANSITION}
-                        className="aspect-square bg-[#f5f5f7] dark:bg-[#1d1d1f] rounded-[4rem] p-12 flex items-center justify-center relative group border border-[#f5f5f7] dark:border-[#424245] shadow-2xl"
+                        className="aspect-square bg-[#f5f5f7] dark:bg-[#111111] rounded-[4rem] p-12 flex items-center justify-center relative group border border-[#f5f5f7] dark:border-white/5 shadow-2xl"
                     >
                         <div className="text-center space-y-6">
                             <div className="w-32 h-32 bg-[#0071e3] text-white rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-700 ease-out">
@@ -107,7 +107,7 @@ export const CareersPage = () => {
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: idx * 0.05 }}
                                 whileHover={{ y: -10 }}
-                                className="group relative aspect-square bg-white dark:bg-[#1d1d1f] rounded-[3.5rem] p-12 flex flex-col justify-between border border-[#f5f5f7] dark:border-[#424245] shadow-sm hover:shadow-2xl transition-all duration-700 ease-out cursor-pointer"
+                                className="group relative aspect-square bg-white dark:bg-[#111111] rounded-[3.5rem] p-12 flex flex-col justify-between border border-[#f5f5f7] dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-700 ease-out cursor-pointer"
                             >
                                 <div className={`w-16 h-16 ${team.color} text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500`}>
                                     {team.icon}
