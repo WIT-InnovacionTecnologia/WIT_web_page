@@ -90,22 +90,31 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Banner Section - Responsive Layout */}
-                    <div className="lg:w-auto flex items-start justify-center lg:justify-end mt-4 lg:mt-6">
-                        {/* Vertical Banner for Desktop */}
+                </div>
+
+                {/* Banner Section - Responsive Layout (Mobile: Below Footer content) */}
+                <div className="w-full flex items-start justify-center lg:justify-end mt-12 lg:-mt-72 lg:relative lg:z-20 pointer-events-none">
+                    {/* Vertical Banner for Desktop - Absolute positioned to side if needed, or kept in flow */}
+                    {/* Note: In desktop it should probably still be to the side. 
+                        Moving it here might break desktop side layout. 
+                        Let's try to keep it inside for desktop but outside for mobile? 
+                        CSS can handle this. 
+                    */}
+                    <div className="hidden lg:block">
                         <img
                             src={verticalBanner}
                             alt="WIT Vertical Banner"
-                            className="hidden lg:block h-auto max-h-[288px] w-auto object-contain"
+                            className="h-auto max-h-[288px] w-auto object-contain pointer-events-auto"
                         />
-                        {/* Horizontal Banner for Mobile with Left Crop */}
-                        <div className="block lg:hidden w-full max-w-[300px] overflow-hidden">
-                            <img
-                                src={horizontalBanner}
-                                alt="WIT Horizontal Banner"
-                                className="w-[120%] max-w-none ml-[-20%] h-auto object-cover"
-                            />
-                        </div>
+                    </div>
+
+                    {/* Horizontal Banner for Mobile - Full Width beneath content */}
+                    <div className="block lg:hidden w-full overflow-hidden rounded-2xl">
+                        <img
+                            src={horizontalBanner}
+                            alt="WIT Horizontal Banner"
+                            className="w-full h-auto object-cover pointer-events-auto"
+                        />
                     </div>
                 </div>
             </div>
