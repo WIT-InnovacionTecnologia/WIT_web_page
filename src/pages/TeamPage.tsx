@@ -53,7 +53,7 @@ export const TeamPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={APPLE_TRANSITION}
-                    className="text-7xl md:text-8xl font-bold tracking-tight mb-8"
+                    className="text-5xl md:text-8xl font-bold tracking-tight mb-8"
                 >
                     {t('team.title')}
                 </motion.h1>

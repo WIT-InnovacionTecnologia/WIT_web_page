@@ -132,7 +132,7 @@ export const ProductPage = ({
                         <span className="text-[#0071e3] font-semibold tracking-[0.1em] text-lg block mb-2">
                             WIT {productName}
                         </span>
-                        <h1 className="text-7xl md:text-[10rem] font-bold tracking-tighter leading-[0.8] mb-8">
+                        <h1 className="text-5xl md:text-[10rem] font-bold tracking-tighter leading-[0.8] mb-8">
                             {productName}.
                         </h1>
                         <p className="text-3xl md:text-5xl text-[#86868b] font-semibold tracking-tight leading-tight max-w-5xl mx-auto">
@@ -334,7 +334,7 @@ export const ProductPage = ({
                     transition={APPLE_TRANSITION}
                     className="max-w-6xl mx-auto space-y-16"
                 >
-                    <h2 className="text-7xl md:text-[11rem] font-bold tracking-tighter leading-[0.8]">
+                    <h2 className="text-5xl md:text-[11rem] font-bold tracking-tighter leading-[0.8]">
                         Hazlo real.<br />A escala WIT.
                     </h2>
                     <p className="text-2xl md:text-3xl text-[#86868b] font-medium leading-relaxed max-w-2xl mx-auto">

@@ -4,9 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Play, ArrowRight } from 'lucide-react';
 
 // Import assets
-import PMASS from '../assets/videos/PMASS.mov';
-import CONNP2 from '../assets/videos/connp2.mp4';
-import IA_VIDEO from '../assets/videos/AI.mp4';
+import { videoUrls } from '../constants/videoUrls';
 
 export const ProductShowcase = () => {
     const { t } = useTranslation();
@@ -17,21 +15,21 @@ export const ProductShowcase = () => {
             title: t('showcase.camera_title'),
             description: t('showcase.camera_desc'),
             align: 'left',
-            media: IA_VIDEO,
+            media: videoUrls.ai,
             type: 'video'
         },
         {
             title: t('showcase.battery_title'),
             description: t('showcase.battery_desc'),
             align: 'right',
-            media: PMASS,
+            media: videoUrls.pmass,
             type: 'video'
         },
         {
             title: t('showcase.chip_title'),
             description: t('showcase.chip_desc'),
             align: 'left',
-            media: CONNP2,
+            media: videoUrls.connp2,
             type: 'video'
         }
     ];
@@ -75,9 +73,9 @@ export const ProductShowcase = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, margin: "-10%" }}
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.21, 0.45, 0.32, 0.9] }}
-                            className="flex-1 w-full aspect-[4/3] relative flex items-center justify-center"
+                            className="flex-1 w-full max-w-full aspect-[4/3] relative flex items-center justify-center box-border"
                         >
-                            <div className="relative w-full h-full bg-[#f5f5f7] dark:bg-[#1d1d1f] p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5 group overflow-hidden">
+                            <div className="relative w-full max-w-full h-full bg-[#f5f5f7] dark:bg-[#1d1d1f] p-1.5 rounded-[1.8rem] shadow-2xl ring-1 ring-black/5 dark:ring-white/5 group overflow-hidden box-border">
                                 <div className="w-full h-full bg-[#0a0a0a] p-[14px] rounded-[1.4rem] ring-1 ring-white/10">
                                     <div className="w-full h-full overflow-hidden rounded-[1.1rem] bg-black relative shadow-inner">
                                         {feature.type === 'video' ? (

@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import heroVideo from '../assets/videos/aerial-birds-eye-tracking-shot-of-car-and-truck-dr-2025-08-28-14-35-14-utc.mov';
+import { videoUrls } from '../constants/videoUrls';
 
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
@@ -60,7 +60,7 @@ export const Hero = () => {
                         muted
                         playsInline
                     >
-                        <source src={heroVideo} />
+                        <source src={videoUrls.hero} />
                         {t('hero.browser_support')}
                     </video>
 

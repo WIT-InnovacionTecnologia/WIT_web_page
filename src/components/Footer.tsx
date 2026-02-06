@@ -5,6 +5,7 @@ import logoDark from '../assets/logoWITMiniDark.png';
 import verticalBanner from '../assets/banner vertical wit 2026.png';
 import horizontalBanner from '../assets/footer-bar.png';
 
+
 export const Footer = () => {
     const { t } = useTranslation();
 
@@ -42,9 +43,9 @@ export const Footer = () => {
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Main Footer Content */}
                     <div className="flex-1">
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-10">
                             {/* Logo Section */}
-                            <div className="col-span-2 md:col-span-1 mb-8 md:mb-0 flex items-start">
+                            <div className="col-span-1 sm:col-span-2 md:col-span-1 mb-8 md:mb-0 flex items-start">
                                 <img
                                     src={logoLight}
                                     alt="WIT Logo"
@@ -97,12 +98,14 @@ export const Footer = () => {
                             alt="WIT Vertical Banner"
                             className="hidden lg:block h-auto max-h-[288px] w-auto object-contain"
                         />
-                        {/* Horizontal Banner for Mobile */}
-                        <img
-                            src={horizontalBanner}
-                            alt="WIT Horizontal Banner"
-                            className="block lg:hidden w-full max-w-[400px] h-auto object-contain"
-                        />
+                        {/* Horizontal Banner for Mobile with Left Crop */}
+                        <div className="block lg:hidden w-full max-w-[300px] overflow-hidden">
+                            <img
+                                src={horizontalBanner}
+                                alt="WIT Horizontal Banner"
+                                className="w-[120%] max-w-none ml-[-20%] h-auto object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
