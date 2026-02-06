@@ -151,7 +151,11 @@ export const Navbar = () => {
                     {/* Desktop Layout */}
                     <div className="hidden md:flex items-center justify-between w-full text-[13px] font-normal relative">
                         {/* WIT Logo */}
-                        <Link to="/" className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}>
+                        <Link
+                            to="/"
+                            className={`opacity-80 hover:opacity-100 transition-opacity flex items-center ${isSearchOpen ? 'hidden' : 'flex'}`}
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        >
                             <img
                                 src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                 alt="WIT"
@@ -246,7 +250,14 @@ export const Navbar = () => {
                     {/* Mobile Layout */}
                     <div className="flex md:hidden items-center justify-between w-full text-current">
                         <div className="z-50 logo-container transition-opacity duration-300">
-                            <Link to="/" className={`flex items-center ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
+                            <Link
+                                to="/"
+                                className={`flex items-center ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
+                            >
                                 <img
                                     src={`${import.meta.env.BASE_URL}wit-logo.png`}
                                     alt="WIT"

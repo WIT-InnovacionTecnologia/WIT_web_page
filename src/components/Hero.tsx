@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { videoUrls } from '../constants/videoUrls';
 import { SmartVideo } from './SmartVideo';
+import posterImage from '../assets/hero-poster.png';
 
 const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [number, number, number, number] };
 
@@ -58,6 +59,7 @@ export const Hero = () => {
                     <SmartVideo
                         src={videoUrls.hero}
                         className="w-full h-full"
+                        poster={posterImage}
                     >
                     </SmartVideo>
 
