@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, X, ArrowUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { LightRays } from './LightRays';
 
 type Message = {
     id: number;
@@ -85,10 +86,15 @@ export const AIAssistant = () => {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="mb-4 w-[350px] md:w-[400px] h-[500px] bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-2xl rounded-3xl flex flex-col overflow-hidden"
+                        className="mb-4 w-[350px] md:w-[400px] h-[500px] bg-white dark:bg-black/40 dark:backdrop-blur-3xl border border-gray-200 dark:border-white/10 shadow-2xl rounded-3xl flex flex-col overflow-hidden relative"
                     >
+                        {/* LightRays Background for Dark Mode */}
+                        <div className="absolute inset-0 pointer-events-none hidden dark:block opacity-40">
+                            <LightRays />
+                        </div>
+
                         {/* Header */}
-                        <div className="p-4 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 flex items-center justify-between">
+                        <div className="p-4 bg-white/80 dark:bg-black/40 backdrop-blur-md border-b border-gray-200 dark:border-white/10 flex items-center justify-between relative z-10">
                             <div className="flex items-center space-x-2">
                                 <div className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-lg">
                                     <Sparkles size={16} className="text-gray-900 dark:text-white" />
@@ -145,7 +151,7 @@ export const AIAssistant = () => {
                         </div>
 
                         {/* Input Area */}
-                        <div className="p-4 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+                        <div className="p-4 bg-white/80 dark:bg-black/40 backdrop-blur-md border-t border-gray-200 dark:border-white/10 relative z-10">
                             <form
                                 onSubmit={(e) => { e.preventDefault(); handleSend(); }}
                                 className="flex items-center space-x-2"

@@ -93,7 +93,7 @@ export const CulturePage = () => {
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
                                 whileHover={{ y: -10 }}
-                                className="bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
+                                className="bg-white dark:bg-black/40 backdrop-blur-3xl p-12 rounded-[3.5rem] border border-transparent dark:border-white/5 flex flex-col items-center text-center space-y-4 shadow-xl transition-all duration-700 shadow-sm hover:shadow-2xl"
                             >
                                 <span className="text-sm font-bold uppercase tracking-widest text-[#86868b]">{stat.label}</span>
                                 <span className={`text-7xl font-black tracking-tighter ${stat.color}`}>{stat.value}</span>

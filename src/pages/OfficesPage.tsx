@@ -38,7 +38,7 @@ export const OfficesPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 selection:bg-[#0071e3]/20">
+        <div className="min-h-screen bg-white dark:bg-transparent text-black dark:text-white pt-24 pb-20 selection:bg-[#0071e3]/20">
             {/* Hero */}
             <section className="max-w-7xl mx-auto px-4 py-20 text-center">
                 <motion.div
@@ -60,11 +60,11 @@ export const OfficesPage = () => {
                     {offices.map((office, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, scale: 0.98, y: 40 }}
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={APPLE_TRANSITION}
-                            className="bg-[#f5f5f7] dark:bg-[#111111] rounded-[3.5rem] overflow-hidden flex flex-col lg:flex-row shadow-sm hover:shadow-xl transition-shadow border border-transparent dark:border-white/5"
+                            className="bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl rounded-[3.5rem] overflow-hidden flex flex-col lg:flex-row border border-transparent dark:border-white/5 shadow-xl transition-all duration-700"
                         >
                             <div className="lg:w-1/2 aspect-video lg:aspect-auto">
                                 <img
