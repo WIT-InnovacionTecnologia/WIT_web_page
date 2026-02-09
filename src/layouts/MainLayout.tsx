@@ -29,7 +29,14 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
 
             <Navbar />
             <main className="flex-grow pt-[44px] relative z-10"> {/* pt-[44px] to account for Navbar height */}
-                {children}
+                <div className="relative min-h-full">
+                    <div className="absolute inset-0 pointer-events-none hidden dark:block opacity-40">
+                        <LightRays />
+                    </div>
+                    <div className="relative z-10">
+                        {children}
+                    </div>
+                </div>
             </main>
             <LogoWall />
             <Footer />

@@ -80,7 +80,7 @@ export const TeamPage = () => {
                             className="group cursor-pointer"
                             onClick={() => setSelectedMember(member)}
                         >
-                            <div className="aspect-[3/4] bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700">
+                            <div className="aspect-[3/4] bg-[#f5f5f7] dark:bg-black/40 backdrop-blur-3xl rounded-3xl overflow-hidden mb-6 relative hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[0.21, 0.45, 0.32, 0.9] border border-transparent dark:border-white/5 shadow-xl transition-all duration-700">
                                 <div className="absolute inset-0 flex items-center justify-center text-[#d2d2d7] dark:text-[#424245]">
                                     <UserCircle className="w-48 h-48 opacity-20 group-hover:scale-105 transition-transform duration-1000 ease-out" />
                                 </div>
@@ -112,7 +112,7 @@ export const TeamPage = () => {
                             animate={{ scale: 1, y: 0, opacity: 1 }}
                             exit={{ scale: 0.92, y: 30, opacity: 0 }}
                             transition={APPLE_SPRING}
-                            className="bg-white dark:bg-black/60 backdrop-blur-3xl border border-[#f5f5f7] dark:border-white/10 shadow-2xl transition-all duration-700"
+                            className="bg-white dark:bg-black/60 backdrop-blur-3xl w-full max-w-6xl max-h-[90dvh] rounded-[3rem] overflow-y-auto relative shadow-2xl border border-[#f5f5f7] dark:border-white/10 transition-all duration-700"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button

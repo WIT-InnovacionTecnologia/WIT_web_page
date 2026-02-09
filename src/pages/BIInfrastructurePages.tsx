@@ -18,6 +18,7 @@ const ToolTemplate = ({ name, description, color, features }: ToolPageProps) => 
 
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 selection:bg-[#0071e3]/20">
+
             <section className="max-w-7xl mx-auto px-4 py-24">
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                     <motion.div

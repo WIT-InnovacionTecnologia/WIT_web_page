@@ -51,7 +51,7 @@ export const SupportPage = () => {
                             transition={{ ...APPLE_TRANSITION, delay: idx * 0.1 }}
                             className="bg-[#f5f5f7] dark:bg-transparent p-8 rounded-[2.5rem] hover:shadow-xl transition-all cursor-pointer group border border-transparent hover:border-[#0071e3]/30 dark:border-white/5"
                         >
-                            <div className="text-[#0071e3] mb-6 inline-block p-4 bg-white dark:bg-black rounded-2xl shadow-sm">
+                            <div className="text-[#0071e3] mb-6 inline-block p-4 bg-white dark:bg-black/40 dark:backdrop-blur-3xl rounded-2xl shadow-sm">
                                 {cat.icon}
                             </div>
                             <h3 className="text-xl font-bold mb-3 flex items-center justify-between">
