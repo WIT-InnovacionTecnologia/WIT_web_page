@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { LightRays } from '../components/LightRays';
 
 interface ProductImage {
     url: string;
@@ -269,7 +270,7 @@ export const ProductPage = ({
             </section>
 
             {/* Apple Grid Features */}
-            <section id="overview" className="py-48 px-6 bg-[#f5f5f7] dark:bg-transparent">
+            <section id="overview" className="py-48 px-6 bg-white dark:bg-transparent">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -294,16 +295,24 @@ export const ProductPage = ({
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ ...APPLE_TRANSITION, delay: index * 0.1 }}
-                                className="bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 shadow-xl transition-all duration-700 shadow-sm hover:shadow-2xl transition-all duration-700 group flex flex-col justify-between aspect-square md:aspect-auto h-[400px]"
+                                whileHover={{ y: -15, transition: { duration: 0.4, ease: [0.21, 0.45, 0.32, 0.9] } }}
+                                className="bg-white dark:bg-black/40 backdrop-blur-3xl border border-transparent dark:border-white/5 transition-all duration-500 hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_40px_80px_rgba(0,0,0,0.4)] group flex flex-col justify-between aspect-square md:aspect-auto h-[400px] p-12 rounded-[3.5rem] overflow-hidden relative cursor-pointer"
                             >
-                                <div className="space-y-8">
-                                    <div className="w-16 h-16 rounded-2xl bg-[#0071e3]/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#0071e3]/10 transition-all duration-500">
-                                        {getFeatureIcon(index)}
-                                    </div>
-                                    <h3 className="text-3xl font-bold tracking-tight leading-tight">{feature}</h3>
+                                {/* LightRays Background Layer for Dark Mode */}
+                                <div className="absolute inset-0 pointer-events-none hidden dark:block opacity-40">
+                                    <LightRays />
                                 </div>
-                                <div className="text-[#0071e3] opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 font-semibold">
-                                    Conoce más <ChevronRight className="w-4 h-4" />
+
+                                <div className="relative z-10 h-full flex flex-col justify-between">
+                                    <div className="space-y-8">
+                                        <div className="w-16 h-16 rounded-2xl bg-[#0071e3]/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#0071e3]/10 transition-all duration-500">
+                                            {getFeatureIcon(index)}
+                                        </div>
+                                        <h3 className="text-3xl font-bold tracking-tight leading-tight">{feature}</h3>
+                                    </div>
+                                    <div className="text-[#0071e3] opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 font-semibold">
+                                        Conoce más <ChevronRight className="w-4 h-4" />
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}

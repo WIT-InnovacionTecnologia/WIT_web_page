@@ -19,6 +19,7 @@ export const AboutPage = () => {
 
     return (
         <div ref={containerRef} className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#0071e3]/20 overflow-hidden">
+
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center px-4">
                 <div className="max-w-6xl mx-auto text-center relative z-10">

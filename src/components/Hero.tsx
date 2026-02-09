@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { videoUrls } from '../constants/videoUrls';
 import { SmartVideo } from './SmartVideo';
 import posterImage from '../assets/hero-poster-real.jpg';
@@ -10,6 +10,7 @@ const APPLE_TRANSITION = { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as [numb
 
 export const Hero = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     // Text Variables for easy access
     const title = t('hero.main_title');
@@ -35,7 +36,7 @@ export const Hero = () => {
                 </p>
                 <div className="flex justify-center space-x-8">
                     <button
-                        onClick={() => window.location.href = '/contact'}
+                        onClick={() => navigate('/contact')}
                         className="bg-[#0071e3] text-white rounded-full px-8 py-3 hover:bg-[#0077ed] transition-colors text-xl font-semibold shadow-lg shadow-[#0071e3]/20"
                     >
                         {buyButtonText}
