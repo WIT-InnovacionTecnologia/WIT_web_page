@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ShoppingBag, Search, ChevronRight, Globe, Sun, Moon, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { navData } from '../lib/navData';
@@ -8,6 +8,8 @@ import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
     const { t, i18n } = useTranslation();
+    const location = useLocation();
+    const isProductPage = location.pathname.startsWith('/products/');
     const [isOpen, setIsOpen] = useState(false); // Mobile menu state
     const [isSearchOpen, setIsSearchOpen] = useState(false); // Search state
     const [scrolled, setScrolled] = useState(false);
@@ -142,7 +144,7 @@ export const Navbar = () => {
     return (
         <nav
             onMouseLeave={() => setActiveHover(null)}
-            className={`fixed top-0 w-full z-50 transition-colors duration-500 ${isOpen || activeHover || isSearchOpen ? 'bg-white dark:bg-black text-black dark:text-white' : scrolled ? 'bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 text-black dark:text-white' : 'bg-transparent text-black dark:text-white'
+            className={`${isProductPage ? 'absolute' : 'fixed'} top-0 w-full z-50 transition-colors duration-500 ${isOpen || activeHover || isSearchOpen ? 'bg-white dark:bg-black text-black dark:text-white' : scrolled ? 'bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 text-black dark:text-white' : 'bg-transparent text-black dark:text-white'
                 }`}
         >
             <div className="max-w-[1024px] mx-auto px-4 sm:px-6 relative z-50">
@@ -192,12 +194,11 @@ export const Navbar = () => {
                                     className="h-full flex items-center"
                                     onMouseEnter={() => setActiveHover(item.key)} // Keeping label for hover logic to match navData
                                 >
-                                    <a
-                                        href="#" // Placeholder path
-                                        className="opacity-80 hover:opacity-100 transition-opacity tracking-wide text-current px-2 py-4"
+                                    <div
+                                        className="opacity-80 hover:opacity-100 transition-opacity tracking-wide text-current px-2 py-4 cursor-pointer"
                                     >
                                         {item.label}
-                                    </a>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -425,13 +426,11 @@ export const Navbar = () => {
                                                                                                 {t(link)}
                                                                                             </Link>
                                                                                         ) : (
-                                                                                            <a
-                                                                                                href="#"
-                                                                                                className="block text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 pl-4 py-1"
-                                                                                                onClick={() => setIsOpen(false)}
+                                                                                            <div
+                                                                                                className="block text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 pl-4 py-1 cursor-default"
                                                                                             >
                                                                                                 {t(link)}
-                                                                                            </a>
+                                                                                            </div>
                                                                                         )}
                                                                                     </li>
                                                                                 ))}
@@ -444,14 +443,11 @@ export const Navbar = () => {
                                                     </AnimatePresence>
                                                 </>
                                             ) : (
-                                                <motion.a
-                                                    variants={itemVariants}
-                                                    href="#"
+                                                <div
                                                     className="block text-[28px] font-semibold text-gray-900 dark:text-[#E8E8ED] py-2 leading-tight text-left w-full"
-                                                    onClick={() => setIsOpen(false)}
                                                 >
                                                     {item.label}
-                                                </motion.a>
+                                                </div>
                                             )}
                                         </div>
                                     );
