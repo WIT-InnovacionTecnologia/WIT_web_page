@@ -131,9 +131,19 @@
         "platforms": "Plataformas",
         "company": "Empresa",
         "contact": "Contacto",
-        "privacy": "Política de Privacidad",
-        "terms": "Términos de Uso",
-        "copyright": "Copyright © 2026 WIT. Todos los derechos reservados."
+        "privacy": "Privacidad",
+        "terms": "Condiciones",
+        "copyright": "Copyright © 2026 WIT. Todos los derechos reservados.",
+        "items": {
+            "software": "Software",
+            "consulting": "Consultoría",
+            "digital": "Digital",
+            "cyber": "Seguridad",
+            "saas": "SaaS",
+            "cloud": "Cloud",
+            "integrations": "Integraciones",
+            "apis": "APIs"
+        }
     },
     "hero": {
         "learn_more": "Más información",

@@ -12,29 +12,11 @@ export const OfficesPage = () => {
         {
             city: "Santiago, Chile",
             name: "Casa Matriz WIT",
-            address: "Obispo Umaña 633, Estación Central, Santiago",
-            phone: "+56 9 9848 1845",
+            address: "Los Conquistadores 1700, Comuna Providencia, Región Metropolitana",
+            phone: "+56990737619",
             hours: "Lun - Vie: 9:00 - 18:30",
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
-            mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Obispo+Umaña+633+Estacion+Central+Santiago"
-        },
-        {
-            city: "Antofagasta, Chile",
-            name: "Centro Logístico Norte",
-            address: "Pedro Aguirre Cerda 121160, Antofagasta",
-            phone: "+56 9 9848 1845",
-            hours: "Lun - Vie: 8:30 - 18:00",
-            image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1974&auto=format&fit=crop",
-            mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Pedro+Aguirre+Cerda+121160+Antofagasta"
-        },
-        {
-            city: "Iquique, Chile",
-            name: "Soporte Regional Norte",
-            address: "Barros Arana 825, Iquique",
-            phone: "+56 9 9848 1845",
-            hours: "Lun - Vie: 9:00 - 18:00",
-            image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
-            mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Barros+Arana+825+Iquique"
+            mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Los+Conquistadores+1700+Providencia+Santiago"
         }
     ];
 

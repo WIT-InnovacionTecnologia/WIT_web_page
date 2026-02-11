@@ -15,23 +15,21 @@ export const Footer = () => {
     const footerSections = [
         {
             title: t('footer.solutions'),
-            links: [t('menu.solutions.items.software'), t('menu.solutions.items.consulting'), t('menu.solutions.items.digital'), t('menu.solutions.items.cyber')],
+            links: [t('footer.items.software'), t('footer.items.consulting'), t('footer.items.digital'), t('footer.items.cyber')],
         },
         {
             title: t('footer.platforms'),
-            links: [t('menu.platforms.items.saas'), t('menu.platforms.items.cloud'), t('menu.platforms.items.integrations'), t('menu.platforms.items.apis')],
+            links: [t('footer.items.saas'), t('footer.items.cloud'), t('footer.items.integrations'), t('footer.items.apis')],
         },
         {
             title: t('footer.company'),
-            links: [t('menu.about_section.title'), t('menu.cases.title'), t('navbar.partners'), t('menu.about_section.items.careers')],
+            links: [t('navbar.menu.about_section.title'), t('navbar.menu.cases.title'), t('navbar.partners'), t('navbar.menu.about_section.items.careers')],
         },
         {
             title: t('footer.contact'),
             links: [
-                'Casa Matriz: Obispo Umaña 633, Estación Central, Santiago',
-                'Iquique: Barros Arana 825',
-                'Antofagasta: Pedro Aguirre Cerda 121160',
-                '+56 9 9848 1845',
+                'Casa Matriz: Los Conquistadores 1700, Comuna Providencia, Región Metropolitana',
+                '+56990737619',
                 'contacto@wit.la'
             ],
         },

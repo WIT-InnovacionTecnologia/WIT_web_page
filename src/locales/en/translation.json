@@ -131,9 +131,19 @@
         "platforms": "Platforms",
         "company": "Company",
         "contact": "Contact",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Use",
-        "copyright": "Copyright © 2026 WIT. All rights reserved."
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "copyright": "Copyright © 2026 WIT. All rights reserved.",
+        "items": {
+            "software": "Software",
+            "consulting": "Consulting",
+            "digital": "Digital",
+            "cyber": "Security",
+            "saas": "SaaS",
+            "cloud": "Cloud",
+            "integrations": "Integrations",
+            "apis": "APIs"
+        }
     },
     "hero": {
         "learn_more": "Learn more",
