@@ -29,7 +29,7 @@ export const Footer = () => {
             title: t('footer.contact'),
             links: [
                 'Casa Matriz: Los Conquistadores 1700, Comuna Providencia, Región Metropolitana',
-                '+56 9 9073 7619',
+                '+56990737619',
                 'contacto@wit.la'
             ],
         },

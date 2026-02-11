@@ -13,7 +13,7 @@ export const OfficesPage = () => {
             city: "Santiago, Chile",
             name: "Casa Matriz WIT",
             address: "Los Conquistadores 1700, Comuna Providencia, Región Metropolitana",
-            phone: "+56 9 9073 7619",
+            phone: "+56990737619",
             hours: "Lun - Vie: 9:00 - 18:30",
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
             mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Los+Conquistadores+1700+Providencia+Santiago"
