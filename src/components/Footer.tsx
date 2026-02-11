@@ -28,9 +28,7 @@ export const Footer = () => {
         {
             title: t('footer.contact'),
             links: [
-                'Casa Matriz: Obispo Umaña 633, Estación Central, Santiago',
-                'Iquique: Barros Arana 825',
-                'Antofagasta: Pedro Aguirre Cerda 121160',
+                'Casa Matriz: Los Conquistadores 1700, Comuna Providencia, Región Metropolitana',
                 '+56 9 9848 1845',
                 'contacto@wit.la'
             ],
