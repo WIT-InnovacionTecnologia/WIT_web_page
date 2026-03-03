@@ -72,12 +72,12 @@ export const Footer = () => {
                     <img
                         src={logoLight}
                         alt="WIT Logo"
-                        className="h-5 md:h-7 w-auto dark:hidden opacity-90 transition-opacity hover:opacity-100"
+                        className="h-4 md:h-5 w-auto dark:hidden opacity-90 transition-opacity hover:opacity-100"
                     />
                     <img
                         src={logoDark}
                         alt="WIT Logo"
-                        className="h-5 md:h-7 w-auto hidden dark:block opacity-90 transition-opacity hover:opacity-100"
+                        className="h-4 md:h-5 w-auto hidden dark:block opacity-90 transition-opacity hover:opacity-100"
                     />
                 </div>
 
@@ -95,7 +95,7 @@ export const Footer = () => {
                 </div>
 
                 {/* Directory Links Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 border-b border-gray-200 dark:border-gray-800 pb-10">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-200 dark:border-gray-800 pb-10">
                     {footerSections.map((section) => (
                         <div key={section.title} className="space-y-4">
                             <h3 className="font-semibold text-gray-900 dark:text-white text-[11px] uppercase tracking-wider">
@@ -139,15 +139,17 @@ export const Footer = () => {
                     <div className="font-medium text-gray-900 dark:text-white hover:underline cursor-pointer">
                         {t('footer.location')}
                     </div>
-                    {/* Banner Section - Responsive Layout (Keeping original assets but styling them) */}
-                    <div className="mt-12 flex flex-col items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-                        <img
-                            src={horizontalBanner}
-                            alt="WIT Banner"
-                            className="w-full h-auto object-contain"
-                        />
-                    </div>
                 </div>
+
+                {/* Banner Section - Responsive Layout (Contained) */}
+                <div className="mt-12 flex flex-col items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                    <img
+                        src={horizontalBanner}
+                        alt="WIT Banner"
+                        className="w-full h-auto object-contain"
+                    />
+                </div>
+            </div>
         </footer>
     );
 };
