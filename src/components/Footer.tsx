@@ -72,12 +72,12 @@ export const Footer = () => {
                     <img
                         src={logoLight}
                         alt="WIT Logo"
-                        className="h-10 md:h-12 w-auto dark:hidden opacity-90 transition-opacity hover:opacity-100"
+                        className="h-4 md:h-5 w-auto dark:hidden opacity-90 transition-opacity hover:opacity-100"
                     />
                     <img
                         src={logoDark}
                         alt="WIT Logo"
-                        className="h-10 md:h-12 w-auto hidden dark:block opacity-90 transition-opacity hover:opacity-100"
+                        className="h-4 md:h-5 w-auto hidden dark:block opacity-90 transition-opacity hover:opacity-100"
                     />
                 </div>
 
@@ -140,15 +140,15 @@ export const Footer = () => {
                         {t('footer.location')}
                     </div>
                 </div>
-            </div>
 
-            {/* Banner Section - Responsive Layout (Keeping original assets but styling them) */}
-            <div className="mt-12 flex flex-col items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-                <img
-                    src={horizontalBanner}
-                    alt="WIT Banner"
-                    className="w-full h-auto object-contain"
-                />
+                {/* Banner Section - Responsive Layout (Contained) */}
+                <div className="mt-12 flex flex-col items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                    <img
+                        src={horizontalBanner}
+                        alt="WIT Banner"
+                        className="w-full h-auto object-contain"
+                    />
+                </div>
             </div>
         </footer>
     );
